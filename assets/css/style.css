@@ -1,0 +1,6 @@
+#logo-image {
+    height: 120px;
+    width: 200px;
+    object-fit: cover;
+    margin: 1rem;
+}
