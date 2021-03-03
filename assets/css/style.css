@@ -4,6 +4,30 @@
 
 /**-----Google Fonts Ends-----**/
 
+/**-----Text-----**/
+
+.headings-dark {
+    font-family: "Quattrocento", sans-serif;
+    color: #312018;
+}
+
+.content-dark {
+    font-family: "Radley", sans-serif;
+    color: #312018;
+}
+
+.headings-light {
+    font-family: "Quattrocento", sans-serif;
+    color: #c8831b
+}
+
+.content-light {
+    font-family: "Radley", sans-serif;
+    color: #c8831b;
+}
+
+/**-----Text Ends-----**/
+
 /**-----Logo Row-----**/
 
 #logo-image {
@@ -38,16 +62,33 @@
 
 /**-----Logo Row Ends-----**/
 
-/**-----Text-----**/
+/**-----Home Page Hero-----**/
 
-.headings-dark {
-    font-family: "Quattrocento", sans-serif;
-    color: #312018;
+.hero-image { /*-- Thanks to Matt Rudge at Code Institue for this code --*/
+    height:90vh;
+    background: url('../images/haka.jpg') no-repeat center bottom;
+    background-size: cover;
+    position: relative;
 }
 
-.content-dark {
-    font-family: "Radley", sans-serif;
-    color: #312018;
+.center { /*-- Thanks to https://www.w3schools.com/howto/howto_css_center_button.asp for centering button --*/
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
-/**-----Text Ends-----**/
+.kick-off {
+    height: 100px;
+    width: 200px;
+    border-radius: 10px;
+    background-color: #312018;
+    opacity: 0.9;
+    border: #c8831b solid 2px;
+    color: #fff;
+    font-size: 2rem;
+}
+
+/**-----Home Page Hero Ends-----**/
