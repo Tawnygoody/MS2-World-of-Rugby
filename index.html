@@ -31,7 +31,7 @@
 
         <section>
             <div class=" container-fluid hero-image">                
-                <button type="button" class="center headings-light kick-off hidden" data-toggle="" data-target="">Kick Off!</button>                   
+                <button type="button" class="center headings-light kick-off hidden" data-toggle="modal" data-target="#kick-off-modal">Kick Off!</button>                   
             </div>
         </section>
 
@@ -55,6 +55,61 @@
                 </div>
             </div>
         </footer>
+        
+        <!--Kick-Off Modal-->
+        <div class="modal fade" id="kick-off-modal" tabindex="-1" role="dialog" aria-labelledby="kick-off-modal" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content text-center">
+                    <div class="modal-header headings-dark text-center">
+                        <h5 class="modal-title" id="kick-off-modal-title">World of Rugby</h5>
+                    </div>
+                    <div class="modal-body content-dark text-center">
+                        <div class="row">
+                            <div class="col-12">
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque ratione repellat natus dicta incidunt. Voluptatem alias corrupti consequuntur.</p>
+                            </div>
+                            <div class="col-12">
+                                <button class="modal-buttons content-light" id="rules-button">Rules</button>
+                                <p class="hidden" id="rules-info">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus fuga magnam dolorum voluptatibus fugit natus molestias nobis, labore esse perspiciatis, dolorem vero expedita quaerat similique maxime quo? Et, repudiandae quae.</p>
+                            </div>
+                            <div class="col-12">
+                                <button class="modal-buttons content-light" data-toggle="modal" data-target="#difficulty-modal" data-dismiss="modal">New Game</button>
+                            </div>
+                            <div class="col-12">
+                                <button class="modal-buttons content-light">Leaderboard</button>
+                            </div>
+                        </div>
+                    </div>               
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="difficulty-modal" tabindex="-1" role="dialog" aria-labelledby="difficulty-modal" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="difficulty-modal-title">Choose Your Difficulty!</h5>
+                    </div>
+                <div class="modal-body text-center">
+                    <div class="row">
+                        <div class="col-12">
+                            <button class="modal-buttons content-light">Amateur</button>
+                        </div>
+                        <div class="col-12">
+                            <button class="modal-buttons content-light">Professional</button>
+                        </div>
+                        <div class="col-12">
+                            <button class="modal-buttons content-light">Legend</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+                </div>
+            </div>
+        </div>
 
         <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
