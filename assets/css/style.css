@@ -37,6 +37,11 @@
     margin: 0.5rem;
 }
 
+#logo-bar {
+    height: 136px;
+    width: 100%;
+}
+
 .custom-switch .custom-control-label::after {
     background-color: #c8831b;
 }
@@ -65,7 +70,7 @@
 /**-----Home Page Hero-----**/
 
 .hero-image { /*-- Thanks to Matt Rudge at Code Institue for this code --*/
-    height:90vh;
+    height:100vh;
     background: url('../images/haka.jpg') no-repeat center bottom;
     background-size: cover;
     position: relative;
@@ -91,4 +96,32 @@
     font-size: 2rem;
 }
 
+.kick-off:hover {
+    background-color: #ca9950;
+    border: #312018 solid 2px;
+    color: #312018;
+}
+
+.hidden {
+    display: none;
+}
+
 /**-----Home Page Hero Ends-----**/
+
+/**-----Footer-----**/
+
+.footer-background {
+    background-color: #312018;
+}
+
+.icons {
+    color: #fff;
+    font-size: 1.5rem;
+    margin: 1rem;
+}
+
+.icons:hover {
+    color: #c8831b;
+}
+
+/**-----Footer Ends-----**/
