@@ -1,6 +1,53 @@
+/**-----Google Fonts-----**/
+
+@import url('https://fonts.googleapis.com/css2?family=Quattrocento:wght@700&family=Radley&display=swap');
+
+/**-----Google Fonts Ends-----**/
+
+/**-----Logo Row-----**/
+
 #logo-image {
     height: 120px;
     width: 200px;
     object-fit: cover;
-    margin: 1rem;
+    margin: 0.5rem;
 }
+
+.custom-switch .custom-control-label::after {
+    background-color: #c8831b;
+}
+
+.custom-control-label::before {
+    background-color: #ffffff;
+    border: #312018 solid 1px;
+}
+
+.custom-switch .custom-control-input:checked~.custom-control-label::after {
+    background-color: #312018;
+}
+
+.custom-control-input:checked~.custom-control-label::before {
+    border-color: #312018;
+    background-color: #c8831b;
+}
+
+.custom-control {
+    margin-right: 1rem;
+}
+
+
+/**-----Logo Row Ends-----**/
+
+/**-----Text-----**/
+
+.headings-dark {
+    font-family: "Quattrocento", sans-serif;
+    color: #312018;
+}
+
+.content-dark {
+    font-family: "Radley", sans-serif;
+    color: #312018;
+}
+
+/**-----Text Ends-----**/
