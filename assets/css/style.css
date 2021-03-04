@@ -26,6 +26,16 @@
     color: #fff;
 }
 
+.headings-color {
+    font-family: "Quattrocento", sans-serif;
+    color: #c8831b;
+}
+
+.content-color {
+    font-family: "Radley", sans-serif;
+    color: #c8831b;
+}
+
 /**-----Text Ends-----**/
 
 /**-----Logo Row-----**/
@@ -107,6 +117,31 @@
 }
 
 /**-----Home Page Hero Ends-----**/
+
+/**-----Game Page-----**/
+
+.game-hero-image { /*-- Thanks to Matt Rudge at Code Institue for this code --*/
+    height:100vh;
+    background: url('../images/rugby-field.png') no-repeat center center;
+    background-size: cover;
+    position: relative;
+}
+
+.opaque-overlay { /*-- Thanks to Matt Rudge at Code Institue for this code --*/
+    position: absolute;
+    top:0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.7);
+}
+
+.game-info {
+    font-size: 3rem;
+    margin: 1rem;
+}
+
+/**-----Game Page Ends-----**/
 
 /**-----Footer-----**/
 
