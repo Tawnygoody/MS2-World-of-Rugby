@@ -120,25 +120,27 @@
 
 /**-----Game Page-----**/
 
-.game-hero-image { /*-- Thanks to Matt Rudge at Code Institue for this code --*/
-    height:100vh;
-    background: url('../images/rugby-field.png') no-repeat center center;
+.game-hero-image { /*-- Thanks to https://css-tricks.com/perfect-full-page-background-image/ for game page background image--*/
+    background: url("../images/rugby-field.png") no-repeat center center scroll;
     background-size: cover;
-    position: relative;
 }
 
-.opaque-overlay { /*-- Thanks to Matt Rudge at Code Institue for this code --*/
-    position: absolute;
-    top:0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-color: rgba(0,0,0,0.7);
+.game-container {
+    max-width: 770px;
 }
 
 .game-info {
     font-size: 3rem;
     margin: 1rem;
+}
+
+.card-image {
+    height: 190px;
+    width: 130px;
+    object-fit: cover;
+    border: #c8831b solid 2px;
+    border-radius: 5px;
+    margin-bottom: 10px;
 }
 
 /**-----Game Page Ends-----**/
