@@ -14,7 +14,9 @@ let timeRemaining = startTime;
 let timer = document.getElementById("time-remaining");
 let countDown;
 let finishTime;
-let Moves = 0;
+let counter = document.getElementById("flips");
+let movesCounter = 0;
+let finishMoves;
 /*
 Variables Ends
 */
@@ -63,7 +65,6 @@ Game Music Section Ends
 function startGame() {
     overlays.classList.remove("visible");
     startMusic(); //fires the start music function. 
-    countDownBegin(); //fires the countDownBegin function
 }
 
 function flipCard() {
@@ -72,6 +73,7 @@ function flipCard() {
 
     this.classList.add("flip"); //adds the "flip" class to the individual card that was clicked.
     flip();
+    flipsCounter();
 
     if(!hasFlippedCard) { //if hasFlippedCard is false means this is the first time player has clicked a card.
         hasFlippedCard = true;
@@ -94,6 +96,14 @@ function countDownBegin() {
         if(timeRemaining === 0) //when time-remaining is equal to 0, triggers the game over function.
             gameOver();
     }, 1000); //number reduces every second
+}
+
+function flipsCounter() {
+    movesCounter++;
+    counter.innerHTML = movesCounter;
+    if(movesCounter == 1) {
+        countDownBegin(); //countdown begins once the players has made their first move.
+    }
 }
 
 function checkForMatch() {
@@ -136,9 +146,11 @@ function resetBoard() { //prevents the same card from being clicked twice.
 function victory() {
     clearInterval(countDown);
     finishTime = timer.innerHTML;
+    finishMoves = movesCounter
     $("#victory-modal").modal("toggle"); //toggles the victory modal
     gameWin();
     document.getElementById("totalTime").innerHTML = finishTime; //displays the finishTime in the Victory Modal
+    document.getElementById("totalMoves").innerHTML = finishMoves; //displays the finishMoves in the Victory Modal
 }
 
 function gameOver() {
