@@ -8,37 +8,35 @@ let matchedCardsArray = [];
 
 function flipCard() {
     if(lockBoard) return;
-    if(this === firstCard) return;
+    if(this === firstCard) return; //prevents the same card from being clicked twice. 
 
-    this.classList.add("flip");
+    this.classList.add("flip"); //adds the "flip" class to the individual card that was clicked.
 
-    if(!hasFlippedCard) {
+    if(!hasFlippedCard) { //if hasFlippedCard is false means this is the first time player has clicked a card.
         hasFlippedCard = true;
         firstCard = this;
-
-        return;
+        return; //stops the function if true.
     }
-
         hasFlippedCard = false;
         secondCard = this;
 
-        checkForMatch();
+        checkForMatch(); //calls checkForMatch function
 }
 
 function checkForMatch() {
-    if(firstCard.dataset.logo === secondCard.dataset.logo) {
+    if(firstCard.dataset.logo === secondCard.dataset.logo) { //if the firstCard and secondCard data-logo's are equal fires matchedCard function.
         matchedCards();
-    } else {
+    } else {  // if the firstCard and secondCard data-logo's are in-equal fires the unmatchedCards function.
         unmatchedCards();
     }
 }
 
 function matchedCards() {
-    firstCard.removeEventListener("click", flipCard);
-    secondCard.removeEventListener("click", flipCard);
-    matchedCardsArray.push(firstCard);
-    matchedCardsArray.push(secondCard);
-    if(matchedCardsArray.length === cardsArray.length) {
+    firstCard.removeEventListener("click", flipCard); //if the cards match - removes event listener so the cards cannot be flipped back.
+    secondCard.removeEventListener("click", flipCard); //if the cards match - removes event listener so the cards cannot be flipped back.
+    matchedCardsArray.push(firstCard); //adds the firstcard clicked to the matchedCardsArray
+    matchedCardsArray.push(secondCard); //add the secondcard clicked to the matchedCardsArray
+    if(matchedCardsArray.length === cardsArray.length) { //if the amount of cards in the matchedCardsArray is equal to the number of cards in the cardsArray fire the victory function
         victory();
     }
 
@@ -46,17 +44,17 @@ function matchedCards() {
 }
 
 function unmatchedCards() {
-    lockBoard = true;
+    lockBoard = true; //board becomes unlocked only after the cards have been flipped
 
-    setTimeout(() => {
-        firstCard.classList.remove("flip");
-        secondCard.classList.remove("flip");
+    setTimeout(() => { //1 second delay when cards do not match before being turned back over. 
+        firstCard.classList.remove("flip"); //if cards do not match removes the flip class, and flips back over.
+        secondCard.classList.remove("flip"); //if cards do not match removes the flip class, and flips back over.
 
         resetBoard();
     }, 1000);
 }
 
-function resetBoard() {
+function resetBoard() { //prevents the same card from being clicked twice. 
     [hasFlippedCard, lockBoard] = [false, false];
     [firstCard, secondCard] = [null, null];
 }
@@ -66,10 +64,10 @@ function victory() {
 }
 
 (function shuffle() {
-    cards.forEach(card => {
-        let randomPos = Math.floor(Math.random() * 16);
-        card.style.order = randomPos;
+    cards.forEach(card => { //iterate through cards Array.
+        let randomPos = Math.floor(Math.random() * 16); //generates a random number between 0-15 and assigns to each card. 
+        card.style.order = randomPos; //random number applied to the order property. 
     });
-})();
+})(); //immediately invoked function. 
 
 cards.forEach(card => card.addEventListener("click", flipCard)); //adds an event listener to each game-card and calls flipcard function when clicked.
