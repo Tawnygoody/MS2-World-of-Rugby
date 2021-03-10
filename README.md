@@ -12,3 +12,4 @@ Images
 - New Zealand Rugby Logo - [View](https://www.pinterest.it/pin/94646029638529210/)
 - Australia Rugby Logo - [View](https://twitter.com/wallabies)
 - Argentina Rugby Logo - [View](http://www.unioncordobesaderugby.com.ar/es/2018/09/concentracion-nacional-m20-en-cordoba/)
+- Webb Ellis Cup - [View](https://www.amazon.co.uk/Rugby-Replica-Trophy-Presentation-rrp%C2%A3120/dp/B01CUF1FME)

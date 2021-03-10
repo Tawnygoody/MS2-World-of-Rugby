@@ -243,4 +243,11 @@
     opacity: 0.5;
 }
 
+.modal-image {
+    width: 110px;
+    height: 170px;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
 /**-----Modals End-----**/
