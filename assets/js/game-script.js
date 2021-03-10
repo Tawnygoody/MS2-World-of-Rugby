@@ -1,6 +1,9 @@
 const cards = Array.from(document.getElementsByClassName("game-card")); //creates an array of all the game-cards. 
 let overlays = document.getElementById("overlay-text");
 
+/*
+Variables
+*/
 let hasFlippedCard = false;
 let lockBoard = false;
 let firstCard, secondCard;
@@ -10,6 +13,10 @@ let startTime = 60;
 let timeRemaining = startTime;
 let timer = document.getElementById("time-remaining");
 let countDown;
+let finishTime;
+/*
+Variables Ends
+*/
 
 
 /*
@@ -54,8 +61,8 @@ Game Music Section Ends
 
 function startGame() {
     overlays.classList.remove("visible");
-    startMusic();
-    countDownBegin();
+    startMusic(); //fires the start music function. 
+    countDownBegin(); //fires the countDownBegin function
 }
 
 function flipCard() {
@@ -76,13 +83,16 @@ function flipCard() {
         checkForMatch(); //calls checkForMatch function
 }
 
+/*
+Help with countdown function taken from https://scotch.io/tutorials/how-to-build-a-memory-matching-game-in-javascript
+*/
 function countDownBegin() {
     countDown = setInterval(function() {
-        timeRemaining--;
-        timer.innerHTML = timeRemaining;
-        if(timeRemaining === 0)
+        timeRemaining--; //time-remaining reduces by one every second
+        timer.innerHTML = timeRemaining; //changes the html content.
+        if(timeRemaining === 0) //when time-remaining is equal to 0, triggers the game over function.
             gameOver();
-    }, 1000);
+    }, 1000); //number reduces every second
 }
 
 function checkForMatch() {
@@ -123,12 +133,15 @@ function resetBoard() { //prevents the same card from being clicked twice.
 }
 
 function victory() {
+    clearInterval(countDown);
     $("#victory-modal").modal("toggle"); //toggles the victory modal
     gameWin();
 }
 
 function gameOver() {
-    clearInterval(countDown)
+    clearInterval(countDown);
+    finishTime = timer.innerHTML;
+    console.log(finishTime)
     $("#victory-modal").modal("toggle"); //toggles the victory modal
     gameWin();
 }
