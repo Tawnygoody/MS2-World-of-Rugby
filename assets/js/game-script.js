@@ -1,4 +1,5 @@
 const cards = Array.from(document.getElementsByClassName("game-card")); //creates an array of all the game-cards. 
+let overlays = document.getElementById("overlay-text");
 
 let hasFlippedCard = false;
 let lockBoard = false;
@@ -44,6 +45,10 @@ function gameLoss() {
 /*
 Game Music Section Ends
 */
+
+function startGame() {
+    overlays.classList.remove("visible");
+}
 
 function flipCard() {
     if(lockBoard) return;
@@ -113,3 +118,4 @@ function victory() {
 })(); //immediately invoked function. 
 
 cards.forEach(card => card.addEventListener("click", flipCard)); //adds an event listener to each game-card and calls flipcard function when clicked.
+overlays.addEventListener("click", startGame);
