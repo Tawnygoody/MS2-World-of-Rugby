@@ -214,7 +214,7 @@
 
 /**-----Footer Ends-----**/
 
-/**-----Kick Off Modal-----**/
+/**-----Modals-----**/
 
 .modal-header {
     text-align: center;
@@ -239,4 +239,8 @@
     color: #c8831b;
 }
 
-/**-----Kick Off Modal Ends-----**/
+.fa-star {
+    opacity: 0.5;
+}
+
+/**-----Modals End-----**/

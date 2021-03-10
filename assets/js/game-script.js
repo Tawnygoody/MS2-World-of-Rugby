@@ -1,9 +1,8 @@
-const cards = Array.from(document.getElementsByClassName("game-card")); //creates an array of all the game-cards. 
-let overlays = document.getElementById("overlay-text");
-
 /*
 Variables
 */
+const cards = Array.from(document.getElementsByClassName("game-card")); //creates an array of all the game-cards. 
+let overlays = document.getElementById("overlay-text");
 let hasFlippedCard = false;
 let lockBoard = false;
 let firstCard, secondCard;
@@ -57,6 +56,10 @@ function gameWin() {
 function gameLoss() {
     stopMusic();
     gameOverSound.play();
+}
+
+function mute() {
+    
 }
 /*
 Game Music Section Ends
@@ -147,6 +150,19 @@ function victory() {
     clearInterval(countDown);
     finishTime = timer.innerHTML;
     finishMoves = movesCounter
+
+    if(movesCounter <= 25) { //star rating system based on the number of moves made.
+        $("#star1,#star2,#star3,#star4,#star5").css({"color": "#c8831b", "opacity": "1"})
+    } else if (movesCounter <= 30) {
+        $("#star1,#star2,#star3,#star4").css({"color": "#c8831b", "opacity": "1"})
+    } else if (movesCounter <= 35) {
+        $("#star1,#star2,#star3").css({"color": "#c8831b", "opacity": "1"})
+    } else if (movesCounter <= 40) {
+        $("#star1,#star2").css({"color": "#c8831b", "opacity": "1"})
+    } else {
+        $("#star1").css({"color": "#c8831b", "opacity": "1"})
+    }
+
     $("#victory-modal").modal("toggle"); //toggles the victory modal
     gameWin();
     document.getElementById("totalTime").innerHTML = finishTime; //displays the finishTime in the Victory Modal
@@ -159,12 +175,12 @@ function gameOver() {
     gameWin();
 }
 
-(function shuffle() {
+/*(function shuffle() {
     cards.forEach(card => { //iterate through cards Array.
         let randomPos = Math.floor(Math.random() * 16); //generates a random number between 0-15 and assigns to each card. 
         card.style.order = randomPos; //random number applied to the order property. 
     });
-})(); //immediately invoked function.
+})(); //immediately invoked function.*/
 
 cards.forEach(card => card.addEventListener("click", flipCard)); //adds an event listener to each game-card and calls flipcard function when clicked.
 overlays.addEventListener("click", startGame);
