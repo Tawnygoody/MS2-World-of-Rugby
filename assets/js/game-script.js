@@ -6,6 +6,11 @@ let lockBoard = false;
 let firstCard, secondCard;
 let cardsArray = cards;
 let matchedCardsArray = [];
+let startTime = 60;
+let timeRemaining = startTime;
+let timer = document.getElementById("time-remaining");
+let countDown;
+
 
 /*
 game music section
@@ -16,6 +21,7 @@ let matchSound = new Audio("assets/audio/match.wav");
 let victorySound = new Audio("assets/audio/victory.wav");
 let gameOverSound = new Audio("assets/audio/gameover.wav");
 bgMusic.loop = true;
+bgMusic.volume = 0.3;
 
 function startMusic() {
     bgMusic.play();
@@ -48,6 +54,8 @@ Game Music Section Ends
 
 function startGame() {
     overlays.classList.remove("visible");
+    startMusic();
+    countDownBegin();
 }
 
 function flipCard() {
@@ -66,6 +74,15 @@ function flipCard() {
         secondCard = this;
 
         checkForMatch(); //calls checkForMatch function
+}
+
+function countDownBegin() {
+    countDown = setInterval(function() {
+        timeRemaining--;
+        timer.innerHTML = timeRemaining;
+        if(timeRemaining === 0)
+            gameOver();
+    }, 1000);
 }
 
 function checkForMatch() {
@@ -106,6 +123,12 @@ function resetBoard() { //prevents the same card from being clicked twice.
 }
 
 function victory() {
+    $("#victory-modal").modal("toggle"); //toggles the victory modal
+    gameWin();
+}
+
+function gameOver() {
+    clearInterval(countDown)
     $("#victory-modal").modal("toggle"); //toggles the victory modal
     gameWin();
 }
