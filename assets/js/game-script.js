@@ -14,6 +14,7 @@ let timeRemaining = startTime;
 let timer = document.getElementById("time-remaining");
 let countDown;
 let finishTime;
+let Moves = 0;
 /*
 Variables Ends
 */
@@ -134,14 +135,14 @@ function resetBoard() { //prevents the same card from being clicked twice.
 
 function victory() {
     clearInterval(countDown);
+    finishTime = timer.innerHTML;
     $("#victory-modal").modal("toggle"); //toggles the victory modal
     gameWin();
+    document.getElementById("totalTime").innerHTML = finishTime; //displays the finishTime in the Victory Modal
 }
 
 function gameOver() {
     clearInterval(countDown);
-    finishTime = timer.innerHTML;
-    console.log(finishTime)
     $("#victory-modal").modal("toggle"); //toggles the victory modal
     gameWin();
 }
@@ -151,7 +152,7 @@ function gameOver() {
         let randomPos = Math.floor(Math.random() * 16); //generates a random number between 0-15 and assigns to each card. 
         card.style.order = randomPos; //random number applied to the order property. 
     });
-})(); //immediately invoked function. 
+})(); //immediately invoked function.
 
 cards.forEach(card => card.addEventListener("click", flipCard)); //adds an event listener to each game-card and calls flipcard function when clicked.
 overlays.addEventListener("click", startGame);
