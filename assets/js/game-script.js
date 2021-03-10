@@ -3,6 +3,8 @@ const cards = Array.from(document.getElementsByClassName("game-card")); //create
 let hasFlippedCard = false;
 let lockBoard = false;
 let firstCard, secondCard;
+let cardsArray = cards;
+let matchedCardsArray = [];
 
 function flipCard() {
     if(lockBoard) return;
@@ -34,6 +36,11 @@ function checkForMatch() {
 function matchedCards() {
     firstCard.removeEventListener("click", flipCard);
     secondCard.removeEventListener("click", flipCard);
+    matchedCardsArray.push(firstCard);
+    matchedCardsArray.push(secondCard);
+    if(matchedCardsArray.length === cardsArray.length) {
+        victory();
+    }
 
     resetBoard();
 }
@@ -52,6 +59,10 @@ function unmatchedCards() {
 function resetBoard() {
     [hasFlippedCard, lockBoard] = [false, false];
     [firstCard, secondCard] = [null, null];
+}
+
+function victory() {
+    $("#victory-modal").modal("toggle");
 }
 
 (function shuffle() {
