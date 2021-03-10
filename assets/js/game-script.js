@@ -6,11 +6,51 @@ let firstCard, secondCard;
 let cardsArray = cards;
 let matchedCardsArray = [];
 
+/*
+game music section
+*/
+let bgMusic = new Audio("assets/audio/bgmusic.wav");
+let flipSound = new Audio("assets/audio/cardflip.wav");
+let matchSound = new Audio("assets/audio/match.wav");
+let victorySound = new Audio("assets/audio/victory.wav");
+let gameOverSound = new Audio("assets/audio/gameover.wav");
+bgMusic.loop = true;
+
+function startMusic() {
+    bgMusic.play();
+}
+function stopMusic() {
+    bgMusic.pause();
+    bgMusic.currentTime = 0;
+}
+
+function flip() {
+    flipSound.play();
+}
+
+function match() {
+    matchSound.play();
+}
+
+function gameWin() {
+    stopMusic();
+    victorySound.play();
+}
+
+function gameLoss() {
+    stopMusic();
+    gameOverSound.play();
+}
+/*
+Game Music Section Ends
+*/
+
 function flipCard() {
     if(lockBoard) return;
     if(this === firstCard) return; //prevents the same card from being clicked twice. 
 
     this.classList.add("flip"); //adds the "flip" class to the individual card that was clicked.
+    flip();
 
     if(!hasFlippedCard) { //if hasFlippedCard is false means this is the first time player has clicked a card.
         hasFlippedCard = true;
@@ -26,6 +66,7 @@ function flipCard() {
 function checkForMatch() {
     if(firstCard.dataset.logo === secondCard.dataset.logo) { //if the firstCard and secondCard data-logo's are equal fires matchedCard function.
         matchedCards();
+        match();
     } else {  // if the firstCard and secondCard data-logo's are in-equal fires the unmatchedCards function.
         unmatchedCards();
     }
@@ -60,7 +101,8 @@ function resetBoard() { //prevents the same card from being clicked twice.
 }
 
 function victory() {
-    $("#victory-modal").modal("toggle");
+    $("#victory-modal").modal("toggle"); //toggles the victory modal
+    gameWin();
 }
 
 (function shuffle() {
