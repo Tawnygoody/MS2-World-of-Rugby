@@ -16,6 +16,7 @@ let finishTime;
 let counter = document.getElementById("flips");
 let movesCounter = 0;
 let finishMoves;
+
 /*
 Variables Ends
 */
@@ -95,6 +96,7 @@ function flipCard() {
     if(soundEffects == "on") {   
         flip();
     }
+    
     flipsCounter();
 
     if(!hasFlippedCard) { //if hasFlippedCard is false means this is the first time player has clicked a card.
@@ -195,7 +197,7 @@ function victory() {
 
 function gameOver() {
     clearInterval(countDown);
-    $("#victory-modal").modal("toggle"); //toggles the victory modal
+    $("#game-over-modal").modal("toggle"); //toggles the victory modal
     if(soundEffects == "on") {   
         gameLoss();
     }
@@ -208,6 +210,8 @@ function gameOver() {
     });
 })(); //immediately invoked function.*/
 
+
+// Event Listeners
 cards.forEach(card => card.addEventListener("click", flipCard)); //adds an event listener to each game-card and calls flipcard function when clicked.
 overlays.addEventListener("click", startGame);
 soundButton.addEventListener("click", musicToggle);
