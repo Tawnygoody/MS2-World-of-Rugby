@@ -248,6 +248,19 @@
     height: 170px;
     object-fit: cover;
     margin-bottom: 1rem;
+    animation: dance 1s linear infinite;
+}
+
+@keyframes dance { /**web dev**/
+    0%, 100% {
+        transform: rotate(0);
+    }
+    25% {
+        transform: rotate(-20deg);
+    }
+    75% {
+        transform: rotate(20deg);
+    }
 }
 
 /**-----Modals End-----**/

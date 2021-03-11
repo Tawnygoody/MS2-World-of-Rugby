@@ -20,10 +20,7 @@
                         </a>                    
                     </div>
                     <div class="col-12 col-sm-12 col-md-4 d-none d-md-block text-right my-auto">
-                        <div class="custom-control custom-switch">
-                            <input type="checkbox" class="custom-control-input" id="audioSwitch">
-                            <label class="custom-control-label content-dark" for="audioSwitch">Toggle Audio</label>
-                        </div>
+                        <button class="button" id="sound-effects"><i class="fas fa-volume-up"></i></button>
                     </div>
                 </div>
             </div>
@@ -35,10 +32,10 @@
             <div class="container-fluid">
                 <div class="row text-center no-gutters">
                     <div class="col">
-                        <h2>Time: <span id="time-remaining">60</span></h2>
+                        <h2 class="headings-dark">Time: <span id="time-remaining">60</span></h2>
                     </div>
                     <div class="col">
-                        <h2>Moves: <span id="flips">0</span></h2>
+                        <h2 class="headings-dark">Moves: <span id="flips">0</span></h2>
                     </div>
                 </div>
                 <div class="col-12 game-container justify-content-center">
@@ -131,7 +128,8 @@
         </footer>
 
         <!-- Modal -->
-        <div class="modal fade" id="victory-modal" tabindex="-1" role="dialog" aria-labelledby="victory-modal" aria-hidden="true">
+        <!-- code to keep modal open when clicking outside taken from https://stackoverflow.com/questions/16152073/prevent-bootstrap-modal-from-disappearing-when-clicking-outside-or-pressing-esca-->
+        <div class="modal fade" id="victory-modal" tabindex="-1" role="dialog" aria-labelledby="victory-modal" aria-hidden="true" data-backdrop="static" data-keyboard="false">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content text-center">
                     <div class="modal-header headings-dark text-center">

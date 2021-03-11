@@ -29,12 +29,15 @@ let flipSound = new Audio("assets/audio/cardflip.wav");
 let matchSound = new Audio("assets/audio/match.wav");
 let victorySound = new Audio("assets/audio/victory.wav");
 let gameOverSound = new Audio("assets/audio/gameover.wav");
+let soundEffects = "off";
+let soundButton = document.getElementById("sound-effects")
 bgMusic.loop = true;
 bgMusic.volume = 0.3;
 
 function startMusic() {
     bgMusic.play();
 }
+
 function stopMusic() {
     bgMusic.pause();
     bgMusic.currentTime = 0;
@@ -58,8 +61,23 @@ function gameLoss() {
     gameOverSound.play();
 }
 
-function mute() {
-    
+function audioToggle() {
+    if(soundEffects === "on") {
+        soundButton.innerHTML = `<i class="fas fa-volume-mute"></i>`;
+        startMusic();
+    } else {
+        soundButton.innerHTML = `<i class="fas fa-volume-up"></i>`;
+        stopMusic();
+    }
+}
+
+function musicToggle() {
+    if(soundEffects === "off") {
+        soundEffects = "on";
+    } else {
+        soundEffects = "off";
+    }
+    audioToggle();
 }
 /*
 Game Music Section Ends
@@ -67,7 +85,6 @@ Game Music Section Ends
 
 function startGame() {
     overlays.classList.remove("visible");
-    startMusic(); //fires the start music function. 
 }
 
 function flipCard() {
@@ -75,7 +92,9 @@ function flipCard() {
     if(this === firstCard) return; //prevents the same card from being clicked twice. 
 
     this.classList.add("flip"); //adds the "flip" class to the individual card that was clicked.
-    flip();
+    if(soundEffects == "on") {   
+        flip();
+    }
     flipsCounter();
 
     if(!hasFlippedCard) { //if hasFlippedCard is false means this is the first time player has clicked a card.
@@ -112,7 +131,10 @@ function flipsCounter() {
 function checkForMatch() {
     if(firstCard.dataset.logo === secondCard.dataset.logo) { //if the firstCard and secondCard data-logo's are equal fires matchedCard function.
         matchedCards();
-        match();
+        if(soundEffects == "on") {   
+            match();
+        }
+        
     } else {  // if the firstCard and secondCard data-logo's are in-equal fires the unmatchedCards function.
         unmatchedCards();
     }
@@ -164,7 +186,9 @@ function victory() {
     }
 
     $("#victory-modal").modal("toggle"); //toggles the victory modal
-    gameWin();
+    if(soundEffects == "on") {   
+        gameWin();
+    }
     document.getElementById("totalTime").innerHTML = finishTime; //displays the finishTime in the Victory Modal
     document.getElementById("totalMoves").innerHTML = finishMoves; //displays the finishMoves in the Victory Modal
 }
@@ -172,7 +196,9 @@ function victory() {
 function gameOver() {
     clearInterval(countDown);
     $("#victory-modal").modal("toggle"); //toggles the victory modal
-    gameWin();
+    if(soundEffects == "on") {   
+        gameLoss();
+    }
 }
 
 /*(function shuffle() {
@@ -184,3 +210,4 @@ function gameOver() {
 
 cards.forEach(card => card.addEventListener("click", flipCard)); //adds an event listener to each game-card and calls flipcard function when clicked.
 overlays.addEventListener("click", startGame);
+soundButton.addEventListener("click", musicToggle);
