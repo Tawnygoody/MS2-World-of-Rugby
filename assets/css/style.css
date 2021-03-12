@@ -249,8 +249,19 @@
     color: #c8831b;
 }
 
+/*-- modal scrollable taken from https://stackoverflow.com/questions/10476632/how-to-scroll-the-page-when-a-modal-dialog-is-longer-than-the-screen --*/
+.modal-body.leader-body {
+    max-height: calc(100vh - 100px);
+    overflow-y: auto;
+}
+
 .fa-star {
     opacity: 0.5;
+}
+
+.leaderR {
+    color: #c8831b;
+    opacity: 1;
 }
 
 .modal-image {
@@ -259,6 +270,14 @@
     object-fit: cover;
     margin-bottom: 1rem;
     animation: dance 1s linear infinite;
+}
+
+.leader-container {
+    margin: 10px;
+    background-color: #312018;
+    border-radius: 20px;
+    opacity: 0.6;
+    padding: 20px;
 }
 
 #tackle {
