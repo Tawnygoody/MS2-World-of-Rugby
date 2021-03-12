@@ -8,7 +8,7 @@ let lockBoard = false;
 let firstCard, secondCard;
 let cardsArray = cards;
 let matchedCardsArray = [];
-let startTime = 60;
+let startTime = 100;
 let timeRemaining = startTime;
 let timer = document.getElementById("time-remaining");
 let countDown;
@@ -203,12 +203,12 @@ function gameOver() {
     }
 }
 
-/*(function shuffle() {
+(function shuffle() {
     cards.forEach(card => { //iterate through cards Array.
         let randomPos = Math.floor(Math.random() * 16); //generates a random number between 0-15 and assigns to each card. 
         card.style.order = randomPos; //random number applied to the order property. 
     });
-})(); //immediately invoked function.*/
+})(); //immediately invoked function.
 
 
 // Event Listeners

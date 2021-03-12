@@ -153,6 +153,14 @@
     perspective: 500px;
 }
 
+.game-container.container-pro {
+    width: 690px;
+}
+
+.game-container.container-leg {
+    width: 830px;
+}
+
 .game-card {
     width: calc(25% - 10px);
     height: calc(25% - 10px);
@@ -161,6 +169,14 @@
     transform: scale(1);
     transform-style: preserve-3d;
     transition: transform .5s;
+}
+
+.game-card.card-pro {
+    width: calc(20% - 10px);
+}
+
+.game-card.card-leg {
+    width: calc(16.666% - 10px);
 }
 
 .game-card:active {
