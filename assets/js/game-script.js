@@ -11,21 +11,20 @@ function ready() {
     let matchedCardsArray = [];
 
     let startTime;
-    let pathName = window.location.pathname;
-    let gameType; //gameType aid using pathname taken from https://stackoverflow.com/questions/21265919/location-pathname-indexof-not-working-with-or
-    if(pathName.indexOf("amateur") != -1) { // if the pathname contains amateur the gameType will be set to AMATEUR
-        gameType = "AMATEUR";
-    } else if(pathName.indexOf("pro") != -1) { // if the pathname contains pro the gameType will be set to PRO
-        gameType = "PRO";
-    } else if(pathName.indexOf("leg") != -1) { // if the pathname contains leg the gameType will be set to LEGEND
-        gameType = "LEGEND";
+    let difficulty; //gameType aid using pathname taken from https://stackoverflow.com/questions/21265919/location-pathname-indexof-not-working-with-or
+    if(window.location.pathname.indexOf("amateur") != -1) { // if the pathname contains amateur the gameType will be set to AMATEUR
+        difficulty = "AMATEUR";
+    } else if(window.location.pathname.indexOf("pro") != -1) { // if the pathname contains pro the gameType will be set to PRO
+        difficulty = "PRO";
+    } else if(window.location.pathname.indexOf("leg") != -1) { // if the pathname contains leg the gameType will be set to LEGEND
+        difficulty = "LEGEND";
     }
 
-    if (gameType === "AMATEUR") {
+    if (difficulty === "AMATEUR") {
         startTime = 60;
-    } else if (gameType === "PRO") {
+    } else if (difficulty === "PRO") {
         startTime = 80;
-    } else if (gameType === "LEGEND") {
+    } else if (difficulty === "LEGEND") {
         startTime = 100;
     }
 

@@ -21,3 +21,5 @@ Images
 
 ## Bugs 
 - victory modal closes when clicking outside it meaning game wont reset. (https://stackoverflow.com/questions/16152073/prevent-bootstrap-modal-from-disappearing-when-clicking-outside-or-pressing-esca)
+- gametype variable - help from tutor Stephen from code institute with code placement in terms of page loading.
+- gametype variable - https://stackoverflow.com/questions/21265919/location-pathname-indexof-not-working-with-or
