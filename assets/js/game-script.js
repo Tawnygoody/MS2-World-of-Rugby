@@ -9,7 +9,26 @@ function ready() {
     let firstCard, secondCard;
     let cardsArray = cards;
     let matchedCardsArray = [];
+
     let startTime;
+    let pathName = window.location.pathname;
+    let gameType; //gameType aid using pathname taken from https://stackoverflow.com/questions/21265919/location-pathname-indexof-not-working-with-or
+    if(pathName.indexOf("amateur") != -1) { // if the pathname contains amateur the gameType will be set to AMATEUR
+        gameType = "AMATEUR";
+    } else if(pathName.indexOf("pro") != -1) { // if the pathname contains pro the gameType will be set to PRO
+        gameType = "PRO";
+    } else if(pathName.indexOf("leg") != -1) { // if the pathname contains leg the gameType will be set to LEGEND
+        gameType = "LEGEND";
+    }
+
+    if (gameType === "AMATEUR") {
+        startTime = 60;
+    } else if (gameType === "PRO") {
+        startTime = 80;
+    } else if (gameType === "LEGEND") {
+        startTime = 100;
+    }
+
     let timeRemaining = startTime;
     let timer = document.getElementById("time-remaining");
     let countDown;
