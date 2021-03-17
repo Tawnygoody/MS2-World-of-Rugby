@@ -10,7 +10,7 @@ function ready() {
     let cardsArray = cards;
     let matchedCardsArray = [];
 
-    let difficulty; //gameType aid using pathname taken from https://stackoverflow.com/questions/21265919/location-pathname-indexof-not-working-with-or
+    let difficulty; //difficulty aid using pathname taken from https://stackoverflow.com/questions/21265919/location-pathname-indexof-not-working-with-or
     if(window.location.pathname.indexOf("amateur") != -1) { // if the pathname contains amateur the gameType will be set to AMATEUR
         difficulty = "AMATEUR";
     } else if(window.location.pathname.indexOf("pro") != -1) { // if the pathname contains pro the gameType will be set to PRO
