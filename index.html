@@ -8,6 +8,13 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous" />
         <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
         <title>World of Rugby</title>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+        <script type="text/javascript">
+            (function(){
+                emailjs.init("user_ciNdVJlqB9l0ym4WC1Pac");
+                emailjs.send("service_drsgi1h", "contact_form", {name: "Aaron", notes: "The project that I want is..."});
+                })();
+                </script>
     </head>
     <body>
         <header>
@@ -88,17 +95,17 @@
                     <div class="row">
                         <div class="col-12">
                             <a href="game-amateur.html">
-                                <button type="button" class="modal-buttons content-light" id="amateur">Amateur</button>
+                                <button type="button" class="modal-buttons content-light">Amateur</button>
                             </a>
                         </div>
                         <div class="col-12">
                             <a href="game-pro.html">
-                                <button type="button" class="modal-buttons content-light" id="pro">Professional</button>
+                                <button type="button" class="modal-buttons content-light">Professional</button>
                             </a>
                         </div>
                         <div class="col-12">
                             <a href="game-leg.html">
-                                <button type="button" class="modal-buttons content-light" id="legend">Legend</button>
+                                <button type="button" class="modal-buttons content-light">Legend</button>
                             </a>
                         </div>
                     </div>

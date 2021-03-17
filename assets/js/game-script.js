@@ -10,7 +10,6 @@ function ready() {
     let cardsArray = cards;
     let matchedCardsArray = [];
 
-    let startTime;
     let difficulty; //gameType aid using pathname taken from https://stackoverflow.com/questions/21265919/location-pathname-indexof-not-working-with-or
     if(window.location.pathname.indexOf("amateur") != -1) { // if the pathname contains amateur the gameType will be set to AMATEUR
         difficulty = "AMATEUR";
@@ -20,6 +19,7 @@ function ready() {
         difficulty = "LEGEND";
     }
 
+    let startTime;
     if (difficulty === "AMATEUR") {
         startTime = 60;
     } else if (difficulty === "PRO") {
@@ -194,16 +194,42 @@ function ready() {
         finishTime = timer.innerHTML;
         finishMoves = movesCounter
 
-        if(movesCounter <= 25) { //star rating system based on the number of moves made.
-            $("#star1,#star2,#star3,#star4,#star5").css({"color": "#c8831b", "opacity": "1"})
-        } else if (movesCounter <= 30) {
-            $("#star1,#star2,#star3,#star4").css({"color": "#c8831b", "opacity": "1"})
-        } else if (movesCounter <= 35) {
-            $("#star1,#star2,#star3").css({"color": "#c8831b", "opacity": "1"})
-        } else if (movesCounter <= 40) {
-            $("#star1,#star2").css({"color": "#c8831b", "opacity": "1"})
-        } else {
-            $("#star1").css({"color": "#c8831b", "opacity": "1"})
+        if(difficulty === "AMATEUR") {
+            if(movesCounter <= 25) { //star rating system based on the number of moves made.
+                $("#star1,#star2,#star3,#star4,#star5").css({"color": "#c8831b", "opacity": "1"})
+            } else if (movesCounter <= 30) {
+                $("#star1,#star2,#star3,#star4").css({"color": "#c8831b", "opacity": "1"})
+            } else if (movesCounter <= 35) {
+                $("#star1,#star2,#star3").css({"color": "#c8831b", "opacity": "1"})
+            } else if (movesCounter <= 40) {
+                $("#star1,#star2").css({"color": "#c8831b", "opacity": "1"})
+            } else {
+                $("#star1").css({"color": "#c8831b", "opacity": "1"})
+            }
+        } else if(difficulty === "PRO") {
+            if(movesCounter <= 35) { //star rating system based on the number of moves made.
+                $("#star1,#star2,#star3,#star4,#star5").css({"color": "#c8831b", "opacity": "1"})
+            } else if (movesCounter <= 40) {
+                $("#star1,#star2,#star3,#star4").css({"color": "#c8831b", "opacity": "1"})
+            } else if (movesCounter <= 45) {
+                $("#star1,#star2,#star3").css({"color": "#c8831b", "opacity": "1"})
+            } else if (movesCounter <= 50) {
+                $("#star1,#star2").css({"color": "#c8831b", "opacity": "1"})
+            } else {
+                $("#star1").css({"color": "#c8831b", "opacity": "1"})
+            }
+        } else if(difficulty === "LEGEND") {
+            if(movesCounter <= 50) { //star rating system based on the number of moves made.
+                $("#star1,#star2,#star3,#star4,#star5").css({"color": "#c8831b", "opacity": "1"})
+            } else if (movesCounter <= 55) {
+                $("#star1,#star2,#star3,#star4").css({"color": "#c8831b", "opacity": "1"})
+            } else if (movesCounter <= 60) {
+                $("#star1,#star2,#star3").css({"color": "#c8831b", "opacity": "1"})
+            } else if (movesCounter <= 65) {
+                $("#star1,#star2").css({"color": "#c8831b", "opacity": "1"})
+            } else {
+                $("#star1").css({"color": "#c8831b", "opacity": "1"})
+            }
         }
 
         $("#victory-modal").modal("toggle"); //toggles the victory modal
@@ -223,17 +249,29 @@ function ready() {
     }
 
     (function shuffle() {
-        cards.forEach(card => { //iterate through cards Array.
-            let randomPos = Math.floor(Math.random() * 16); //generates a random number between 0-15 and assigns to each card. 
-            card.style.order = randomPos; //random number applied to the order property. 
-        });
+        if(difficulty === "AMATEUR") {
+            cards.forEach(card => { //iterate through cards Array.
+                let randomPos = Math.floor(Math.random() * 16); //generates a random number between 0-15 and assigns to each card. 
+                card.style.order = randomPos; //random number applied to the order property. 
+            });
+        } else if(difficulty === "PRO") {
+            cards.forEach(card => { //iterate through cards Array.
+                let randomPos = Math.floor(Math.random() * 20); //generates a random number between 0-19 and assigns to each card. 
+                card.style.order = randomPos; //random number applied to the order property. 
+            });
+        } else if(difficulty === "LEGEND") {
+            cards.forEach(card => { //iterate through cards Array.
+                let randomPos = Math.floor(Math.random() * 24); //generates a random number between 0-23 and assigns to each card. 
+                card.style.order = randomPos; //random number applied to the order property. 
+            });
+        }
     })(); //immediately invoked function.
 
 
     // Event Listeners
     cards.forEach(card => card.addEventListener("click", flipCard)); //adds an event listener to each game-card and calls flipcard function when clicked.
-    overlays.addEventListener("click", startGame);
-    soundButton.addEventListener("click", musicToggle);
+    overlays.addEventListener("click", startGame); //adds an event listener to the overlay and calls startGame function when clicked
+    soundButton.addEventListener("click", musicToggle); //adds an event listener to the soundbutton and calls musicToggle function when clicked
 
 
 }
