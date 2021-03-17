@@ -12,7 +12,6 @@
         <script type="text/javascript">
             (function(){
                 emailjs.init("user_ciNdVJlqB9l0ym4WC1Pac");
-                emailjs.send("service_drsgi1h", "contact_form", {name: "Aaron", notes: "The project that I want is..."});
                 })();
                 </script>
     </head>
@@ -77,6 +76,25 @@
                             </div>
                             <div class="col-12">
                                 <button type="button" class="modal-buttons content-light" data-toggle="modal" data-target="#leader-modal" data-dismiss="modal">Leaderboard</button>
+                            </div>
+                            <div class="col-12">
+                                <button type="button" class="modal-buttons content-light" id="contact-button">Contact Us</button>
+                                <form class="hidden" onsubmit="return sendMail(this);">
+                                    <div class="form-group">
+                                        <label for="fullname">Full Name</label>
+                                        <input type="text" name="name" class="form-control" id="fullname" placeholder="Name" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Email address</label>
+                                        <input type="email"  name="emailaddress" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="queryTextArea">Your Query</label>
+                                        <textarea class="form-control" name="customersummary" id="queryTextArea" rows="3"></textarea>
+                                    </div>
+                                    <button type="submit" class ="modal-buttons content-light">Submit</button>
+                                </form>
                             </div>
                         </div>
                     </div>               
@@ -292,7 +310,6 @@
         <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-        <script src="assets/js/game-script.js" type="text/javascript"></script><script src="assets/js/script.js" type="text/javascript"></script>
         <script src="assets/js/script.js" type="text/javascript"></script>
     </body>
 </html>
