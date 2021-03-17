@@ -1,3 +1,6 @@
+/*
+Send Mail function taken from Code Institute tutorial by Matt Rudge
+*/
 function sendMail(contactForm) {
         emailjs.send("service_drsgi1h", "contact_form", {
             "from_name": contactForm.name.value,
@@ -6,9 +9,12 @@ function sendMail(contactForm) {
         })
         .then(
             function(response) {
+                window.alert("Thankyou for your enquiry.")
+                $('#contact-form')[0].reset(); //clear the contact form taken from https://stackoverflow.com/questions/14589193/clearing-my-form-inputs-after-submission/47198786
                 console.log("Success", response);
             },
             function(error) {
+                window.alert("Failed to submit enquiry.")
                 console.log("Failed", error);
             });
             return false

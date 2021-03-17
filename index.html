@@ -79,7 +79,8 @@
                             </div>
                             <div class="col-12">
                                 <button type="button" class="modal-buttons content-light" id="contact-button">Contact Us</button>
-                                <form class="hidden" onsubmit="return sendMail(this);">
+                                <form class="hidden" onsubmit="return sendMail(this);" id="contact-form">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, non eveniet! Maiores itaque tempora odit, alias beatae earum aliquam eveniet. Ipsa facere cum eveniet sequi dolore quod architecto. Tempora, nihil?</p>
                                     <div class="form-group">
                                         <label for="fullname">Full Name</label>
                                         <input type="text" name="name" class="form-control" id="fullname" placeholder="Name" required>
@@ -91,7 +92,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="queryTextArea">Your Query</label>
-                                        <textarea class="form-control" name="customersummary" id="queryTextArea" rows="3"></textarea>
+                                        <textarea class="form-control" name="customersummary" id="queryTextArea" rows="3" required></textarea>
                                     </div>
                                     <button type="submit" class ="modal-buttons content-light">Submit</button>
                                 </form>
