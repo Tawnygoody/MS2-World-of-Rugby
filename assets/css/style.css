@@ -142,6 +142,25 @@
     animation: overlay-grow 500ms forwards;
 }
 
+.game-info-div {
+    max-width: 550px;
+}
+
+.game-info-pro-div {
+    max-width: 690px;
+}
+
+.game-info-leg-div {
+    max-width: 830px;
+}
+
+.game-info {
+    background-image: radial-gradient(#312018, black);
+    margin: 1rem;
+    padding-top: 8px;
+    border-radius: 10px;
+    max-width: 150px;
+}
 
 .game-container {
     width: 550px;
@@ -375,14 +394,17 @@
     .game-container {
     width: 280px;
     height: 390px;
+    margin-top: 0.5rem;
     }
     .game-container.container-pro {
     width: 280px;
     height: 460px;
+    margin-top: 0.5rem;
     }
     .game-container.container-leg {
     width: 280px;
     height: 555px;
+    margin-top: 0.5rem;
     }
     .game-card {
     width: calc(25% - 4px);
@@ -405,6 +427,12 @@
     }
     #logo-bar {
     height: 102px;
+    }
+    .headings-small {
+        font-size: 16px;
+    }
+    .game-info {
+        max-width: 80px;
     }
 }
 
