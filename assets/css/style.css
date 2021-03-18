@@ -328,6 +328,11 @@
     width: 550px;
     height: 1090px;
     }
+    #sound-effects {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -359,6 +364,11 @@
     width: 350px;
     height: 695px;
     }
+    #sound-effects {
+    width: 30px;
+    height: 30px;
+    border-radius: 6px;
+    }
 }
 
 @media screen and (max-width: 395px) {
@@ -388,6 +398,13 @@
     width: calc(25% - 4px);
     height: calc(16.666% - 4px);
     margin: 2px;
+    }
+    #logo-image {
+    height: 90px;
+    width: 150px;
+    }
+    #logo-bar {
+    height: 102px;
     }
 }
 
