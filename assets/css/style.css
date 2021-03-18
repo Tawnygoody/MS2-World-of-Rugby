@@ -299,3 +299,96 @@
 }
 
 /**-----Modals End-----**/
+
+/**-----Media Queries-----**/
+
+@media screen and (max-width: 870px) {
+   .game-container.container-leg {
+    width: 690px;
+    height: 625px;
+    } 
+}
+
+@media screen and (max-width: 720px) {
+    .game-card.card-pro {
+    width: calc(25% - 10px);
+    height: calc(20% - 10px);
+    }
+
+    .game-container.container-pro {
+    width: 550px;
+    height: 940px;
+    }
+
+    .game-card.card-leg {
+    width: calc(25% - 10px);
+    height: calc(16.666% - 10px);
+    }
+    .game-container.container-leg {
+    width: 550px;
+    height: 1090px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .game-container {
+    width: 450px;
+    height: 620px;
+    }
+    .game-container.container-pro {
+    width: 450px;
+    height: 730px;
+    }
+    .game-container.container-leg {
+    width: 450px;
+    height: 890px;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+    .game-container {
+    width: 350px;
+    height: 500px;
+    }
+    .game-container.container-pro {
+    width: 350px;
+    height: 570px;
+    }
+    .game-container.container-leg {
+    width: 350px;
+    height: 695px;
+    }
+}
+
+@media screen and (max-width: 395px) {
+    .game-container {
+    width: 280px;
+    height: 390px;
+    }
+    .game-container.container-pro {
+    width: 280px;
+    height: 460px;
+    }
+    .game-container.container-leg {
+    width: 280px;
+    height: 555px;
+    }
+    .game-card {
+    width: calc(25% - 4px);
+    height: calc(25% - 4px);
+    margin: 2px;
+    }
+    .game-card.card-pro {
+    width: calc(25% - 4px);
+    height: calc(20% - 4px);
+    margin: 2px;
+    }
+    .game-card.card-leg {
+    width: calc(25% - 4px);
+    height: calc(16.666% - 4px);
+    margin: 2px;
+    }
+}
+
+/**-----Media Queries Ends-----**/
