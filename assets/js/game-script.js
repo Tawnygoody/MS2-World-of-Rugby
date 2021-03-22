@@ -242,8 +242,8 @@ function ready() {
         }
         
         //help with final score equation taken from https://stackoverflow.com/questions/7658176/adding-two-variables-together
-        finalScore = parseInt(points) + parseInt(timer.innerHTML);
-        score.innerHTML = finalScore;
+        finalScore = parseInt(points) + parseInt(timer.innerHTML); //final score is equal to points dependent on movesCounter and the time-remaining when the last match is made. 
+        score.innerHTML = finalScore; // score shows in the victory modal as a result of the finalScore. 
 
         $("#victory-modal").modal("toggle"); //toggles the victory modal
         if(soundEffects == "on") { //gameWin function called if soundEffects are on
