@@ -15,7 +15,7 @@ function ready() {
         difficulty = "AMATEUR";
     } else if(window.location.pathname.indexOf("pro") != -1) { // if the pathname contains pro the gameType will be set to PRO
         difficulty = "PRO";
-    } else { // if the pathname contains leg the gameType will be set to LEGEND
+    } else { // the default difficulty will be set to "Legend"
         difficulty = "LEGEND";
     }
 
@@ -35,15 +35,6 @@ function ready() {
     let counter = document.getElementById("flips");
     let movesCounter = 0;
     let finishMoves;
-
-    /*
-    Variables Ends
-    */
-
-
-    /*
-    game music section
-    */
     let bgMusic = new Audio("assets/audio/bgmusic.wav");
     let flipSound = new Audio("assets/audio/cardflip.wav");
     let matchSound = new Audio("assets/audio/match.wav");
@@ -54,38 +45,38 @@ function ready() {
     bgMusic.loop = true;
     bgMusic.volume = 0.3;
 
-    function startMusic() {
+    function startMusic() { //bgMusic players when function is called in audioToggle function
         bgMusic.play();
     }
 
-    function stopMusic() {
+    function stopMusic() { //bgMusic stops and resets to the beginning of the song, when function is called in the audioToggle function
         bgMusic.pause();
         bgMusic.currentTime = 0;
     }
 
-    function flip() {
+    function flip() { //flipSound plays whenever a card is turned. Called in the flipCard function. 
         flipSound.play();
     }
 
-    function match() {
+    function match() { //matchSound plays whenever 2 cards match. Called in the checkForMatch function. 
         matchSound.play();
     }
 
-    function gameWin() {
-        stopMusic();
+    function gameWin() { //victorySound plays whenever all the cards have been matched. Called in the victory function. 
+        stopMusic(); //stop the bgMusic so background music and victory sounds aren't playing at the same time. 
         victorySound.play();
     }
 
-    function gameLoss() {
-        stopMusic();
+    function gameLoss() { //gameOverSounds players when not all the cards have been matched within the timeframe. Called in the gameOver function. 
+        stopMusic(); //stops the bgMusic so background music and game over sounds aren't playing at the same time.
         gameOverSound.play();
     }
 
     function audioToggle() {
-        if(soundEffects === "on") {
+        if(soundEffects === "on") { //if the soundEffects are on, bgMusic will play and the icon will be set to the mute button, should the user want to mute soundEffects.
             soundButton.innerHTML = `<i class="fas fa-volume-mute"></i>`;
             startMusic();
-        } else {
+        } else { //else when soundEffects are off, stopMusic function called, and the icon will be set to volume up button, should the user want soundEffects on. 
             soundButton.innerHTML = `<i class="fas fa-volume-up"></i>`;
             stopMusic();
         }
@@ -103,7 +94,7 @@ function ready() {
     Game Music Section Ends
     */
 
-    function startGame() {
+    function startGame() { //removes the overlay with the text of "Kick Off", so the game can begin.
         overlays.classList.remove("visible");
     }
 
@@ -112,11 +103,11 @@ function ready() {
         if(this === firstCard) return; //prevents the same card from being clicked twice. 
 
         this.classList.add("flip"); //adds the "flip" class to the individual card that was clicked.
-        if(soundEffects == "on") {   
+        if(soundEffects == "on") { //flipSound plays when soundEffects are on. 
             flip();
         }
         
-        flipsCounter();
+        flipsCounter(); //calls the flipsCounter function
 
         if(!hasFlippedCard) { //if hasFlippedCard is false means this is the first time player has clicked a card.
             hasFlippedCard = true;
@@ -141,22 +132,22 @@ function ready() {
         }, 1000); //number reduces every second
     }
 
-    function flipsCounter() {
-        movesCounter++;
-        counter.innerHTML = movesCounter;
+    function flipsCounter() { //function called in the flipCard function
+        movesCounter++; //increments the movesCounter by one everytime a card is flipped.
+        counter.innerHTML = movesCounter; //shows the moves the user has made.
         if(movesCounter == 1) {
-            countDownBegin(); //countdown begins once the players has made their first move.
+            countDownBegin(); //countDownBegin function called once the player has made their first move.
         }
     }
 
-    function checkForMatch() {
+    function checkForMatch() { //checkForMatch function called in the flipCard function
         if(firstCard.dataset.logo === secondCard.dataset.logo) { //if the firstCard and secondCard data-logo's are equal fires matchedCard function.
             matchedCards();
-            if(soundEffects == "on") {   
+            if(soundEffects == "on") {  //matchSound plays when the soundEffects are on.  
                 match();
             }
             
-        } else {  // if the firstCard and secondCard data-logo's are in-equal fires the unmatchedCards function.
+        } else {  // if the firstCard and secondCard data-logo's are not equal fires the unmatchedCards function.
             unmatchedCards();
         }
     }
@@ -181,7 +172,7 @@ function ready() {
             secondCard.classList.remove("flip"); //if cards do not match removes the flip class, and flips back over.
 
             resetBoard();
-        }, 1000);
+        }, 1000); //delays the cards from being turned back by 1 second
     }
 
     function resetBoard() { //prevents the same card from being clicked twice. 
@@ -190,50 +181,50 @@ function ready() {
     }
 
     function victory() {
-        clearInterval(countDown);
-        finishTime = timer.innerHTML;
-        finishMoves = movesCounter
+        clearInterval(countDown); //stops the countdown.
+        finishTime = timer.innerHTML; //finishTime variable set to the timer content.
+        finishMoves = movesCounter; //finishMoves variable set to the movesCounter.
 
         if(difficulty === "AMATEUR") {
             if(movesCounter <= 25) { //star rating system based on the number of moves made.
-                $("#star1,#star2,#star3,#star4,#star5").css({"color": "#c8831b", "opacity": "1"})
+                $("#star1,#star2,#star3,#star4,#star5").css({"color": "#c8831b", "opacity": "1"}) //5 stars shown if user has made 25 moves or less.
             } else if (movesCounter <= 30) {
-                $("#star1,#star2,#star3,#star4").css({"color": "#c8831b", "opacity": "1"})
+                $("#star1,#star2,#star3,#star4").css({"color": "#c8831b", "opacity": "1"}) //4 stars shows if the user has made 30 moves or less.
             } else if (movesCounter <= 35) {
-                $("#star1,#star2,#star3").css({"color": "#c8831b", "opacity": "1"})
+                $("#star1,#star2,#star3").css({"color": "#c8831b", "opacity": "1"}) // 3 stars shown if the user has made 35 moves or less.
             } else if (movesCounter <= 40) {
-                $("#star1,#star2").css({"color": "#c8831b", "opacity": "1"})
+                $("#star1,#star2").css({"color": "#c8831b", "opacity": "1"}) //2 stars shown if the user has made 40 moves or less.
             } else {
-                $("#star1").css({"color": "#c8831b", "opacity": "1"})
+                $("#star1").css({"color": "#c8831b", "opacity": "1"}) //1 star shown when user has made 40+ moves.
             }
         } else if(difficulty === "PRO") {
             if(movesCounter <= 35) { //star rating system based on the number of moves made.
-                $("#star1,#star2,#star3,#star4,#star5").css({"color": "#c8831b", "opacity": "1"})
+                $("#star1,#star2,#star3,#star4,#star5").css({"color": "#c8831b", "opacity": "1"}) //5 stars shown if user has made 35 moves or less.
             } else if (movesCounter <= 40) {
-                $("#star1,#star2,#star3,#star4").css({"color": "#c8831b", "opacity": "1"})
+                $("#star1,#star2,#star3,#star4").css({"color": "#c8831b", "opacity": "1"}) //4 stars shows if the user has made 40 moves or less.
             } else if (movesCounter <= 45) {
-                $("#star1,#star2,#star3").css({"color": "#c8831b", "opacity": "1"})
+                $("#star1,#star2,#star3").css({"color": "#c8831b", "opacity": "1"}) // 3 stars shown if the user has made 45 moves or less.
             } else if (movesCounter <= 50) {
-                $("#star1,#star2").css({"color": "#c8831b", "opacity": "1"})
+                $("#star1,#star2").css({"color": "#c8831b", "opacity": "1"}) //2 stars shown if the user has made 50 moves or less.
             } else {
-                $("#star1").css({"color": "#c8831b", "opacity": "1"})
+                $("#star1").css({"color": "#c8831b", "opacity": "1"}) //1 star shown when user has made 50+ moves.
             }
         } else {
             if(movesCounter <= 50) { //star rating system based on the number of moves made.
-                $("#star1,#star2,#star3,#star4,#star5").css({"color": "#c8831b", "opacity": "1"})
+                $("#star1,#star2,#star3,#star4,#star5").css({"color": "#c8831b", "opacity": "1"}) //5 stars shown if user has made 50 moves or less.
             } else if (movesCounter <= 55) {
-                $("#star1,#star2,#star3,#star4").css({"color": "#c8831b", "opacity": "1"})
+                $("#star1,#star2,#star3,#star4").css({"color": "#c8831b", "opacity": "1"}) //4 stars shows if the user has made 55 moves or less.
             } else if (movesCounter <= 60) {
-                $("#star1,#star2,#star3").css({"color": "#c8831b", "opacity": "1"})
+                $("#star1,#star2,#star3").css({"color": "#c8831b", "opacity": "1"}) // 3 stars shown if the user has made 60 moves or less.
             } else if (movesCounter <= 65) {
-                $("#star1,#star2").css({"color": "#c8831b", "opacity": "1"})
+                $("#star1,#star2").css({"color": "#c8831b", "opacity": "1"}) //2 stars shown if the user has made 65 moves or less.
             } else {
-                $("#star1").css({"color": "#c8831b", "opacity": "1"})
+                $("#star1").css({"color": "#c8831b", "opacity": "1"}) //1 star shown when user has made 65+ moves.
             }
         }
 
         $("#victory-modal").modal("toggle"); //toggles the victory modal
-        if(soundEffects == "on") {   
+        if(soundEffects == "on") { //gameWin function called if soundEffects are on
             gameWin();
         }
         document.getElementById("totalTime").innerHTML = finishTime; //displays the finishTime in the Victory Modal
@@ -241,9 +232,9 @@ function ready() {
     }
 
     function gameOver() {
-        clearInterval(countDown);
-        $("#game-over-modal").modal("toggle"); //toggles the victory modal
-        if(soundEffects == "on") {   
+        clearInterval(countDown); //stops the countdown
+        $("#game-over-modal").modal("toggle"); //toggles the gameOver modal
+        if(soundEffects == "on") { //gameLoss function called if soundEffects are on
             gameLoss();
         }
     }
@@ -273,11 +264,10 @@ function ready() {
     overlays.addEventListener("click", startGame); //adds an event listener to the overlay and calls startGame function when clicked
     soundButton.addEventListener("click", musicToggle); //adds an event listener to the soundbutton and calls musicToggle function when clicked
 
-
 }
 
 if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", ready());
+    document.addEventListener("DOMContentLoaded", ready()); //calls the ready function once the DOM content has loaded.
 } else {
-    ready();
+    ready(); //calls the ready function
 }
