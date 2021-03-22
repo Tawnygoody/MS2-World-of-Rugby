@@ -8,11 +8,11 @@ function sendMail(contactForm) {
             "customer_request": contactForm.customersummary.value
         })
         .then(
-            function(response) {
+            function() {
                 window.alert("Thankyou for your enquiry.")
                 $('#contact-form')[0].reset(); //clear the contact form taken from https://stackoverflow.com/questions/14589193/clearing-my-form-inputs-after-submission/47198786
             },
-            function(error) {
+            function() {
                 window.alert("Failed to submit enquiry.")
             });
             return false

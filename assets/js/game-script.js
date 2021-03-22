@@ -20,11 +20,11 @@ function ready() {
     }
 
     let startTime;
-    if (difficulty === "AMATEUR") {
+    if (difficulty === "AMATEUR") { //if the difficulty is set to "AMATEUR" the startTime will be 60 seconds
         startTime = 60;
-    } else if (difficulty === "PRO") {
+    } else if (difficulty === "PRO") { //if the difficulty is set to "PRO" the startTime will be 80 seconds.
         startTime = 80;
-    } else {
+    } else { //the default startTime will be set to 100 seconds. 
         startTime = 100;
     }
 
@@ -35,6 +35,9 @@ function ready() {
     let counter = document.getElementById("flips");
     let movesCounter = 0;
     let finishMoves;
+    let points;
+    let finalScore;
+    let score = document.getElementById("score");
     let bgMusic = new Audio("assets/audio/bgmusic.wav");
     let flipSound = new Audio("assets/audio/cardflip.wav");
     let matchSound = new Audio("assets/audio/match.wav");
@@ -184,44 +187,63 @@ function ready() {
         clearInterval(countDown); //stops the countdown.
         finishTime = timer.innerHTML; //finishTime variable set to the timer content.
         finishMoves = movesCounter; //finishMoves variable set to the movesCounter.
-
+    
         if(difficulty === "AMATEUR") {
             if(movesCounter <= 25) { //star rating system based on the number of moves made.
+                points = 80;
                 $("#star1,#star2,#star3,#star4,#star5").css({"color": "#c8831b", "opacity": "1"}) //5 stars shown if user has made 25 moves or less.
             } else if (movesCounter <= 30) {
+                points = 60;
                 $("#star1,#star2,#star3,#star4").css({"color": "#c8831b", "opacity": "1"}) //4 stars shows if the user has made 30 moves or less.
             } else if (movesCounter <= 35) {
+                points = 40;
                 $("#star1,#star2,#star3").css({"color": "#c8831b", "opacity": "1"}) // 3 stars shown if the user has made 35 moves or less.
             } else if (movesCounter <= 40) {
+                points = 20;
                 $("#star1,#star2").css({"color": "#c8831b", "opacity": "1"}) //2 stars shown if the user has made 40 moves or less.
             } else {
+                points = 0;
                 $("#star1").css({"color": "#c8831b", "opacity": "1"}) //1 star shown when user has made 40+ moves.
             }
         } else if(difficulty === "PRO") {
             if(movesCounter <= 35) { //star rating system based on the number of moves made.
+                points = 80;
                 $("#star1,#star2,#star3,#star4,#star5").css({"color": "#c8831b", "opacity": "1"}) //5 stars shown if user has made 35 moves or less.
             } else if (movesCounter <= 40) {
+                points = 60;
                 $("#star1,#star2,#star3,#star4").css({"color": "#c8831b", "opacity": "1"}) //4 stars shows if the user has made 40 moves or less.
             } else if (movesCounter <= 45) {
+                points = 40;
                 $("#star1,#star2,#star3").css({"color": "#c8831b", "opacity": "1"}) // 3 stars shown if the user has made 45 moves or less.
             } else if (movesCounter <= 50) {
+                points = 20;
                 $("#star1,#star2").css({"color": "#c8831b", "opacity": "1"}) //2 stars shown if the user has made 50 moves or less.
             } else {
+                points = 0;
                 $("#star1").css({"color": "#c8831b", "opacity": "1"}) //1 star shown when user has made 50+ moves.
             }
         } else {
             if(movesCounter <= 50) { //star rating system based on the number of moves made.
+                points = 80;
                 $("#star1,#star2,#star3,#star4,#star5").css({"color": "#c8831b", "opacity": "1"}) //5 stars shown if user has made 50 moves or less.
             } else if (movesCounter <= 55) {
+                points = 60;
                 $("#star1,#star2,#star3,#star4").css({"color": "#c8831b", "opacity": "1"}) //4 stars shows if the user has made 55 moves or less.
             } else if (movesCounter <= 60) {
+                points = 40;
                 $("#star1,#star2,#star3").css({"color": "#c8831b", "opacity": "1"}) // 3 stars shown if the user has made 60 moves or less.
             } else if (movesCounter <= 65) {
+                points = 20;
                 $("#star1,#star2").css({"color": "#c8831b", "opacity": "1"}) //2 stars shown if the user has made 65 moves or less.
             } else {
+                points = 0;
                 $("#star1").css({"color": "#c8831b", "opacity": "1"}) //1 star shown when user has made 65+ moves.
             }
         }
+        
+        //help with final score equation taken from https://stackoverflow.com/questions/7658176/adding-two-variables-together
+        finalScore = parseInt(points) + parseInt(timer.innerHTML);
+        score.innerHTML = finalScore;
 
         $("#victory-modal").modal("toggle"); //toggles the victory modal
         if(soundEffects == "on") { //gameWin function called if soundEffects are on
