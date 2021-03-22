@@ -15,7 +15,7 @@ function ready() {
         difficulty = "AMATEUR";
     } else if(window.location.pathname.indexOf("pro") != -1) { // if the pathname contains pro the gameType will be set to PRO
         difficulty = "PRO";
-    } else if(window.location.pathname.indexOf("leg") != -1) { // if the pathname contains leg the gameType will be set to LEGEND
+    } else { // if the pathname contains leg the gameType will be set to LEGEND
         difficulty = "LEGEND";
     }
 
@@ -24,7 +24,7 @@ function ready() {
         startTime = 60;
     } else if (difficulty === "PRO") {
         startTime = 80;
-    } else if (difficulty === "LEGEND") {
+    } else {
         startTime = 100;
     }
 
@@ -218,7 +218,7 @@ function ready() {
             } else {
                 $("#star1").css({"color": "#c8831b", "opacity": "1"})
             }
-        } else if(difficulty === "LEGEND") {
+        } else {
             if(movesCounter <= 50) { //star rating system based on the number of moves made.
                 $("#star1,#star2,#star3,#star4,#star5").css({"color": "#c8831b", "opacity": "1"})
             } else if (movesCounter <= 55) {
@@ -259,7 +259,7 @@ function ready() {
                 let randomPos = Math.floor(Math.random() * 20); //generates a random number between 0-19 and assigns to each card. 
                 card.style.order = randomPos; //random number applied to the order property. 
             });
-        } else if(difficulty === "LEGEND") {
+        } else {
             cards.forEach(card => { //iterate through cards Array.
                 let randomPos = Math.floor(Math.random() * 24); //generates a random number between 0-23 and assigns to each card. 
                 card.style.order = randomPos; //random number applied to the order property. 
