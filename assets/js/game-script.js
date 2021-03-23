@@ -37,7 +37,11 @@ function ready() {
     let finishMoves;
     let points;
     let finalScore;
-    let score = document.getElementById("score");
+    let mostRecentScore = document.getElementById("score");
+    let username = document.getElementById("username");
+    let saveScoreBtn = document.getElementById("saveScoreBtn");
+    let highScores = JSON.parse(localStorage.getItem("highScores")) || [];
+    let highScoresList = document.getElementById("highScoresList");
     let bgMusic = new Audio("assets/audio/bgmusic.wav");
     let flipSound = new Audio("assets/audio/cardflip.wav");
     let matchSound = new Audio("assets/audio/match.wav");
@@ -243,7 +247,7 @@ function ready() {
         
         //help with final score equation taken from https://stackoverflow.com/questions/7658176/adding-two-variables-together
         finalScore = parseInt(points) + parseInt(timer.innerHTML); //final score is equal to points dependent on movesCounter and the time-remaining when the last match is made. 
-        score.innerHTML = finalScore; // score shows in the victory modal as a result of the finalScore. 
+        mostRecentScore.innerHTML = finalScore; // score shows in the victory modal as a result of the finalScore. 
 
         $("#victory-modal").modal("toggle"); //toggles the victory modal
         if(soundEffects == "on") { //gameWin function called if soundEffects are on
@@ -253,6 +257,28 @@ function ready() {
         document.getElementById("totalMoves").innerHTML = finishMoves; //displays the finishMoves in the Victory Modal
     }
 
+    saveHighScore = (e) => {
+        e.preventDefault();
+
+        let score = {
+            score: finalScore,
+            name: username.value
+        };
+        highScores.push(score);
+        highScores.sort((a,b) => b.score - a.score);
+        highScores.splice(10);
+
+        localStorage.setItem("highScores", JSON.stringify(highScores));
+
+        highScoresList.innerHTML = 
+        highScores.map(score => {
+        return `<li class="scoreList">${score.name} - ${score.score}</li>`; 
+        }).join("");
+
+        $("#leader-modal").modal("toggle");
+        $("#victory-modal").modal("toggle");
+    }
+
     function gameOver() {
         clearInterval(countDown); //stops the countdown
         $("#game-over-modal").modal("toggle"); //toggles the gameOver modal
@@ -260,7 +286,7 @@ function ready() {
             gameLoss();
         }
     }
-
+/*
     (function shuffle() {
         if(difficulty === "AMATEUR") {
             cards.forEach(card => { //iterate through cards Array.
@@ -279,12 +305,14 @@ function ready() {
             });
         }
     })(); //immediately invoked function.
-
-
+*/
     // Event Listeners
     cards.forEach(card => card.addEventListener("click", flipCard)); //adds an event listener to each game-card and calls flipcard function when clicked.
     overlays.addEventListener("click", startGame); //adds an event listener to the overlay and calls startGame function when clicked
     soundButton.addEventListener("click", musicToggle); //adds an event listener to the soundbutton and calls musicToggle function when clicked
+    username.addEventListener("keyup", () => {
+        saveScoreBtn.disabled = !username.value;
+    });
 
 }
 

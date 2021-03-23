@@ -292,12 +292,19 @@
     animation: dance 1s linear infinite;
 }
 
-.leader-container {
-    margin: 10px;
-    background-color: #312018;
-    border-radius: 20px;
-    opacity: 0.6;
-    padding: 20px;
+#username {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+#highScoresList {
+    list-style: none;
+    margin-bottom: 1rem;
+    padding-left: 0;
+}
+
+.scoreList {
+    font-size: 1rem;
 }
 
 #tackle {
