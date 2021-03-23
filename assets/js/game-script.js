@@ -46,7 +46,7 @@ function ready() {
         {score: 85, name: "Johnny Wilkinson"},
         {score: 80, name: "Brian Habana"},
         {score: 70, name: "Richie McCaw"},
-        {score: 65, name: "Finn Russel"},
+        {score: 65, name: "Finn Russell"},
         {score: 60, name: "Cheslin Kolbe"},
         {score: 50, name: "David Campese"},
         {score: 45, name: "Sonny Bill Williams"},
@@ -274,12 +274,12 @@ function ready() {
         e.preventDefault();
 
         let score = {
-            score: finalScore,
-            name: username.value
+            score: finalScore, //score value taken from the result of the finalScore variable in the victory function
+            name: username.value //name value taken from the input the user enters their name into.
         };
-        highScores.push(score);
-        highScores.sort((a,b) => b.score - a.score);
-        highScores.splice(15);
+        highScores.push(score); //adds the score to the highScores array
+        highScores.sort((a,b) => b.score - a.score); //sorts the score in descending order
+        highScores.splice(15); //sets the maximum numbers of results on the leaderboard to 15
 
         localStorage.setItem("highScores", JSON.stringify(highScores));
 
@@ -294,8 +294,8 @@ function ready() {
 
     function removeStorage() {
         if (confirm("Are you sure you want to clear the leaderboard? All saved scores will be lost.")) { // confirm alert message aided by https://stackoverflow.com/questions/9334636/how-to-create-a-dialog-with-yes-and-no-options
-            localStorage.clear();
-            window.location.assign("/")
+            localStorage.clear(); //clears localStorage so any saved names are removed from the leaderboard
+            window.location.assign("/") //takes the user back to the home page if users confirms to clear localStorage
         }
     }
 

@@ -254,6 +254,7 @@
 .modal-content {
     background-image: radial-gradient(#f7d8a9, #ca9950);
     border-radius: 30px;
+    overflow: hidden;
 }
 
 .modal-buttons {
