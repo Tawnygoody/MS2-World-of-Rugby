@@ -40,7 +40,20 @@ function ready() {
     let mostRecentScore = document.getElementById("score");
     let username = document.getElementById("username");
     let saveScoreBtn = document.getElementById("saveScoreBtn");
-    let highScores = JSON.parse(localStorage.getItem("highScores")) || [];
+    let defHighScores = [
+        {score: 100, name: "Jonah Lomu"},
+        {score: 95, name: "Dan Carter"},
+        {score: 90, name: "Johnny Wilkinson"},
+        {score: 85, name: "Brian Habana"},
+        {score: 80, name: "Richie McCaw"},
+        {score: 75, name: "Finn Russel"},
+        {score: 70, name: "Cheslin Kolbe"},
+        {score: 65, name: "David Campese"},
+        {score: 60, name: "Sonny Bill Williams"},
+        {score: 55, name: "Shane Williams"},
+    ];
+    let highScores = JSON.parse(localStorage.getItem("highScores")) || defHighScores;
+    console.log(highScores);
     let highScoresList = document.getElementById("highScoresList");
     let bgMusic = new Audio("assets/audio/bgmusic.wav");
     let flipSound = new Audio("assets/audio/cardflip.wav");
@@ -266,7 +279,7 @@ function ready() {
         };
         highScores.push(score);
         highScores.sort((a,b) => b.score - a.score);
-        highScores.splice(10);
+        highScores.splice(15);
 
         localStorage.setItem("highScores", JSON.stringify(highScores));
 
