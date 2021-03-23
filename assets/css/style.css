@@ -258,11 +258,15 @@
 
 .modal-buttons {
     height: 50px;
-    width: 120px;
+    width: 140px;
     border-radius: 20px;
     margin: 1rem;
     background-image: radial-gradient(#312018, black);
     border: #c8831b solid 2px;
+}
+
+#clearStorage {
+    height: 80px;
 }
 
 .modal-buttons:hover {

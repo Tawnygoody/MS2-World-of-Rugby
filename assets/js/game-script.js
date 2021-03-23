@@ -42,19 +42,19 @@ function ready() {
     let saveScoreBtn = document.getElementById("saveScoreBtn");
     let defHighScores = [
         {score: 100, name: "Jonah Lomu"},
-        {score: 95, name: "Dan Carter"},
-        {score: 90, name: "Johnny Wilkinson"},
-        {score: 85, name: "Brian Habana"},
-        {score: 80, name: "Richie McCaw"},
-        {score: 75, name: "Finn Russel"},
-        {score: 70, name: "Cheslin Kolbe"},
-        {score: 65, name: "David Campese"},
-        {score: 60, name: "Sonny Bill Williams"},
-        {score: 55, name: "Shane Williams"},
+        {score: 90, name: "Dan Carter"},
+        {score: 85, name: "Johnny Wilkinson"},
+        {score: 80, name: "Brian Habana"},
+        {score: 70, name: "Richie McCaw"},
+        {score: 65, name: "Finn Russel"},
+        {score: 60, name: "Cheslin Kolbe"},
+        {score: 50, name: "David Campese"},
+        {score: 45, name: "Sonny Bill Williams"},
+        {score: 40, name: "Shane Williams"},
     ];
     let highScores = JSON.parse(localStorage.getItem("highScores")) || defHighScores;
-    console.log(highScores);
     let highScoresList = document.getElementById("highScoresList");
+    let clearStorage = document.getElementById("clearStorage");
     let bgMusic = new Audio("assets/audio/bgmusic.wav");
     let flipSound = new Audio("assets/audio/cardflip.wav");
     let matchSound = new Audio("assets/audio/match.wav");
@@ -206,16 +206,16 @@ function ready() {
         finishMoves = movesCounter; //finishMoves variable set to the movesCounter.
     
         if(difficulty === "AMATEUR") {
-            if(movesCounter <= 25) { //star rating system based on the number of moves made.
+            if(movesCounter <= 30) { //star rating system based on the number of moves made.
                 points = 80;
                 $("#star1,#star2,#star3,#star4,#star5").css({"color": "#c8831b", "opacity": "1"}) //5 stars shown if user has made 25 moves or less.
-            } else if (movesCounter <= 30) {
+            } else if (movesCounter <= 35) {
                 points = 60;
                 $("#star1,#star2,#star3,#star4").css({"color": "#c8831b", "opacity": "1"}) //4 stars shows if the user has made 30 moves or less.
-            } else if (movesCounter <= 35) {
+            } else if (movesCounter <= 40) {
                 points = 40;
                 $("#star1,#star2,#star3").css({"color": "#c8831b", "opacity": "1"}) // 3 stars shown if the user has made 35 moves or less.
-            } else if (movesCounter <= 40) {
+            } else if (movesCounter <= 45) {
                 points = 20;
                 $("#star1,#star2").css({"color": "#c8831b", "opacity": "1"}) //2 stars shown if the user has made 40 moves or less.
             } else {
@@ -223,16 +223,16 @@ function ready() {
                 $("#star1").css({"color": "#c8831b", "opacity": "1"}) //1 star shown when user has made 40+ moves.
             }
         } else if(difficulty === "PRO") {
-            if(movesCounter <= 35) { //star rating system based on the number of moves made.
+            if(movesCounter <= 40) { //star rating system based on the number of moves made.
                 points = 80;
                 $("#star1,#star2,#star3,#star4,#star5").css({"color": "#c8831b", "opacity": "1"}) //5 stars shown if user has made 35 moves or less.
-            } else if (movesCounter <= 40) {
+            } else if (movesCounter <= 45) {
                 points = 60;
                 $("#star1,#star2,#star3,#star4").css({"color": "#c8831b", "opacity": "1"}) //4 stars shows if the user has made 40 moves or less.
-            } else if (movesCounter <= 45) {
+            } else if (movesCounter <= 50) {
                 points = 40;
                 $("#star1,#star2,#star3").css({"color": "#c8831b", "opacity": "1"}) // 3 stars shown if the user has made 45 moves or less.
-            } else if (movesCounter <= 50) {
+            } else if (movesCounter <= 55) {
                 points = 20;
                 $("#star1,#star2").css({"color": "#c8831b", "opacity": "1"}) //2 stars shown if the user has made 50 moves or less.
             } else {
@@ -240,16 +240,16 @@ function ready() {
                 $("#star1").css({"color": "#c8831b", "opacity": "1"}) //1 star shown when user has made 50+ moves.
             }
         } else {
-            if(movesCounter <= 50) { //star rating system based on the number of moves made.
+            if(movesCounter <= 55) { //star rating system based on the number of moves made.
                 points = 80;
                 $("#star1,#star2,#star3,#star4,#star5").css({"color": "#c8831b", "opacity": "1"}) //5 stars shown if user has made 50 moves or less.
-            } else if (movesCounter <= 55) {
+            } else if (movesCounter <= 60) {
                 points = 60;
                 $("#star1,#star2,#star3,#star4").css({"color": "#c8831b", "opacity": "1"}) //4 stars shows if the user has made 55 moves or less.
-            } else if (movesCounter <= 60) {
+            } else if (movesCounter <= 65) {
                 points = 40;
                 $("#star1,#star2,#star3").css({"color": "#c8831b", "opacity": "1"}) // 3 stars shown if the user has made 60 moves or less.
-            } else if (movesCounter <= 65) {
+            } else if (movesCounter <= 70) {
                 points = 20;
                 $("#star1,#star2").css({"color": "#c8831b", "opacity": "1"}) //2 stars shown if the user has made 65 moves or less.
             } else {
@@ -269,7 +269,10 @@ function ready() {
         document.getElementById("totalTime").innerHTML = finishTime; //displays the finishTime in the Victory Modal
         document.getElementById("totalMoves").innerHTML = finishMoves; //displays the finishMoves in the Victory Modal
     }
-
+    
+    /*
+    Help with saveHighScore event taken from https://www.youtube.com/watch?v=jfOv18lCMmw
+    */
     saveHighScore = (e) => {
         e.preventDefault();
 
@@ -290,6 +293,13 @@ function ready() {
 
         $("#leader-modal").modal("toggle");
         $("#victory-modal").modal("toggle");
+    }
+
+    function removeStorage() {
+        if (confirm("Are you sure you want to clear the leaderboard? All saved scores will be lost.")) {
+            localStorage.clear();
+            window.location.assign("/")
+        }
     }
 
     function gameOver() {
@@ -326,7 +336,7 @@ function ready() {
     username.addEventListener("keyup", () => {
         saveScoreBtn.disabled = !username.value;
     });
-
+    clearStorage.addEventListener("click", removeStorage);
 }
 
 if (document.readyState === "loading") {
