@@ -110,9 +110,6 @@ function ready() {
         }
         audioToggle();
     }
-    /*
-    Game Music Section Ends
-    */
 
     function startGame() { //removes the overlay with the text of "Kick Off", so the game can begin.
         overlays.classList.remove("visible");
@@ -288,15 +285,15 @@ function ready() {
 
         highScoresList.innerHTML = 
         highScores.map(score => {
-        return `<li class="scoreList">${score.name} - ${score.score}</li>`; 
+        return `<li class="resultName">${score.name} - <span class="resultScore">${score.score}</span></li>`; 
         }).join("");
 
-        $("#leader-modal").modal("toggle");
-        $("#victory-modal").modal("toggle");
+        $("#leader-modal").modal("toggle"); //opens the leader modal
+        $("#victory-modal").modal("toggle"); //closes the victory-modal
     }
 
     function removeStorage() {
-        if (confirm("Are you sure you want to clear the leaderboard? All saved scores will be lost.")) {
+        if (confirm("Are you sure you want to clear the leaderboard? All saved scores will be lost.")) { // confirm alert message aided by https://stackoverflow.com/questions/9334636/how-to-create-a-dialog-with-yes-and-no-options
             localStorage.clear();
             window.location.assign("/")
         }

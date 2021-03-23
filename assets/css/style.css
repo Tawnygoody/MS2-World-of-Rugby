@@ -307,8 +307,22 @@
     padding-left: 0;
 }
 
-.scoreList {
+.resultName {
     font-size: 1rem;
+}
+
+.resultScore {
+    font-size: 1.5rem;
+    color: #fbf41d;
+}
+
+.leader-container {
+    background-color: #312018;
+    margin: 1rem;
+    border-radius: 20px;
+    color: #fff;
+    padding-top: 1rem;
+    border: 2px solid #fff;
 }
 
 #tackle {
