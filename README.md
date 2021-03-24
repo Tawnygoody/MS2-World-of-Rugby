@@ -185,6 +185,8 @@ I would then implement back end technologies (knowledge not yet gained)
     - Techsini has been used to generate mock images on different devices, and help with responsiveness. 
 - [Canva](https://www.canva.com/)
     - Canva has been used to design the websites logo. 
+- [Wondershare Mockitt](https://mockitt.wondershare.com/)
+    - This has been used to create the wireframes for the project. 
 
 
 
