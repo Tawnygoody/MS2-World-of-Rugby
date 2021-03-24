@@ -70,8 +70,13 @@
                             <div class="col-12">
                                 <button type="button" class="modal-buttons content-light" id="rules-button">Rules</button>
                                 <p class="hidden" id="rules-info">The object of the game is to find all the matching pairs in the least amount of moves before the time runs out. A player makes a match if the two cards flipped are identical.
-                                    If the cards do not match they will flip back. There are three difficulty levels for a player to challenge themselves. 
+                                    If the cards do not match they will flip back. There are three difficulty levels for a player to challenge themselves: 
                                 </p>
+                                <ul class="hidden listItems">
+                                    <li>Amateur - 16 cards</li>
+                                    <li>Professional - 20 cards</li>
+                                    <li>Legend - 24 cards</li>
+                                </ul>
                             </div>
                             <div class="col-12">
                                 <button type="button" class="modal-buttons content-light" data-toggle="modal" data-target="#difficulty-modal" data-dismiss="modal">New Game</button>
@@ -88,7 +93,6 @@
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">Email address</label>
                                         <input type="email"  name="emailaddress" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                                     </div>
                                     <div class="form-group">
                                         <label for="queryTextArea">Your Query</label>

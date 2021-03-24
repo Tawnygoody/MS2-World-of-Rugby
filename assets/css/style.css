@@ -308,8 +308,14 @@
     padding-left: 0;
 }
 
+.listItems {
+    list-style: none;
+    padding-left: 0;
+}
+
 .resultName {
     font-size: 1rem;
+    text-transform: capitalize;
 }
 
 .resultScore {

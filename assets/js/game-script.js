@@ -220,16 +220,16 @@ function ready() {
                 $("#star1").css({"color": "#c8831b", "opacity": "1"}) //1 star shown when user has made 40+ moves.
             }
         } else if(difficulty === "PRO") {
-            if(movesCounter <= 40) { //star rating system based on the number of moves made.
+            if(movesCounter <= 35) { //star rating system based on the number of moves made.
                 points = 80;
                 $("#star1,#star2,#star3,#star4,#star5").css({"color": "#c8831b", "opacity": "1"}) //5 stars shown if user has made 35 moves or less.
-            } else if (movesCounter <= 45) {
+            } else if (movesCounter <= 40) {
                 points = 60;
                 $("#star1,#star2,#star3,#star4").css({"color": "#c8831b", "opacity": "1"}) //4 stars shows if the user has made 40 moves or less.
-            } else if (movesCounter <= 50) {
+            } else if (movesCounter <= 45) {
                 points = 40;
                 $("#star1,#star2,#star3").css({"color": "#c8831b", "opacity": "1"}) // 3 stars shown if the user has made 45 moves or less.
-            } else if (movesCounter <= 55) {
+            } else if (movesCounter <= 50) {
                 points = 20;
                 $("#star1,#star2").css({"color": "#c8831b", "opacity": "1"}) //2 stars shown if the user has made 50 moves or less.
             } else {
@@ -237,16 +237,16 @@ function ready() {
                 $("#star1").css({"color": "#c8831b", "opacity": "1"}) //1 star shown when user has made 50+ moves.
             }
         } else {
-            if(movesCounter <= 55) { //star rating system based on the number of moves made.
+            if(movesCounter <= 50) { //star rating system based on the number of moves made.
                 points = 80;
                 $("#star1,#star2,#star3,#star4,#star5").css({"color": "#c8831b", "opacity": "1"}) //5 stars shown if user has made 50 moves or less.
-            } else if (movesCounter <= 60) {
+            } else if (movesCounter <= 65) {
                 points = 60;
                 $("#star1,#star2,#star3,#star4").css({"color": "#c8831b", "opacity": "1"}) //4 stars shows if the user has made 55 moves or less.
-            } else if (movesCounter <= 65) {
+            } else if (movesCounter <= 60) {
                 points = 40;
                 $("#star1,#star2,#star3").css({"color": "#c8831b", "opacity": "1"}) // 3 stars shown if the user has made 60 moves or less.
-            } else if (movesCounter <= 70) {
+            } else if (movesCounter <= 65) {
                 points = 20;
                 $("#star1,#star2").css({"color": "#c8831b", "opacity": "1"}) //2 stars shown if the user has made 65 moves or less.
             } else {
@@ -306,7 +306,7 @@ function ready() {
             gameLoss();
         }
     }
-/*
+
     (function shuffle() {
         if(difficulty === "AMATEUR") {
             cards.forEach(card => { //iterate through cards Array.
@@ -325,7 +325,7 @@ function ready() {
             });
         }
     })(); //immediately invoked function.
-*/
+
     // Event Listeners
     cards.forEach(card => card.addEventListener("click", flipCard)); //adds an event listener to each game-card and calls flipcard function when clicked.
     overlays.addEventListener("click", startGame); //adds an event listener to the overlay and calls startGame function when clicked
