@@ -38,7 +38,18 @@ View the live project [here]()
 
 ## Strategy
 
+The main requirement of this project was to create a fun, easy to play, interactive memory game 
+that could be enjoyed by everyone. As the content of the game is suitable for all age groups, the target
+audience is substantial. The game may appeal more to sports fans, and more specifically rugby fans. 
 
+### User Stories
+- #### Business Goals
+    - The game needs to be easily accessible and straightforward to use, through the use of readily 
+    available instructions. 
+    - The game needs to engaging from the first visit to encourage the user to play the game. 
+    - The game needs to appeal to all ages to maximise the target audience.
+    - Scrolling whilst playing the game on different screen sizes should be minimal, as this will
+    detract from the user experience. 
 
 
 
