@@ -133,9 +133,58 @@ I would then implement back end technologies (knowledge not yet gained)
         - Kick Off overlay which is removed once the user has clicked anywhere on the screen, so the game can begin. 
         - Dependant on which selection the user makes the game page will display 16, 20, or 25 cards. The remaining features are the same. 
         - Audio button in the logo row which when clicked will allow sound effects. If the user clicks again the sound effects will stop. 
+        - If the audio is on, and flip sound effect will play when a card is clicked and a match sound effect will play if the user matches 
+        two cards. 
         - Game information row which displays the time remaining and the moves the user has made. 
+        - Game container which contains all the cards the user will click to play the game. 
+    - #### Game Page modals
+        - ##### All Game Page modals
+            - Play Again button allowing the user to play the game again. 
+            - Home Button to take the user back to the websites homepage.    
+        - ##### Victory Modal
+            - A victory sound effect will be played when the victory modal opens.
+            - A dancing animation of a trophy is displayed to symbolise victory.
+            - The modal will show the users score calculated in the javascript file, the time remaining and the total moves the user has made. 
+            - A star rating system will also display dependant on how many moves the user has made. 
+            - A Name input field will allow the user to save their score to the leaderboard. The user can only save their score was the name field
+            has been filled out. 
+        - ##### Game Over Modal 
+            - A game over sound effect will be played when the victory modal pens. 
+            - A dancing animation of a rugby tackle is displayed to symbolise the game is over.
+        - ##### Leader Board Modal
+            - Leader Board will display the 10 default scores set in the game-script, and will display the users score, and sort it against the 
+            default scores and any previously saved scores. Only the top 15 scores will be displayed. 
+            - Leader Board reset button will clear the local storage and take the user to the home screen. A confirm message will alert the user
+            before the local storage is cleared. 
 
+# Technologies Used
 
+## Languages used
+- [HTML](https://en.wikipedia.org/wiki/HTML5)
+- [CSS](https://en.wikipedia.org/wiki/Cascading_Style_Sheets) 
+- [JavaScript](https://en.wikipedia.org/wiki/JavaScript)  
+
+## Frameworks Libraries and Programmes used
+- [jQuery](https://jquery.com/)
+    - jQuery has been used for adding effects and toggling modals. 
+- [Bootstrap 4.3.1](https://getbootstrap.com/docs/4.3/getting-started/introduction/)
+    - Used as a framework for styling and to make the website responsive.
+- [Hover.css](https://ianlunn.github.io/Hover/)
+    - Hover.css has been used for the buttons and social media icons. 
+- [Google fonts](https://fonts.google.com/)
+    - Google fonts was used to import "Quattrocento" and "Radley" fonts used across the website. 
+- [Fontawesome](https://fontawesome.com/icons?d=gallery)
+    - Font awesome was used for the GitHub and Linkedin icons in the footer. 
+- [Google Developer Tools](https://developers.google.com/web/tools)
+    - Google developer tools have been used to fix bugs, and test responsiveness and website performance. 
+- [Github](https://github.com/)
+    - GitHub is used to store the project code after being pushed from Git.
+- [Git](https://git-scm.com/) 
+    - Git was used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.
+- [Techsini](https://techsini.com/multi-mockup/)
+    - Techsini has been used to generate mock images on different devices, and help with responsiveness. 
+- [Canva](https://www.canva.com/)
+    - Canva has been used to design the websites logo. 
 
 
 
