@@ -56,8 +56,40 @@ audience is substantial. The game may appeal more to sports fans, and more speci
     - I want to be able to return to the home page at the click of a button. 
     - I want to be able to challenge myself with different difficulty settings. 
     - I want to have the option of turning audio on and off. 
-    - I do not want to have the cards in the same position every time I play. 
+    - I want a game that is simple to play so I do not to spend a length of time learning the rules. 
+    - I want easy controls for the game, so I can play the game effortlessly. 
+    - I want to see a scoring system so I have a score to beat. 
     - I want to be able to contact the business with any queries I may have. 
+
+## Scope
+
+Based on the strategic goals established, I will incorporate a phased approach prioritising the most feasible
+concepts. 
+
+The first phase will be aimed at creating a minimum viable product (MVP):
+
+- ### Phase 1
+    - A home page, with a stimulating image, logo, and button to open a modal.
+    - Modal to include, instructions, contact information, and option to begin a new game. 
+    - A game page with the layout of the cards all with the same image, until the game begins and user 
+    flips cards. 
+    - A timer on the game page, which counts down when the game has begun. 
+    - A scoring system should be displayed to reflect the users performance based on the number of moves made.
+    - A congratulations / comiserations modal should show time, score and the option to play again. 
+
+Once the MVP has been established I would add to the user experience in phase 2:
+
+- ### Phase 2
+    - Include different levels of difficulty to challenge the user. 
+    - Incorporate EmailJS API to receive emails from the user using a contact form.  
+    - Include a leader board using local storage so a user can save their scores in the session, and compete against default
+    scores that will already appear on the leader board. 
+
+I would then implement back end technologies (knowledge not yet gained)
+
+- ### Phase 3
+    - Include a leader board that would save the scores to a database, so that users could compete against
+    other users. 
 
 
 
