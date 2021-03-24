@@ -112,6 +112,28 @@ I would then implement back end technologies (knowledge not yet gained)
     
 ## Skeleton
 
+## Surface
+- ### Features
+    - #### All Pages
+        - Logo - The logo row will include an image of the websites logo, which slides down when the page has loaded.
+        - Footer - The footer will contain links to the GitHub repository and Linkedin which will open in a separate tab. 
+    - #### Home Page
+        - Striking background image to engage the user. 
+        - Kick Off button which triggers the World of Rugby Modal. 
+    - #### World of Rugby Modal
+        - Rules button which slides open the rules for the game when clicked, and hides them when clicked again. 
+        - New Game button which takes the user to select their difficulty modal. 
+        - Contact Us button which slides open the contact form when clicked, and hides the contact form when clicked again.
+        Submitting the contact form once the fields have been completed, will trigger an EmailJS API and send an email to the
+        developer.  
+    - #### Difficulty Modal
+        - 3 buttons for choosing a difficulty which will direct the user to that game page depending on their selection. 
+        - "Back" button which will take the user back to the World of Rugby Modal. 
+    - #### Game Pages
+        - Kick Off overlay which is removed once the user has clicked anywhere on the screen, so the game can begin. 
+        - Dependant on which selection the user makes the game page will display 16, 20, or 25 cards. The remaining features are the same. 
+        - Audio button in the logo row which when clicked will allow sound effects. If the user clicks again the sound effects will stop. 
+        - Game information row which displays the time remaining and the moves the user has made. 
 
 
 
