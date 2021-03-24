@@ -89,7 +89,30 @@ I would then implement back end technologies (knowledge not yet gained)
 
 - ### Phase 3
     - Include a leader board that would save the scores to a database, so that users could compete against
-    other users. 
+    other users.
+
+## Structure
+- ### Design
+    - #### Colour Scheme
+        - The main colours for the website are Brown, and Rusty colours. These have been picked from the logo Image
+        to compliment the website. White and Orange have been used for the text in places to increase color contrast and 
+        allow easier readability. 
+    - #### Typography
+        - Quattrocento will be used for headings and titles and Radley will be used for the websites content. San-serif will 
+        be used as a fallback, should there be an error with the imported fonts. These fonts are in-keeping with the websites
+        logo. 
+        - The text will be consistent accross all pages / modals. Most content can be centered as there are no large bodies of 
+        text in the website. 
+    - #### Imagery
+        - Home page background is designed to catch the user's attention. This must be striking and directly 
+        related to what the company offers. 
+        - Game page background must be in-keeping with the game, but should not detract from the game cards or distract the user. 
+        - All images must be of a sound enough quality, so they can scale according to different device sizes, without pixelating.
+
+    
+## Skeleton
+
+
 
 
 
