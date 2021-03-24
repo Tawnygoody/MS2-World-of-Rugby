@@ -51,6 +51,14 @@ audience is substantial. The game may appeal more to sports fans, and more speci
     - Scrolling whilst playing the game on different screen sizes should be minimal, as this will
     detract from the user experience. 
 
+- #### User Goals
+    - I want to know what the website offers, and easily navigate through the site. 
+    - I want to be able to return to the home page at the click of a button. 
+    - I want to be able to challenge myself with different difficulty settings. 
+    - I want to have the option of turning audio on and off. 
+    - I do not want to have the cards in the same position every time I play. 
+    - I want to be able to contact the business with any queries I may have. 
+
 
 
 
