@@ -188,7 +188,43 @@ I would then implement back end technologies (knowledge not yet gained)
 - [Wondershare Mockitt](https://mockitt.wondershare.com/)
     - This has been used to create the wireframes for the project. 
 
+# Testing
 
+## Solved Bugs
+1. I had an issue when it came to adding difficulty levels to the game, and changing the value
+of variables depending on what game type was selected. One solution would have been to create different
+scripts for each game page, however I did not feel this was a practical solution, and there would be a 
+better way of doing this. 
+    - Fix: After some research I found a solution on Stack Overflow (seen in credits section), which selects the difficulty based on the window.location.pathname
+    (i.e the HTML page). I found this was the best solution for my site as I had already created 3 HTML pages for the 3 different game difficulties. 
+    - Issue: I did have one issue to begin with when using this approach. The start time on every page would display as "NAN", once the first card was 
+    clicked and the game had begun. 
+    - Fix: A tutor at code institute (Stephen) had pointed out to me that javascript loads on the page from the top down. As the "timeRemaining = startTime" variable
+    was located above the startTime dependant on difficulty, this was causing the error. A simple re-arrangement of the code fixed this issue. 
+2. When the game victory / game over modal was displayed, if the user clicked outside the area of the modal the modal would close. This meant that the game 
+would not restart and the only way the user could play again would be to click on the logo to take the user back to the home page. I felt that this was not a 
+good user experience. 
+    - Fix: I found the solution on Stack Overflow (seen in credits section), which adds 'data-backdrop="static" data-keyboard="false"' to the modal. The user can then click
+    outside the modal and this will not close the modal. The user then has the option to play the game again or return home. 
+3. I wanted the user to be able to reset the leaderboard should they wish. There wasn't an issue with this as I could just use localStorage.clear(). However there was
+no indication to the user that this had been achieved without reloading the page manually. Also I felt this button could be pressed accidentally, in which case the user
+would lose any saved progress they had made. 
+    - Fix: I found the solution on Stack Overflow (seen in credits section), which would prompt the user with an alert, letting them know that they are about to clear the 
+    leader board and all saved progress would be lost. I also redirected the user back to the home page if they confirmed this, showing a clear indication that re-setting
+    the leader board had been achieved. 
+4. I had an issue with the modal content particularly on smaller devices. When the modal content was taller than the the height of the device, it wouldn't scroll. For example the user 
+would not be able to fill out the contact form on the home page modal. 
+    - Fix: I found the solution on Stack Overflow (seen in the credit section), which set the overflow-y: auto, so the content would then by scrollable. 
+5. When I first decided to implement a leader board into the game, the first approach I took was to create a list of default scores in the HTML doc. However once I 
+had written the code to save the players high scores with the help of a tutorial (seen in the credits section), I was unable to sort the players high scores with 
+the default scores written in the html doc. 
+    - Fix: Rather than write the default scores in HTML, I created an array of objects with the default high scores, and rather than having an empty array for the highScores variable
+    set this to the defHighScores array of objects. This therefore sorted the default scores and any high scores the user has saved in the saveHighScores event. 
+6. I had a small issue when it came to retrieving the users final score. I had wanted the users final score to equal the points (dependant on moves made) plus the 
+time remaining once the user had won the game. However the score was displaying as them joined together rather than them being added to eachother. For example if the points scored were 
+60 and time remaining was 15, this would show as 6015 rather than 75. 
+    - Fix: I found the solution on Stack Overflow (seen in credits section), which uses a parseInt function which parses a string and returns and integer, so the two values could then 
+    be added to eachother. 
 
 
 
