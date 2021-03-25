@@ -188,6 +188,10 @@ I would then implement back end technologies (knowledge not yet gained)
     - Canva has been used to design the websites logo. 
 - [Wondershare Mockitt](https://mockitt.wondershare.com/)
     - This has been used to create the wireframes for the project. 
+- [Reduces Images](https://www.reduceimages.com/)
+    - This has been used to re-size the images. 
+- [Freeconvert](https://www.freeconvert.com/wav-compressor/download)
+    - This has been used to re-siz the audio files.
 
 # Testing
 
@@ -227,6 +231,41 @@ time remaining once the user had won the game. However the score was displaying 
     - Fix: I found the solution on Stack Overflow (seen in credits section), which uses a parseInt function which parses a string and returns and integer, so the two values could then 
     be added to eachother. 
 
+## Known bugs
+
+## Lighthouse
+I have tested the website's performace, accessibility, and user experience using Lighthouse in Google Developer Tools
+
+### index.html 
+
+#### Index page lighthouse results
+![Index pag test](documentation/testing/lighthouse/index-lighthouse.png)
+
+I'm very happy that all of the criteria were between 90-100. My main focus was to increase the best pratices as this was something
+I was aiming to increase from my first milestone project. 
+- By adding rel="noreferrer" to the media icon links would improve "Best Practices"
+
+Below shows the outcome of the changes made. 
+![Index page edit](documentation/testing/lighthouse/index-lighthouse-edit.png)
+
+As shown the "Best Practices has increased from 93 to 100. 
+
+#### Amateur Game Page lighthouse results
+![Amateur game page test](documentation/testing/lighthouse/amateur-lighthouse.png)
+
+The results from lighthouse show that performance and accessibility will need to be increased on this page. 
+- Lighthouse has identified that the audio button does not have a visible label. This has been addressed by adding aria-label to the audio button 
+to describe the action to anyone using an assistive technology. 
+- Lighthouse has identified that image sizes, and audio files may be too large. 
+
+Below shows the outcome of the changes made.
+![Amateur game page edit](documentation/testing/lighthouse/amateur-lighthouse-edit.png)
+
+As can be seen the accessibility has increased from 88 to 100, and performance has increased from 48-90. 
+Although I could reduce image and audio files further, I do not feel it would make a large difference to the 
+performance and any further reductions may have a detrimental impact on the quality of the site. 
+
+#### Professional Game Page lighthouse results
 # Deployment
 
 # Credits
@@ -289,4 +328,6 @@ Due to the nature of the game images have had to be taken from various sources:
 - Match Sound - [View](https://freesound.org/people/Eponn/sounds/421002/)
 - Game Over Sound - [View](https://freesound.org/people/landlucky/sounds/277403/)
 - Victory Sound - [View](https://freesound.org/people/humanoide9000/sounds/466133/)
+
+## Acknowledgements
 
