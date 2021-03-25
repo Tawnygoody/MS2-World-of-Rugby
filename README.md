@@ -29,8 +29,9 @@ View the live project [here]()
     - [Making a Local Clone](#making-a-local-clone)
 - [Credits](#credits)
     - [Code](#code)
-    - [Content](#content)
     - [Media](#media)
+        - [Images](#images)
+        - [Audio](#audio)
     - [Acknowledgements](#acknowledgement)
 
 
@@ -226,12 +227,43 @@ time remaining once the user had won the game. However the score was displaying 
     - Fix: I found the solution on Stack Overflow (seen in credits section), which uses a parseInt function which parses a string and returns and integer, so the two values could then 
     be added to eachother. 
 
+# Deployment
+
+# Credits
+## Code
+- Stack Overflow
+    - Aided with making the modals scrollable - [View](https://stackoverflow.com/questions/10476632/how-to-scroll-the-page-when-a-modal-dialog-is-longer-than-the-screen)
+    - Helped prevent the modal closing when clicking outside the modal or pressing escape - [View](https://stackoverflow.com/questions/16152073/prevent-bootstrap-modal-from-disappearing-when-clicking-outside-or-pressing-esca)
+    - Helped with setting the difficulty level based on window.location.pathname.indexOf() - [View](https://stackoverflow.com/questions/21265919/location-pathname-indexof-not-working-with-or)
+    - Provided the solution for the users final score - [View](https://stackoverflow.com/questions/7658176/adding-two-variables-together)
+    - Helped alert the user if they want to clear the localStorage (i.e leader board) - [View](https://stackoverflow.com/questions/9334636/how-to-create-a-dialog-with-yes-and-no-options)
+- CSS Tricks
+    - Aided with the styling for the game page background image - [View](https://css-tricks.com/perfect-full-page-background-image/)
+- Matt Rudge, Code institute - [View](https://codeinstitute.net/)
+    - Styling for the home page hero image.
+    - Provided tutorial for setting up EmailJS API and sendMail function. 
+- W3Schools
+    - Provided the solution to center the kick off button in index.html - [View](https://www.w3schools.com/howto/howto_css_center_button.asp)
+- Scotch
+    - Helped with setInterval function for the game timer. This has been adapted for the games needs - [View](https://scotch.io/tutorials/how-to-build-a-memory-matching-game-in-javascript)
+- James Q Quick
+    - Provided tutorial for the saveHighScore Event. This has been slightly modified to include default high scores - [View](https://www.youtube.com/watch?v=jfOv18lCMmw)
+- Marina Ferreira - Memory Card Game tutorial
+    - I took inspiration from this tutorial, which provided the styling for the game cards, game container, and the basic functionality of the game - [View](https://marina-ferreira.github.io/tutorials/js/memory-game/)
+- Web Dev Simplified - How to code a card matching game tutorial - [View](https://www.youtube.com/watch?v=28VfzEiJgy4)
+    - Provided CSS to create dancing animation in the victory and game over modals. 
+    - Provided CSS and html for the kick off overlay text on the game pages. 
+- Port Exe - How to code a card matching game tutorial - [View](https://www.youtube.com/watch?v=3uuQ3g92oPQ&t=0s)
+    - Thanks to Port Exe, which provided the code for the audio functions and to build on game functionality, by introducing a timer, and moves counter. 
+- Bootstrap - [View](https://getbootstrap.com/docs/4.3/getting-started/introduction/)
+    - Bootstrap has been used throughout the project to make the site responsive and add components from their library. 
+- Fontawesome - [View](https://fontawesome.com/icons?d=gallery)
+    - Fontawesome has been used for the social media icons and audio icons. 
 
 
-
-
-# Media
-Images 
+## Media
+### Images 
+Due to the nature of the game images have had to be taken from various sources:
 - Home Page Background - [View](https://www.pixelstalk.net/free-new-zealand-all-black-rugby-hd-backgrounds/)
 - Logo Rugby Ball - [View](https://www.modestvintageplayer.com/collections/mvp-leather-balls)
 - Game page Background - [View](https://commons.wikimedia.org/wiki/File:Rugby_union_pitch.svg)
@@ -251,7 +283,10 @@ Images
 - Canada Rugby Logo - [View](http://torontorugby.ca/clubs/rugby-canada/)
 - Georgia Rugby Logo - [View](https://www.florugby.com/collections/tag/georgia-rugby/article)
 
-## Bugs 
-- victory modal closes when clicking outside it meaning game wont reset. (https://stackoverflow.com/questions/16152073/prevent-bootstrap-modal-from-disappearing-when-clicking-outside-or-pressing-esca)
-- gametype variable - help from tutor Stephen from code institute with code placement in terms of page loading.
-- gametype variable - https://stackoverflow.com/questions/21265919/location-pathname-indexof-not-working-with-or
+### Audio
+- Background Music - [View](https://www.youtube.com/watch?v=xY24sAfIzXo)
+- Flip Sound - [View](https://freesound.org/people/f4ngy/sounds/240776/)
+- Match Sound - [View](https://freesound.org/people/Eponn/sounds/421002/)
+- Game Over Sound - [View](https://freesound.org/people/landlucky/sounds/277403/)
+- Victory Sound - [View](https://freesound.org/people/humanoide9000/sounds/466133/)
+
