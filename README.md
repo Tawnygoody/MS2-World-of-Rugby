@@ -236,9 +236,7 @@ time remaining once the user had won the game. However the score was displaying 
 ## Lighthouse
 I have tested the website's performace, accessibility, and user experience using Lighthouse in Google Developer Tools
 
-### index.html 
-
-#### Index page lighthouse results
+### Index page lighthouse results
 ![Index pag test](documentation/testing/lighthouse/index-lighthouse.png)
 
 I'm very happy that all of the criteria were between 90-100. My main focus was to increase the best pratices as this was something
@@ -250,7 +248,7 @@ Below shows the outcome of the changes made.
 
 As shown the "Best Practices has increased from 93 to 100. 
 
-#### Amateur Game Page lighthouse results
+### Amateur Game Page lighthouse results
 ![Amateur game page test](documentation/testing/lighthouse/amateur-lighthouse.png)
 
 The results from lighthouse show that performance and accessibility will need to be increased on this page. 
@@ -265,7 +263,9 @@ As can be seen the accessibility has increased from 88 to 100, and performance h
 Although I could reduce image and audio files further, I do not feel it would make a large difference to the 
 performance and any further reductions may have a detrimental impact on the quality of the site. 
 
-#### Professional Game Page lighthouse results
+### Professional Game Page lighthouse results
+
+
 # Deployment
 
 # Credits
