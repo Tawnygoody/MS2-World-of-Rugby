@@ -132,6 +132,7 @@ I would then implement back end technologies (knowledge not yet gained)
         - "Back" button which will take the user back to the World of Rugby Modal. 
     - #### Game Pages
         - Kick Off overlay which is removed once the user has clicked anywhere on the screen, so the game can begin. 
+        - Darkened background image so that the game cards stand out. 
         - Dependant on which selection the user makes the game page will display 16, 20, or 25 cards. The remaining features are the same. 
         - Audio button in the logo row which when clicked will allow sound effects. If the user clicks again the sound effects will stop. 
         - If the audio is on, and flip sound effect will play when a card is clicked and a match sound effect will play if the user matches 
@@ -191,7 +192,9 @@ I would then implement back end technologies (knowledge not yet gained)
 - [Reduces Images](https://www.reduceimages.com/)
     - This has been used to re-size the images. 
 - [Freeconvert](https://www.freeconvert.com/wav-compressor/download)
-    - This has been used to re-siz the audio files.
+    - This has been used to re-size the audio files.
+- [Removebg](https://www.remove.bg/)
+    - This has been used to remove the background color on images for the victory and gameover modals. 
 
 # Testing
 
@@ -237,6 +240,7 @@ time remaining once the user had won the game. However the score was displaying 
 I have tested the website's performace, accessibility, and user experience using Lighthouse in Google Developer Tools
 
 ### Index page lighthouse results
+
 ![Index pag test](documentation/testing/lighthouse/index-lighthouse.png)
 
 I'm very happy that all of the criteria were between 90-100. My main focus was to increase the best pratices as this was something
@@ -244,11 +248,13 @@ I was aiming to increase from my first milestone project.
 - By adding rel="noreferrer" to the media icon links would improve "Best Practices"
 
 Below shows the outcome of the changes made. 
+
 ![Index page edit](documentation/testing/lighthouse/index-lighthouse-edit.png)
 
 As shown the "Best Practices has increased from 93 to 100. 
 
-### Amateur Game Page lighthouse results
+### Amateur Game Page lighthouse results.
+
 ![Amateur game page test](documentation/testing/lighthouse/amateur-lighthouse.png)
 
 The results from lighthouse show that performance and accessibility will need to be increased on this page. 
@@ -257,6 +263,7 @@ to describe the action to anyone using an assistive technology.
 - Lighthouse has identified that image sizes, and audio files may be too large. 
 
 Below shows the outcome of the changes made.
+
 ![Amateur game page edit](documentation/testing/lighthouse/amateur-lighthouse-edit.png)
 
 As can be seen the accessibility has increased from 88 to 100, and performance has increased from 48-90. 
@@ -265,8 +272,57 @@ performance and any further reductions may have a detrimental impact on the qual
 
 ### Professional Game Page lighthouse results
 
+![Pro game page test](documentation/testing/lighthouse/pro-lighthouse.png)
+
+- Lighthouse has identified there are some further images that can be reduced to increase performance.
+
+Below shows the the outcome of the changes made. 
+
+![Pro game page edit](documentation/testing/lighthouse/pro-lighthouse-edit.png)
+
+As can be seen performance on this page has increased from 76 to 92. The remaining criteria are at 100 as a result 
+from the previous pages lighthouse tests. 
+
+### Legend Game Page lighthouse results
+
+![Legend game page test](documentation/testing/lighthouse/leg-lighthouse.png)
+
+As a result of the changes I have made on the previous pages I am happy with the lighthouse results 
+for this page. 
+
+### Personal Reflections
+Overall I am very happy with the final results from lighthouse. One of the work on's I highlighted 
+from my first milestone project was to improve my overall lighthouse scores. All pages now have scores 
+between 90-100 for all criteria. 
 
 # Deployment
+
+## GitHub pages
+
+The project has been deployed on GitHub Pages using the following method:
+
+1. Log into GitHub and locate the [repository](https://github.com/Tawnygoody/MS2-World-of-Rugby) you wish to deploy.
+2. At the top of the repository click on the settings link. 
+3. Scroll down the setting pages until you reach the section titled "GitHub Pages". 
+4. Under the "Source" subheading click the dropdown labelled "None", select master and click save.
+5. The page will then automatically refresh (it can take a while)
+6. When you scroll back down through the page you will see a green bar with a tick showing that your site has been published in the "GitHub Pages" section.
+
+## Forking the GitHub Repository
+
+By forking the GitHub Repository to make a copy of the original repository, we can make changes without it affecting the original repository, by following these steps:
+
+1. Log into GitHub and locate the [repository](https://github.com/Tawnygoody/MS2-World-of-Rugby) you wish to fork.
+2. At the top-right of the repository underneath the navbar, click the "Fork" button.
+3. You should now have a copy of the original repository in your account. 
+
+## Making a Local Clone
+
+1. Log into GitHub and locate the [repository](https://github.com/Tawnygoody/MS2-World-of-Rugby) you wish to clone.
+2. Click the dropdown labelled "Code" to the left of the green "Gitpod" button and copy the link shown. 
+3. Open Git Bash.
+4. Change to the location where you want the cloned directory to be made.
+5. Type "gitclone" and then paste the URL you copied in step 2. 
 
 # Credits
 ## Code
@@ -276,6 +332,7 @@ performance and any further reductions may have a detrimental impact on the qual
     - Helped with setting the difficulty level based on window.location.pathname.indexOf() - [View](https://stackoverflow.com/questions/21265919/location-pathname-indexof-not-working-with-or)
     - Provided the solution for the users final score - [View](https://stackoverflow.com/questions/7658176/adding-two-variables-together)
     - Helped alert the user if they want to clear the localStorage (i.e leader board) - [View](https://stackoverflow.com/questions/9334636/how-to-create-a-dialog-with-yes-and-no-options)
+    - Helped make the game page background image darker so game-cards stand out more [View](https://stackoverflow.com/questions/44438868/css-background-image-make-darker/44439094)
 - CSS Tricks
     - Aided with the styling for the game page background image - [View](https://css-tricks.com/perfect-full-page-background-image/)
 - Matt Rudge, Code institute - [View](https://codeinstitute.net/)

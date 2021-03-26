@@ -41,16 +41,16 @@ function ready() {
     let username = document.getElementById("username");
     let saveScoreBtn = document.getElementById("saveScoreBtn");
     let defHighScores = [
-        {score: 100, name: "Jonah Lomu"},
-        {score: 90, name: "Dan Carter"},
-        {score: 85, name: "Johnny Wilkinson"},
-        {score: 80, name: "Brian Habana"},
-        {score: 70, name: "Richie McCaw"},
-        {score: 65, name: "Finn Russell"},
-        {score: 60, name: "Cheslin Kolbe"},
-        {score: 50, name: "David Campese"},
-        {score: 45, name: "Sonny Bill Williams"},
-        {score: 40, name: "Shane Williams"},
+        {score: 120, name: "Jonah Lomu"},
+        {score: 110, name: "Dan Carter"},
+        {score: 100, name: "Johnny Wilkinson"},
+        {score: 90, name: "Brian Habana"},
+        {score: 80, name: "Richie McCaw"},
+        {score: 70, name: "Finn Russell"},
+        {score: 65, name: "Cheslin Kolbe"},
+        {score: 55, name: "David Campese"},
+        {score: 50, name: "Sonny Bill Williams"},
+        {score: 45, name: "Shane Williams"},
     ];
     let highScores = JSON.parse(localStorage.getItem("highScores")) || defHighScores;
     let highScoresList = document.getElementById("highScoresList");

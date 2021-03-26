@@ -115,7 +115,7 @@
 /**-----Game Page-----**/
 
 .game-hero-image { /*-- Thanks to https://css-tricks.com/perfect-full-page-background-image/ for game page background image--*/
-    background: url("../images/rugby-field.png") no-repeat center center scroll;
+    background: linear-gradient( rgba(0,0,0,0.5), rgba(0, 0, 0, 0.5) ),url("../images/rugby-field.png") no-repeat center center scroll; /*--thanks to stack overflow (credited in README)--*/
     background-size: cover;
     min-height: 100vh;
 }
