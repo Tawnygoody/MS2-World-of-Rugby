@@ -148,7 +148,7 @@ I would then implement back end technologies (knowledge not yet gained)
             - A dancing animation of a trophy is displayed to symbolise victory.
             - The modal will show the users score calculated in the javascript file, the time remaining and the total moves the user has made. 
             - A star rating system will also display dependant on how many moves the user has made. 
-            - A Name input field will allow the user to save their score to the leaderboard. The user can only save their score was the name field
+            - A Name input field will allow the user to save their score to the leaderboard. The user can only save their score once the name field
             has been filled out. 
         - ##### Game Over Modal 
             - A game over sound effect will be played when the victory modal pens. 
