@@ -45,6 +45,7 @@ Testing has been completed on all devices and browsers listed in the README.md f
 - Submit enquiry form without entering "Email Address", to reveal "Please fill out this field" message. 
 - Submit enquiry form without entering "Your Query", to reveal "Please fill out this field" message. 
 - Submit enquiry form with all fields filled out, to reveal "Thankyou for your enquiry" alert and ensure contact form has been cleared.
+- Ensure modal is scrollable when content is greater than the device height.
 
 ## Difficulty Modal
 
@@ -53,6 +54,7 @@ Testing has been completed on all devices and browsers listed in the README.md f
 - Click the "Professional" button to take the user to the Professional game page. 
 - Click the "Legend" button to take the user to the Legend game page. 
 - Click the "Back" button to close the difficulty modal and return the user to the "Kick Off" modal. 
+- Ensure modal is scrollable when content is greater than the device height.
 
 # Game Page
 
@@ -76,13 +78,15 @@ difficulty has been selected.
 - Filling out the name field and clicking the "Save" button will close the vitory modal, and open the leader board modal. 
 - Clicking the "Play Again" button will take the user to the respective game page depending on the difficulty they had chosen.
 - Clicking the "Home" button will take the user from the victory modal to the Home page. 
+- Ensure modal is scrollable when content is greater than the device height.
 
 ## Game Over Modal
 
 - Ensure clicking outside the modal does not close the Game Over modal.
 - Image of a tackle should dance continuously, until the user directs to another modal / page. 
 - Clicking the "Play Again" button will take the user to the respective game page depending on the difficulty they had chosen.
-- Clicking the "Home" button will take the user from the victory modal to the Home page. 
+- Clicking the "Home" button will take the user from the victory modal to the Home page.
+- Ensure modal is scrollable when content is greater than the device height. 
 
 ## Leader Board Modal
 
@@ -91,7 +95,8 @@ difficulty has been selected.
 - Clicking the "Home" button will take the user from the victory modal to the Home page.
 - Clicking the "Reset Leader Board" button will alert the user that all saved scores will be lost. 
     - Clicking "cancel" will take the user back to the Leader Board modal. 
-    - Clicking "ok" will take the user to the Home page and reset the Leader Board. 
+    - Clicking "ok" will take the user to the Home page and reset the Leader Board.
+- Ensure modal is scrollable when content is greater than the device height. 
 
 # Functions
 
