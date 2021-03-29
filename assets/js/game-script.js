@@ -306,7 +306,7 @@ function ready() {
             gameLoss();
         }
     }
-
+/*
     (function shuffle() {
         if(difficulty === "AMATEUR") {
             cards.forEach(card => { //iterate through cards Array.
@@ -325,14 +325,14 @@ function ready() {
             });
         }
     })(); //immediately invoked function.
-
+*/
     // Event Listeners
     cards.forEach(card => card.addEventListener("click", flipCard)); //adds an event listener to each game-card and calls flipcard function when clicked.
     overlays.addEventListener("click", startGame); //adds an event listener to the overlay and calls startGame function when clicked
     soundButton.addEventListener("click", musicToggle); //adds an event listener to the soundbutton and calls musicToggle function when clicked
     username.addEventListener("keyup", () => {
         saveScoreBtn.disabled = !username.value;
-    });
+    }); 
     clearStorage.addEventListener("click", removeStorage);
 }
 
