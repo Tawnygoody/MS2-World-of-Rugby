@@ -142,7 +142,7 @@ difficulty has been selected.
 
 ## Victory
 
-- Ensure once the user has correctly matched all the cards the Victory modal appears. 
+- Ensure once the user has correctly matched all the cards the Victory modal shows. 
 - Ensure when audio is on (mute icon should be showing) that background music will stop and a victory sound plays when the user has matched all the cards. 
 - Ensure when audio is off (volume up icon should be showing) that a victory sound does not play when the user has matched all the cards.
 - Ensure the "Time Remaining" is displaying as the start time minus the amount of time the user has taken to complete the game. 
@@ -167,14 +167,25 @@ difficulty has been selected.
         - If the moves made is less than or equal to 65: points = 20, stars = 2
         - Anything above 65: points = 0, stars = 1
 
-
-
-
 ## Saving High Scores
+
+- Ensure the default high scores are displaying on the Leader Board. 
+- Ensure the high scores are displaying in order, with the best score appearing at the top of the leader board. 
+- Ensure the maximum number of scores displaying on the leader board is 15.
+- Ensure that if a user gets a higher score than the 15th score, the lowest score is knocked off the leader board. 
+- Ensure the first letter of the user's name is capitalized. 
+- Ensure a user's score is saved to local storage, so they do not lose their score when starting a new game. 
 
 ## Reset the Leader Board
 
+- Ensure when the user resets the leader board the user is taken back to the home screen. 
+- Ensure when the user saves a new high score all the default high scores should appear and all user scores should be removed. 
+
 ## Game Over
+
+- Ensure once the timer reaches zero, the Game Over modal shows. 
+- Ensure when audio is on (mute icon should be showing) that background music will stop and a game over sound plays when the timer reaches zero. 
+- Ensure when audio is off (volume up icon should be showing) that a game over sound does not play when the timer reaches zero.
 
 
 

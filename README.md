@@ -198,6 +198,30 @@ I would then implement back end technologies (knowledge not yet gained)
 
 # Testing
 
+## Full Testing
+
+Testing was completed using the following steps on all interactive elements of the website [View here](TESTING.md)
+
+## Further Testing
+### Browser Compatibility
+
+### Responsive Design
+
+Google Developer tools were used throughout the project to test the responsiveness of the website across multiple device sizes. 
+I have used Google Developer tools to simulate the following device sizes:
+
+#### Home Page
+- Galaxy Fold: [Portrait](documentation/testing/responsiveness/home/galaxy-fold-home-p.png), [Landscape](documentation/testing/responsiveness/home/galaxy-fold-home-l.png)
+- Galaxy S5: [Portrait](documentation/testing/responsiveness/home/galaxys5-p.png), [Landscape](documentation/testing/responsiveness/home/galaxys5-l.png)
+- Iphone 4: [Portrait](documentation/testing/responsiveness/home/iphone4-p.png), [Landscape](documentation/testing/responsiveness/home/iphone4-l.png)
+- Iphone 5/SE: [Portrait](documentation/testing/responsiveness/home/iphone5-p.png), [Landscape](documentation/testing/responsiveness/home/iphone5-l.png)
+- Iphone 6/7/8: [Portrait](documentation/testing/responsiveness/home/iphone6-p.png), [Landscape](documentation/testing/responsiveness/home/iphone6-l.png)
+- Iphone X: [Portrait](documentation/testing/responsiveness/home/iphonex-p.png), [Landscape](documentation/testing/responsiveness/home/iphonex-l.png)
+- Ipad: [Portrait](documentation/testing/responsiveness/home/ipad-p.png), [Landscape](documentation/testing/responsiveness/home/ipad-l.png)
+- Moto G4: [Portrait](documentation/testing/responsiveness/home/motog4-p.png), [Landscape](documentation/testing/responsiveness/home/motog4-l.png)
+- Pixel 2: [Portrait](documentation/testing/responsiveness/home/pixel2-p.png), [Landscape](documentation/testing/responsiveness/home/pixel2-l.png)
+- Surface Duo: [Portrait](documentation/testing/responsiveness/home/surface-p.png), [Landscape](documentation/testing/responsiveness/home/surface-l.png)
+
 ## Solved Bugs
 1. I had an issue when it came to adding difficulty levels to the game, and changing the value
 of variables depending on what game type was selected. One solution would have been to create different
