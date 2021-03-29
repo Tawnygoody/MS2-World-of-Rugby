@@ -221,6 +221,10 @@ I have used Google Developer tools to simulate the following device sizes:
 - Moto G4: [Portrait](documentation/testing/responsiveness/home/motog4-p.png), [Landscape](documentation/testing/responsiveness/home/motog4-l.png)
 - Pixel 2: [Portrait](documentation/testing/responsiveness/home/pixel2-p.png), [Landscape](documentation/testing/responsiveness/home/pixel2-l.png)
 - Surface Duo: [Portrait](documentation/testing/responsiveness/home/surface-p.png), [Landscape](documentation/testing/responsiveness/home/surface-l.png)
+- Acer Chromebook: [Landscape only](documentation/testing/responsiveness/home/acer-chromebook.png)
+- LG Desktop Monitor: [Landscape only](documentation/testing/responsiveness/home/lg-desktop.png)
+
+#### Amateur Game Page
 
 ## Solved Bugs
 1. I had an issue when it came to adding difficulty levels to the game, and changing the value
