@@ -397,11 +397,25 @@
     width: 450px;
     height: 730px;
     }
+    .game-card.card-pro {
+    width: calc(25% - 10px);
+    height: calc(20% - 10px);
+    }
     .game-container.container-leg {
     width: 450px;
     height: 890px;
     }
+}
 
+@media screen and (max-width: 540px) {
+    .game-container.container-pro {
+    width: 385px;
+    height: 620px;
+    }
+    .game-container.container-leg {
+    width: 350px;
+    height: 695px;
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -412,10 +426,6 @@
     .game-container.container-pro {
     width: 350px;
     height: 570px;
-    }
-    .game-container.container-leg {
-    width: 350px;
-    height: 695px;
     }
     #sound-effects {
     width: 30px;
