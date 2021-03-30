@@ -132,6 +132,8 @@ I would then implement back end technologies (knowledge not yet gained)
         - "Back" button which will take the user back to the World of Rugby Modal. 
     - #### Game Pages
         - Kick Off overlay which is removed once the user has clicked anywhere on the screen, so the game can begin. 
+        - Message on the Kick Off overlay to tell the user to turn their device to portrait mode, as this will provide the best user experience. This message will only 
+        show on devices which are less than 1025px wide. This width has been chosen as it is the width of an iPad in landscape mode. 
         - Darkened background image so that the game cards stand out. 
         - Dependant on which selection the user makes the game page will display 16, 20, or 25 cards. The remaining features are the same. 
         - Audio button in the logo row which when clicked will allow sound effects. If the user clicks again the sound effects will stop. 
