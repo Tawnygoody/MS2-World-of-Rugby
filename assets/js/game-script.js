@@ -295,7 +295,7 @@ function ready() {
     function removeStorage() {
         if (confirm("Are you sure you want to clear the leaderboard? All saved scores will be lost.")) { // confirm alert message aided by https://stackoverflow.com/questions/9334636/how-to-create-a-dialog-with-yes-and-no-options
             localStorage.clear(); //clears localStorage so any saved names are removed from the leaderboard
-            window.location.assign("/") //takes the user back to the home page if users confirms to clear localStorage
+            window.location.assign("index.html") //takes the user back to the home page if users confirms to clear localStorage
         }
     }
 
