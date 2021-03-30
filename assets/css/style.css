@@ -171,6 +171,7 @@
     margin-top: 1rem;
     flex-wrap: wrap;
     perspective: 500px;
+    padding-bottom: 0.5rem;
 }
 
 .game-container.container-pro {

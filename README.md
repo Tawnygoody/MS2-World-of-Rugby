@@ -238,6 +238,20 @@ I have used Google Developer tools to simulate the following device sizes:
 - Acer Chromebook: [Landscape only]()
 - LG Desktop Monitor: [Landscape only](documentation/testing/responsiveness/amateur/am-desktop.png)
 
+#### Professional Game Page
+- Galaxy Fold: [Portrait](documentation/testing/responsiveness/pro/pr-galaxy-fold-p.png), [Landscape](documentation/testing/responsiveness/pro/pr-galaxy-fold-l.png)
+- Galaxy S5: [Portrait](documentation/testing/responsiveness/pro/pr-galaxys5-p.png), [Landscape](documentation/testing/responsiveness/pro/pr-galaxys5-l.png)
+- Iphone 4: [Portrait](documentation/testing/responsiveness/pro/pr-iphone4-p.png), [Landscape](documentation/testing/responsiveness/pro/pr-iphone4-l.png)
+- Iphone 5/SE: [Portrait](documentation/testing/responsiveness/pro/pr-iphone5-p.png), [Landscape](documentation/testing/responsiveness/pro/pr-iphone5-l.png)
+- Iphone 6/7/8: [Portrait](documentation/testing/responsiveness/pro/pr-iphone6-p.png), [Landscape](documentation/testing/responsiveness/pro/pr-iphone6-l.png)
+- Iphone X: [Portrait](documentation/testing/responsiveness/pro/pr-iphonex-p.png), [Landscape](documentation/testing/responsiveness/pro/pr-iphonex-l.png)
+- Ipad: [Portrait](documentation/testing/responsiveness/pro/pr-ipad-p.png), [Landscape](documentation/testing/responsiveness/pro/pr-ipad-l.png)
+- Moto G4: [Portrait](documentation/testing/responsiveness/pro/pr-motog4-p.png), [Landscape](documentation/testing/responsiveness/pro/pr-motog4-l.png)
+- Pixel 2: [Portrait](documentation/testing/responsiveness/pro/pr-pixel2-p.png), [Landscape](documentation/testing/responsiveness/pro/pr-pixel2-l.png)
+- Surface Duo: [Portrait](documentation/testing/responsiveness/pro/pr-surface-p.png), [Landscape](documentation/testing/responsiveness/pro/pr-surface-l.png)
+- Acer Chromebook: [Landscape only]()
+- LG Desktop Monitor: [Landscape only](documentation/testing/responsiveness/pro/pr-desktop.png)
+
 ## Solved Bugs
 1. I had an issue when it came to adding difficulty levels to the game, and changing the value
 of variables depending on what game type was selected. One solution would have been to create different
