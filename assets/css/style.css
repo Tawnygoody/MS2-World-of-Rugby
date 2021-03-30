@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 /**-----Google Fonts-----**/
 
 @import url('https://fonts.googleapis.com/css2?family=Quattrocento:wght@700&family=Radley&display=swap');
@@ -43,7 +50,8 @@
 #logo-image {
     height: 120px;
     width: 200px;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
     margin: 0.5rem;
 }
 
@@ -86,7 +94,8 @@
   top: 50%;
   left: 50%;
   -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .kick-off {
@@ -115,6 +124,8 @@
 /**-----Game Page-----**/
 
 .game-hero-image { /*-- Thanks to https://css-tricks.com/perfect-full-page-background-image/ for game page background image--*/
+    background: -webkit-gradient( linear, left top, left bottom, from(rgba(0,0,0,0.5)), to(rgba(0, 0, 0, 0.5)) ),url("../images/rugby-field.png") no-repeat center center scroll;
+    background: -o-linear-gradient( rgba(0,0,0,0.5), rgba(0, 0, 0, 0.5) ),url("../images/rugby-field.png") no-repeat center center scroll;
     background: linear-gradient( rgba(0,0,0,0.5), rgba(0, 0, 0, 0.5) ),url("../images/rugby-field.png") no-repeat center center scroll; /*--thanks to stack overflow (credited in README)--*/
     background-size: cover;
     min-height: 100vh;
@@ -127,9 +138,16 @@
     left: 0;
     right: 0;
     bottom: 0;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     z-index: 100;
     color: #fbf41d;
     font-family: "Quattrocento", sans-serif;
@@ -142,6 +160,8 @@
 }
 
 #overlay-text.visible {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
@@ -158,6 +178,7 @@
 }
 
 .game-info {
+    background-image: -o-radial-gradient(#312018, black);
     background-image: radial-gradient(#312018, black);
     border: #c8831b solid 2px;
     margin: 1rem;
@@ -169,11 +190,15 @@
 .game-container {
     width: 550px;
     height: 750px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     margin: auto;
     margin-top: 1rem;
-    flex-wrap: wrap;
-    perspective: 500px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-perspective: 500px;
+            perspective: 500px;
     padding-bottom: 0.5rem;
 }
 
@@ -190,9 +215,16 @@
     height: calc(25% - 10px);
     position: relative;
     margin: 5px;
-    transform: scale(1);
-    transform-style: preserve-3d;
+    -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+    -webkit-transition: -webkit-transform .5s;
+    transition: -webkit-transform .5s;
+    -o-transition: transform .5s;
     transition: transform .5s;
+    transition: transform .5s, -webkit-transform .5s;
 }
 
 .game-card.card-pro {
@@ -204,12 +236,19 @@
 }
 
 .game-card:active {
-    transform: scale(.97);
+    -webkit-transform: scale(.97);
+        -ms-transform: scale(.97);
+            transform: scale(.97);
+    -webkit-transition: -webkit-transform .2s;
+    transition: -webkit-transform .2s;
+    -o-transition: transform .2s;
     transition: transform .2s;
+    transition: transform .2s, -webkit-transform .2s;
 }
 
 .game-card.flip {
-    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
 }
 
 .front-face,
@@ -217,14 +256,17 @@
     width: 100%;
     height: 100%;
     border-radius: 10px;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
     position: absolute;
     border: 2px solid #c8831b;
-    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
 }
 
 .front-face {
-    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
 }
 
 
@@ -256,6 +298,7 @@
 }
 
 .modal-content {
+    background-image: -o-radial-gradient(#f7d8a9, #ca9950);
     background-image: radial-gradient(#f7d8a9, #ca9950);
     border-radius: 30px;
     overflow: hidden;
@@ -266,6 +309,7 @@
     width: 140px;
     border-radius: 20px;
     margin: 1rem;
+    background-image: -o-radial-gradient(#312018, black);
     background-image: radial-gradient(#312018, black);
     border: #c8831b solid 2px;
 }
@@ -296,9 +340,11 @@
 .modal-image {
     width: 110px;
     height: 170px;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
     margin-bottom: 1rem;
-    animation: dance 1s linear infinite;
+    -webkit-animation: dance 1s linear infinite;
+            animation: dance 1s linear infinite;
 }
 
 #username {
@@ -339,18 +385,37 @@
 #tackle {
     width: 170px;
     height: 170px;
-    animation: dance 3s linear infinite;
+    -webkit-animation: dance 3s linear infinite;
+            animation: dance 3s linear infinite;
+}
+
+@-webkit-keyframes dance { /**web dev**/
+    0%, 100% {
+        -webkit-transform: rotate(0);
+                transform: rotate(0);
+    }
+    25% {
+        -webkit-transform: rotate(-20deg);
+                transform: rotate(-20deg);
+    }
+    75% {
+        -webkit-transform: rotate(20deg);
+                transform: rotate(20deg);
+    }
 }
 
 @keyframes dance { /**web dev**/
     0%, 100% {
-        transform: rotate(0);
+        -webkit-transform: rotate(0);
+                transform: rotate(0);
     }
     25% {
-        transform: rotate(-20deg);
+        -webkit-transform: rotate(-20deg);
+                transform: rotate(-20deg);
     }
     75% {
-        transform: rotate(20deg);
+        -webkit-transform: rotate(20deg);
+                transform: rotate(20deg);
     }
 }
 
