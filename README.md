@@ -227,10 +227,13 @@ I have used Google Developer tools to simulate the following device sizes:
 - LG Desktop Monitor: [Landscape only](documentation/testing/responsiveness/home/lg-desktop.png)
 
 #### Amateur Game Page
+As the game is optimized for playing in a portrait orientation, I have focused on laying out the cards so that minimal scrolling is required
+when a handheld device is in a portrait orientation. 
+
 - Galaxy Fold: [Portrait](documentation/testing/responsiveness/amateur/am-galaxy-fold-p.png), [Landscape](documentation/testing/responsiveness/amateur/am-galaxy-fold-l.png)
 - Galaxy S5: [Portrait](documentation/testing/responsiveness/amateur/am-galaxys5-p.png), [Landscape](documentation/testing/responsiveness/amateur/am-galaxys5-l.png)
 - Iphone 4: [Portrait](documentation/testing/responsiveness/amateur/am-iphone4-p.png), [Landscape](documentation/testing/responsiveness/amateur/am-iphone4-l.png)
-- Iphone 5/SE: [Portrait](documentation/testing/responsiveness/amateur/am-iphone5-p.png), [Landscape](documentation/testing/responsiveness/amateur/am-iphone5-l.png)
+- Iphone 5/SE: [Portrait](documentation/testing/responsiveness/amateur/am-iphone-5-p.png), [Landscape](documentation/testing/responsiveness/amateur/am-iphone-5-l.png)
 - Iphone 6/7/8: [Portrait](documentation/testing/responsiveness/amateur/am-iphone6-p.png), [Landscape](documentation/testing/responsiveness/amateur/am-iphone6-l.png)
 - Iphone X: [Portrait](documentation/testing/responsiveness/amateur/am-iphonex-p.png), [Landscape](documentation/testing/responsiveness/amateur/am-iphonex-l.png)
 - Ipad: [Portrait](documentation/testing/responsiveness/amateur/am-ipad-p.png), [Landscape](documentation/testing/responsiveness/amateur/am-ipad-l.png)
@@ -239,6 +242,8 @@ I have used Google Developer tools to simulate the following device sizes:
 - Surface Duo: [Portrait](documentation/testing/responsiveness/amateur/am-surface-p.png), [Landscape](documentation/testing/responsiveness/amateur/am-surface-l.png)
 - Acer Chromebook: [Landscape only]()
 - LG Desktop Monitor: [Landscape only](documentation/testing/responsiveness/amateur/am-desktop.png)
+
+All devices show all the game cards, the timer and moves counter within the viewport height, therefore the user does not need to scroll when playing the game. 
 
 #### Professional Game Page
 - Galaxy Fold: [Portrait](documentation/testing/responsiveness/pro/pr-galaxy-fold-p.png), [Landscape](documentation/testing/responsiveness/pro/pr-galaxy-fold-l.png)
@@ -254,6 +259,9 @@ I have used Google Developer tools to simulate the following device sizes:
 - Acer Chromebook: [Landscape only]()
 - LG Desktop Monitor: [Landscape only](documentation/testing/responsiveness/pro/pr-desktop.png)
 
+Devices with a small viewport height (eg iphone4), do not show the timer or the moves counter. However all devices still show all the game cards, therefore the user does not need to scroll 
+when playing the game, unless they wish to view the timer or moves counter on smaller devices. 
+
 #### Legend Game Page
 - Galaxy Fold: [Portrait](documentation/testing/responsiveness/legend/le-galaxy-fold-p.png), [Landscape](documentation/testing/responsiveness/legend/le-galaxy-fold-l.png)
 - Galaxy S5: [Portrait](documentation/testing/responsiveness/legend/le-galaxys5-p.png), [Landscape](documentation/testing/responsiveness/legend/le-galaxys5-l.png)
@@ -267,6 +275,10 @@ I have used Google Developer tools to simulate the following device sizes:
 - Surface Duo: [Portrait](documentation/testing/responsiveness/legend/le-surface-p.png), [Landscape](documentation/testing/responsiveness/legend/le-surface-l.png)
 - Acer Chromebook: [Landscape only]()
 - LG Desktop Monitor: [Landscape only](documentation/testing/responsiveness/legend/le-desktop.png)
+
+There are a few more devices where the timer and moves counter aren't visible when showing all the game cards and on some of the smaller devices, minimal scrolling is required 
+to see all the game cards. I could make the game cards smaller to accommodate the smaller devices, however I feel making the images any smaller, would not make them clear enough, 
+and may detract from the user experience as the cards would be very small to click. Therefore I'm happy to allow for a small amount of scrolling. 
 
 ## Solved Bugs
 1. I had an issue when it came to adding difficulty levels to the game, and changing the value
@@ -315,6 +327,9 @@ could not see the team logo.
 9. When testing the site on iPad manually, the "Please turn your device to portrait" message does not show on the iPad when in landscape mode. 
     - Fix: As google developer tools may be using an older version iPad, I have increased the max-width to 1200px for the message to show. Message now shows
     on the iPad during manual testing. 
+10. When testing the site on iPhone the icon inside the audio button was off center. The icon would overlap the edge of the button. 
+    - Fix: After checking google developer tools, it appeared there was some default padding set to the button, which was positioning the icon incorrectly. By setting 
+    this to zero it has centered the icon in the centre of the button. 
 
 ## Known bugs
 
@@ -323,7 +338,7 @@ I have tested the website's performace, accessibility, and user experience using
 
 ### Index page lighthouse results
 
-![Index pag test](documentation/testing/lighthouse/index-lighthouse.png)
+![Index page test](documentation/testing/lighthouse/index-lighthouse.png)
 
 I'm very happy that all of the criteria were between 90-100. My main focus was to increase the best pratices as this was something
 I was aiming to increase from my first milestone project. 
