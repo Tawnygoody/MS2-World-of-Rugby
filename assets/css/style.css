@@ -469,4 +469,22 @@
     }
 }
 
+@media screen and (max-width: 280px) {
+    .game-container {
+    width: 250px;
+    height: 350px;
+    margin-top: 0.5rem;
+    }
+    .game-container.container-pro {
+    width: 250px;
+    height: 410px;
+    margin-top: 0.5rem;
+    }
+    .game-container.container-leg {
+    width: 250px;
+    height: 495px;
+    margin-top: 0.5rem;
+    }
+}
+
 /**-----Media Queries Ends-----**/

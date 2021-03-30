@@ -225,6 +225,18 @@ I have used Google Developer tools to simulate the following device sizes:
 - LG Desktop Monitor: [Landscape only](documentation/testing/responsiveness/home/lg-desktop.png)
 
 #### Amateur Game Page
+- Galaxy Fold: [Portrait](documentation/testing/responsiveness/amateur/am-galaxy-fold-p.png), [Landscape](documentation/testing/responsiveness/amateur/am-galaxy-fold-l.png)
+- Galaxy S5: [Portrait](documentation/testing/responsiveness/amateur/am-galaxys5-p.png), [Landscape](documentation/testing/responsiveness/amateur/am-galaxys5-l.png)
+- Iphone 4: [Portrait](documentation/testing/responsiveness/amateur/am-iphone4-p.png), [Landscape](documentation/testing/responsiveness/amateur/am-iphone4-l.png)
+- Iphone 5/SE: [Portrait](documentation/testing/responsiveness/amateur/am-iphone5-p.png), [Landscape](documentation/testing/responsiveness/amateur/am-iphone5-l.png)
+- Iphone 6/7/8: [Portrait](documentation/testing/responsiveness/amateur/am-iphone6-p.png), [Landscape](documentation/testing/responsiveness/amateur/am-iphone6-l.png)
+- Iphone X: [Portrait](documentation/testing/responsiveness/amateur/am-iphonex-p.png), [Landscape](documentation/testing/responsiveness/amateur/am-iphonex-l.png)
+- Ipad: [Portrait](documentation/testing/responsiveness/amateur/am-ipad-p.png), [Landscape](documentation/testing/responsiveness/amateur/am-ipad-l.png)
+- Moto G4: [Portrait](documentation/testing/responsiveness/amateur/am-motog4-p.png), [Landscape](documentation/testing/responsiveness/amateur/am-motog4-l.png)
+- Pixel 2: [Portrait](documentation/testing/responsiveness/amateur/am-pixel2-p.png), [Landscape](documentation/testing/responsiveness/amateur/am-pixel2-l.png)
+- Surface Duo: [Portrait](documentation/testing/responsiveness/amateur/am-surface-p.png), [Landscape](documentation/testing/responsiveness/amateur/am-surface-l.png)
+- Acer Chromebook: [Landscape only]()
+- LG Desktop Monitor: [Landscape only](documentation/testing/responsiveness/amateur/am-desktop.png)
 
 ## Solved Bugs
 1. I had an issue when it came to adding difficulty levels to the game, and changing the value
