@@ -295,7 +295,7 @@ function ready() {
     function removeStorage() {
         if (confirm("Are you sure you want to clear the leaderboard? All saved scores will be lost.")) { // confirm alert message aided by https://stackoverflow.com/questions/9334636/how-to-create-a-dialog-with-yes-and-no-options
             localStorage.clear(); //clears localStorage so any saved names are removed from the leaderboard
-            window.location.assign("index.html") //takes the user back to the home page if users confirms to clear localStorage
+            window.location.href = "index.html" //takes the user back to the home page if users confirms to clear localStorage
         }
     }
 
@@ -306,7 +306,7 @@ function ready() {
             gameLoss();
         }
     }
-
+/*
     (function shuffle() {
         if(difficulty === "AMATEUR") {
             cards.forEach(card => { //iterate through cards Array.
@@ -325,7 +325,7 @@ function ready() {
             });
         }
     })(); //immediately invoked function.
-
+*/
     // Event Listeners
     cards.forEach(card => card.addEventListener("click", flipCard)); //adds an event listener to each game-card and calls flipcard function when clicked.
     overlays.addEventListener("click", startGame); //adds an event listener to the overlay and calls startGame function when clicked
