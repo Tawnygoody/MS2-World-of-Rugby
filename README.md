@@ -303,6 +303,15 @@ time remaining once the user had won the game. However the score was displaying 
 60 and time remaining was 15, this would show as 6015 rather than 75. 
     - Fix: I found the solution on Stack Overflow (seen in credits section), which uses a parseInt function which parses a string and returns and integer, so the two values could then 
     be added to eachother. 
+7. After deploying the website and testing on ipad and iphone when I tried to clear the leaderboard (i.e removeStorage function) 
+when you clicked ok on the warning message it would clear the local storage, however instead of directing the user to the home page, a 404 
+message appeared. 
+    - Fix: After some trial and error I found the error seemed to stem from using "window.location.assign("/")". I have replaced this with 
+    "window.location.href = 'index.html'". The user is now directed back to the home page once the leader board has been cleared on all manual devices
+    tested. 
+8. When testing the site on iphone / ipads Safari browser, the game cards would flip when clicked but would only show the back face image. The user 
+could not see the team logo. 
+    - I have run style.css through Autoprefixer and this has corrected the problem. 
 
 ## Known bugs
 
