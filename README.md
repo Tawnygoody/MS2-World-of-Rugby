@@ -312,6 +312,9 @@ message appeared.
 8. When testing the site on iphone / ipads Safari browser, the game cards would flip when clicked but would only show the back face image. The user 
 could not see the team logo. 
     - I have run style.css through Autoprefixer and this has corrected the problem. 
+9. When testing the site on iPad manually, the "Please turn your device to portrait" message does not show on the iPad when in landscape mode. 
+    - Fix: As google developer tools may be using an older version iPad, I have increased the max-width to 1200px for the message to show. Message now shows
+    on the iPad during manual testing. 
 
 ## Known bugs
 
