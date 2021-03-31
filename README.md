@@ -20,6 +20,8 @@ View the live project [here]()
     - [Testing User Stories](#testing-user-stories)
     - [Full Testing](#full-testing)
     - [Further Testing](#further-testing)
+        - [Browser Compatibility](#broswer-compatibility)
+        - [Responsive Design](#responsive-design)
     - [Solved Bugs](#solved-bugs)
     - [Known Bugs](#known-bugs)
     - [Lighthouse](#lighthouse)
@@ -292,7 +294,7 @@ better way of doing this.
     - Fix: A tutor at code institute (Stephen) had pointed out to me that javascript loads on the page from the top down. As the "timeRemaining = startTime" variable
     was located above the startTime dependant on difficulty, this was causing the error. A simple re-arrangement of the code fixed this issue. 
 2. When the game victory / game over modal was displayed, if the user clicked outside the area of the modal the modal would close. This meant that the game 
-would not restart and the only way the user could play again would be to click on the logo to take the user back to the home page. I felt that this was not a 
+would not restart and the only way the user could play again would be to click on the logo to take the user back to the home page or refresh the page. I felt that this was not a 
 good user experience. 
     - Fix: I found the solution on Stack Overflow (seen in credits section), which adds 'data-backdrop="static" data-keyboard="false"' to the modal. The user can then click
     outside the modal and this will not close the modal. The user then has the option to play the game again or return home. 

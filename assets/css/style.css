@@ -425,6 +425,32 @@
 
 /**-----Media Queries-----**/
 
+@media screen and (max-height: 900px) {
+    .game-container {
+        height: 650px;
+        width: 476px;
+    }
+    .game-container.container-pro {
+    width: 598px;
+    }
+    .game-container.container-leg {
+    width: 720px;
+    }
+}
+
+@media screen and (max-height: 750px) {
+    .game-container {
+        height: 520px;
+        width: 380px;
+    }
+    .game-container.container-pro {
+    width: 476px;
+    }
+    .game-container.container-leg {
+    width: 573px;
+    }
+}
+
 @media screen and (max-width: 1200px) {
     #portrait-mode {
     font-size: 20px;
