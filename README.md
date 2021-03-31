@@ -236,10 +236,32 @@ are visible. Some smaller devices may require some minor scrolling, especially w
 ![No scrolling iphone](documentation/testing/user-stories/us-iphone-leg.PNG) ![No scrolling ipad](documentation/testing/user-stories/us-ipad-leg.PNG) ![No scrolling acer](documentation/testing/user-stories/us-acer-leg.png)
 ### User Goals
 
-#### I want to know what the website offers, and easily navigate through the site. 
+#### I want to know what the website offers, and easily navigate through the site.
+- The user is greeted on all pages with a logo showing that the website is some form of memory game. 
+- Upon opening the Kick Off modal the user is met with a welcome message. 
+- The purposefully limited options, means the site is easy to navigate through.
+
+![logo](documentation/testing/user-stories/us-logo.png) ![Welcome](documentation/testing/user-stories/us-welcome.png)
+
 #### I want to be able to return to the home page at the click of a button. 
+- The user can return to the home page when none of the modals are open by clicking the logo. 
+- When the Kick Off or Difficulty modals are open the user can return to the home page by clicking outside the modals. 
+- When the game page modals are open the user can click the home button to take them back to the home page. 
+
+![Returning to home page](documentation/testing/user-stories/us-home-page.gif)
+
 #### I want to be able to challenge myself with different difficulty settings. 
+- The user has the option to select three different difficulties: Amateur - 16 cards, Professional - 20 cards, or Legend 24 cards.
+- The user is directed to a different page depending on the difficulty they select. 
+
+![Selecting difficulty](documentation/testing/user-stories/us-difficulty.png)
+
 #### I want to have the option of turning audio on and off. 
+- The game by default will have all sound effects muted. 
+- The "volume up" icon will display when there are no sound effects playing, indicating to the user to press this should they wish to hear audio. 
+- The "volume mute" icon will display when sound effects are playing, indicating to the user to press this should they wish to mute the audio. 
+
+![Mute Volume](documentation/testing/user-stories/us-mute.png) ![Volume up](documentation/testing/user-stories/us-volume.png)
 #### I want a game that is simple to play so I do not to spend a length of time learning the rules. 
 #### I want easy controls for the game, so I can play the game effortlessly. 
 #### I want to see a scoring system so I have a score to beat. 
