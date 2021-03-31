@@ -209,6 +209,38 @@ Testing was completed using the following steps on all interactive elements of t
 ## Further Testing
 ### Browser Compatibility
 
+#### Laptop / Desktop
+- Google Chrome - successful
+- Mozilla Firefox 81 - successful
+- Safari 12 - successful
+- Edge 85 - successful
+- Opera 70 - successful
+- Internet Explorer 11 failed to meet the needs of the website. This can be seen below: 
+
+![Explorer Home Page](documentation/testing/browser/ie-home.png)
+
+On the home page the Kick Off button would not fade in and the logo would not slide down on page load. The logo has also been squeezed down 
+so is scaling incorrectly. 
+
+![Explorer Difficulty Modal](documentation/testing/browser/ie-difficulty.png)
+
+The back button in the modal footer of the difficulty modal is off centre. 
+
+![Explorer Game Page](documentation/testing/browser/ie-overlay.png)
+
+On the game pages the Logo remains squeezed, the audio has not not been centered in the logo bar, the time and moves counter are off center, and the overlay
+text does not get removed when it is clicked therefore the user cannot play the game. 
+
+Although this is a problem when using Internet Explorer (IE), IE is gradually being replaced by Microsoft Edge, which fully supports the website. 
+
+#### iPad 8th Generation
+- Google Chrome - successful
+- Safari - successful
+
+#### iPhone 8
+- Google Chrome - successful
+- Safari - successful
+
 ### Responsive Design
 
 #### Google Developer Tools
