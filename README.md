@@ -211,10 +211,12 @@ Testing was completed using the following steps on all interactive elements of t
 
 ### Responsive Design
 
+#### Google Developer Tools
+
 Google Developer tools were used throughout the project to test the responsiveness of the website across multiple device sizes. 
 I have used Google Developer tools to simulate the following device sizes:
 
-#### Home Page
+##### Home Page
 - Galaxy Fold: [Portrait](documentation/testing/responsiveness/home/galaxy-fold-home-p.png), [Landscape](documentation/testing/responsiveness/home/galaxy-fold-home-l.png)
 - Galaxy S5: [Portrait](documentation/testing/responsiveness/home/galaxys5-p.png), [Landscape](documentation/testing/responsiveness/home/galaxys5-l.png)
 - Iphone 4: [Portrait](documentation/testing/responsiveness/home/iphone4-p.png), [Landscape](documentation/testing/responsiveness/home/iphone4-l.png)
@@ -225,10 +227,8 @@ I have used Google Developer tools to simulate the following device sizes:
 - Moto G4: [Portrait](documentation/testing/responsiveness/home/motog4-p.png), [Landscape](documentation/testing/responsiveness/home/motog4-l.png)
 - Pixel 2: [Portrait](documentation/testing/responsiveness/home/pixel2-p.png), [Landscape](documentation/testing/responsiveness/home/pixel2-l.png)
 - Surface Duo: [Portrait](documentation/testing/responsiveness/home/surface-p.png), [Landscape](documentation/testing/responsiveness/home/surface-l.png)
-- Acer Chromebook: [Landscape only](documentation/testing/responsiveness/home/acer-chromebook.png)
-- LG Desktop Monitor: [Landscape only](documentation/testing/responsiveness/home/lg-desktop.png)
 
-#### Amateur Game Page
+##### Amateur Game Page
 As the game is optimized for playing in a portrait orientation, I have focused on laying out the cards so that minimal scrolling is required
 when a handheld device is in a portrait orientation. 
 
@@ -242,12 +242,10 @@ when a handheld device is in a portrait orientation.
 - Moto G4: [Portrait](documentation/testing/responsiveness/amateur/am-motog4-p.png), [Landscape](documentation/testing/responsiveness/amateur/am-motog4-l.png)
 - Pixel 2: [Portrait](documentation/testing/responsiveness/amateur/am-pixel2-p.png), [Landscape](documentation/testing/responsiveness/amateur/am-pixel2-l.png)
 - Surface Duo: [Portrait](documentation/testing/responsiveness/amateur/am-surface-p.png), [Landscape](documentation/testing/responsiveness/amateur/am-surface-l.png)
-- Acer Chromebook: [Landscape only]()
-- LG Desktop Monitor: [Landscape only](documentation/testing/responsiveness/amateur/am-desktop.png)
 
 All devices show all the game cards, the timer and moves counter within the viewport height, therefore the user does not need to scroll when playing the game. 
 
-#### Professional Game Page
+##### Professional Game Page
 - Galaxy Fold: [Portrait](documentation/testing/responsiveness/pro/pr-galaxy-fold-p.png), [Landscape](documentation/testing/responsiveness/pro/pr-galaxy-fold-l.png)
 - Galaxy S5: [Portrait](documentation/testing/responsiveness/pro/pr-galaxys5-p.png), [Landscape](documentation/testing/responsiveness/pro/pr-galaxys5-l.png)
 - Iphone 4: [Portrait](documentation/testing/responsiveness/pro/pr-iphone4-p.png), [Landscape](documentation/testing/responsiveness/pro/pr-iphone4-l.png)
@@ -258,13 +256,11 @@ All devices show all the game cards, the timer and moves counter within the view
 - Moto G4: [Portrait](documentation/testing/responsiveness/pro/pr-motog4-p.png), [Landscape](documentation/testing/responsiveness/pro/pr-motog4-l.png)
 - Pixel 2: [Portrait](documentation/testing/responsiveness/pro/pr-pixel2-p.png), [Landscape](documentation/testing/responsiveness/pro/pr-pixel2-l.png)
 - Surface Duo: [Portrait](documentation/testing/responsiveness/pro/pr-surface-p.png), [Landscape](documentation/testing/responsiveness/pro/pr-surface-l.png)
-- Acer Chromebook: [Landscape only]()
-- LG Desktop Monitor: [Landscape only](documentation/testing/responsiveness/pro/pr-desktop.png)
 
 Devices with a small viewport height (eg iphone4), do not show the timer or the moves counter. However all devices still show all the game cards, therefore the user does not need to scroll 
 when playing the game, unless they wish to view the timer or moves counter on smaller devices. 
 
-#### Legend Game Page
+##### Legend Game Page
 - Galaxy Fold: [Portrait](documentation/testing/responsiveness/legend/le-galaxy-fold-p.png), [Landscape](documentation/testing/responsiveness/legend/le-galaxy-fold-l.png)
 - Galaxy S5: [Portrait](documentation/testing/responsiveness/legend/le-galaxys5-p.png), [Landscape](documentation/testing/responsiveness/legend/le-galaxys5-l.png)
 - Iphone 4: [Portrait](documentation/testing/responsiveness/legend/le-iphone4-p.png), [Landscape](documentation/testing/responsiveness/legend/le-iphone4-l.png)
@@ -275,12 +271,39 @@ when playing the game, unless they wish to view the timer or moves counter on sm
 - Moto G4: [Portrait](documentation/testing/responsiveness/legend/le-motog4-p.png), [Landscape](documentation/testing/responsiveness/legend/le-motog4-l.png)
 - Pixel 2: [Portrait](documentation/testing/responsiveness/legend/le-pixel2-p.png), [Landscape](documentation/testing/responsiveness/legend/le-pixel2-l.png)
 - Surface Duo: [Portrait](documentation/testing/responsiveness/legend/le-surface-p.png), [Landscape](documentation/testing/responsiveness/legend/le-surface-l.png)
-- Acer Chromebook: [Landscape only]()
-- LG Desktop Monitor: [Landscape only](documentation/testing/responsiveness/legend/le-desktop.png)
 
 There are a few more devices where the timer and moves counter aren't visible when showing all the game cards and on some of the smaller devices, minimal scrolling is required 
 to see all the game cards. I could make the game cards smaller to accommodate the smaller devices, however I feel making the images any smaller, would not make them clear enough, 
 and may detract from the user experience as the cards would be very small to click. Therefore I'm happy to allow for a small amount of scrolling. 
+
+#### Manual Device Testing
+
+Manual device testing was carried out on iPhone 8, iPad 8th Generation, Acer Chromebook, and LG 22 inch desktop monitor. Images appear in order from top-bottom, and left to right. 
+
+##### Home Page
+
+![Home page iphone](documentation/testing/responsiveness/manual/ma-iphone-home.PNG) ![Ipad home page](documentation/testing/responsiveness/manual/ma-ipad-home.PNG) ![Acer home page](documentation/testing/responsiveness/manual/ma-acer-home.png)
+![Home page LG](documentation/testing/responsiveness/manual/ma-lg-home.png)
+
+##### Game Page Overlay
+
+![Game page overlay iphone](documentation/testing/responsiveness/manual/ma-iphone-overlay.PNG) ![Ipad game page overlay](documentation/testing/responsiveness/manual/ma-ipad-overlay.PNG) ![Acer game page overlay](documentation/testing/responsiveness/manual/ma-acer-overlay.png)
+![Game page overlay LG](documentation/testing/responsiveness/manual/ma-lg-overlay.png)
+
+##### Amateur Game Page
+
+![Amateur page iphone](documentation/testing/responsiveness/manual/ma-iphone-amateur.PNG) ![Ipad amateur page](documentation/testing/responsiveness/manual/ma-ipad-amateur.PNG) ![Acer amateur page](documentation/testing/responsiveness/manual/ma-acer-amateur.png)
+![Amateur page LG](documentation/testing/responsiveness/manual/ma-lg-amateur.png)
+
+##### Professional Game Page
+
+![Pro page iphone](documentation/testing/responsiveness/manual/ma-iphone-pro.PNG) ![Ipad pro page](documentation/testing/responsiveness/manual/ma-ipad-pro.PNG) ![Acer pro page](documentation/testing/responsiveness/manual/ma-acer-pro.png)
+![Pro page LG](documentation/testing/responsiveness/manual/ma-lg-pro.png)
+
+##### Legend Game Page
+
+![Legend page iphone](documentation/testing/responsiveness/manual/ma-iphone-leg.PNG) ![Ipad legend page](documentation/testing/responsiveness/manual/ma-ipad-leg.PNG) ![Acer legend page](documentation/testing/responsiveness/manual/ma-acer-leg.png)
+![Legend page LG](documentation/testing/responsiveness/manual/ma-lg-leg.png)
 
 ## Solved Bugs
 1. I had an issue when it came to adding difficulty levels to the game, and changing the value
