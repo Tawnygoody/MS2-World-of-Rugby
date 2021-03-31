@@ -199,8 +199,51 @@ I would then implement back end technologies (knowledge not yet gained)
     - This has been used to re-size the audio files.
 - [Removebg](https://www.remove.bg/)
     - This has been used to remove the background color on images for the victory and gameover modals. 
+- [LambdaTest](https://www.lambdatest.com/)
+    - LambdaTest has been used to test the website on different browsers.
+- [CloudConvert](https://cloudconvert.com/mp4-to-gif) 
+    - This has been used to convert screen recordings into gif format for the README.
 
 # Testing
+
+## Testing User stories
+
+### Business Goals
+#### The game needs to be easily accessible and straightforward to use, through the use of readily available instructions.
+- The home page only has only the Kick Off button in its main content, allowing for easy accessibility. 
+- The Kick Off modal has three buttons. When the rules button is clicked this drops down the rules of the game for the user. 
+
+![Rules Dropdown](documentation/testing/user-stories/rules.gif)
+
+#### The game needs to be engaging from the first visit to encourage the user to play the game. 
+- The user is immediately greeted with a striking image directly related to rugby, to draw the user in. 
+- All the buttons are designed to be eye-catching to encourage the user to interact with the website. 
+- The use of modals means the user isn't directed to a different page, so there is less loading time between interactions. 
+
+![User engagement](documentation/testing/user-stories/engaging.gif)
+
+#### The game needs to appeal to all ages to maximise the target audience.
+- All content is of an appropriate nature that all users can enjoy playing the game. 
+- With around 90% of the population using smartphones, the game can be used by people of all ages. The buttons and game cards 
+are of an appropriate size that all users can interact with the game. 
+
+![User engagement](documentation/testing/user-stories/appeal.gif)
+
+#### Scrolling whilst playing the game on different screen sizes should be minimal, as this will detract from the user experience.
+- The styling of the website ensures that on the majority of devices there is no scrolling required when playing the game as all game cards 
+are visible. Some smaller devices may require some minor scrolling, especially when playing on the higher difficulties. 
+
+![No scrolling iphone](documentation/testing/user-stories/us-iphone-leg.PNG) ![No scrolling ipad](documentation/testing/user-stories/us-ipad-leg.PNG) ![No scrolling acer](documentation/testing/user-stories/us-acer-leg.png)
+### User Goals
+
+#### I want to know what the website offers, and easily navigate through the site. 
+#### I want to be able to return to the home page at the click of a button. 
+#### I want to be able to challenge myself with different difficulty settings. 
+#### I want to have the option of turning audio on and off. 
+#### I want a game that is simple to play so I do not to spend a length of time learning the rules. 
+#### I want easy controls for the game, so I can play the game effortlessly. 
+#### I want to see a scoring system so I have a score to beat. 
+#### I want to be able to contact the business with any queries I may have.
 
 ## Full Testing
 
@@ -208,6 +251,8 @@ Testing was completed using the following steps on all interactive elements of t
 
 ## Further Testing
 ### Browser Compatibility
+
+LambdaTest has been used to test the website across different browsers:
 
 #### Laptop / Desktop
 - Google Chrome - successful
