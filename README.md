@@ -205,6 +205,17 @@ I would then implement back end technologies (knowledge not yet gained)
 
 # Testing
 
+## W3C Validator
+
+- W3C CSS Validator
+    - [style.css results](documentation/testing/w3c/w3c-css.png)
+
+- W3C Markup Validator
+    - [index.html results](documentation/testing/w3c/w3c-index.png)
+    - [game-amateur.html results](documentation/testing/w3c/w3c-amateur.png)
+    - [game-pro.html results](documentation/testing/w3c/w3c-pro.png)
+    - [game-leg.html results](documentation/testing/w3c/w3c-leg.png)
+
 ## Testing User stories
 
 ### Business Goals
@@ -286,6 +297,8 @@ Please note the image below does not show the warning message when clearing the 
 - The user has the option of selecting the contact us button on the Kick Off modal, which drops down a contact form when clicked. 
 - All 3 fields must be completed, which will send an automated email to the developer. 
 - The user is greeted with a thankyou for your enquiry message, and the contact form is cleared. 
+
+Please note the image below does not show the "thankyou for your enquiry" message due to the screen recording programme used.
 
 ![Email](documentation/testing/user-stories/us-email.gif)
 ![Email](documentation/testing/user-stories/us-email-test.png)
@@ -477,6 +490,10 @@ could not see the team logo.
 10. When testing the site on iPhone the icon inside the audio button was off center. The icon would overlap the edge of the button. 
     - Fix: After checking google developer tools, it appeared there was some default padding set to the button, which was positioning the icon incorrectly. By setting 
     this to zero it has centered the icon in the centre of the button. 
+11. After running the html files through W3C validator, I received an error message for having a button element as a direct descendant of an anchor link. 
+I removed the button element and styled the anchor link to look like a button. However the button was not appearing as it had previously. The button was wrapping the text, and not 
+keeping a consistent height and width. 
+    - Fix: I had previously set the buttons height using height in CSS. I altered this to line-height, which has corrected the issue. 
 
 ## Known bugs
 

@@ -307,21 +307,20 @@
 }
 
 .modal-buttons {
-    height: 50px;
-    width: 140px;
+    line-height: 50px;
+    width: 160px;
+    padding: 0;
     border-radius: 20px;
     margin: 1rem;
     background-image: -o-radial-gradient(#312018, black);
     background-image: radial-gradient(#312018, black);
     border: #c8831b solid 2px;
-}
-
-#clearStorage {
-    height: 80px;
+    text-decoration: none;
 }
 
 .modal-buttons:hover {
     color: #c8831b;
+    text-decoration: none;
 }
 
 /*-- modal scrollable taken from https://stackoverflow.com/questions/10476632/how-to-scroll-the-page-when-a-modal-dialog-is-longer-than-the-screen --*/
