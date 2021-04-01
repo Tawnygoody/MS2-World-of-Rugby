@@ -59,8 +59,7 @@ audience is substantial. The game may appeal more to sports fans, and more speci
     - I want to be able to return to the home page at the click of a button. 
     - I want to be able to challenge myself with different difficulty settings. 
     - I want to have the option of turning audio on and off. 
-    - I want a game that is simple to play so I do not to spend a length of time learning the rules. 
-    - I want easy controls for the game, so I can play the game effortlessly. 
+    - I want a game that is simple to play so I do not to spend a length of time learning the rules.  
     - I want to see a scoring system so I have a score to beat. 
     - I want to be able to contact the business with any queries I may have. 
 
@@ -234,6 +233,7 @@ are of an appropriate size that all users can interact with the game.
 are visible. Some smaller devices may require some minor scrolling, especially when playing on the higher difficulties. 
 
 ![No scrolling iphone](documentation/testing/user-stories/us-iphone-leg.PNG) ![No scrolling ipad](documentation/testing/user-stories/us-ipad-leg.PNG) ![No scrolling acer](documentation/testing/user-stories/us-acer-leg.png)
+
 ### User Goals
 
 #### I want to know what the website offers, and easily navigate through the site.
@@ -262,10 +262,33 @@ are visible. Some smaller devices may require some minor scrolling, especially w
 - The "volume mute" icon will display when sound effects are playing, indicating to the user to press this should they wish to mute the audio. 
 
 ![Mute Volume](documentation/testing/user-stories/us-mute.png) ![Volume up](documentation/testing/user-stories/us-volume.png)
+
 #### I want a game that is simple to play so I do not to spend a length of time learning the rules. 
-#### I want easy controls for the game, so I can play the game effortlessly. 
+- Memory games by design are relatively straightforward to understand. Rules is the first button the user will see when opening the Kick Off modal, 
+with a brief description the user is immediately aware of how the game is played. 
+
+![Game Rules](documentation/testing/user-stories/us-rules.png)
+ 
 #### I want to see a scoring system so I have a score to beat. 
+- When the user has matched all the cards they are met with a victory modal. The user is provided with the stats of their game: 
+    - User is shown how much time remaining they had once all cards are matched. 
+    - User is shown the total moves they made to match all the cards. 
+    - User is shown a star rating system based on their performance. 
+    - User is shown their score, which is calculated by adding the time remaining, to the points scored based on the moves made. 
+- User can save their score to a local leader board, with some default high scores already set, to challenege themselves to reach the top of the leader board. 
+- User is also able to clear the leaderboard, and reset it to the default scores. 
+
+Please note the image below does not show the warning message when clearing the leader board due to the screen recording programme used. 
+
+![Leader Board](documentation/testing/user-stories/leader-board.gif)
+
 #### I want to be able to contact the business with any queries I may have.
+- The user has the option of selecting the contact us button on the Kick Off modal, which drops down a contact form when clicked. 
+- All 3 fields must be completed, which will send an automated email to the developer. 
+- The user is greeted with a thankyou for your enquiry message, and the contact form is cleared. 
+
+![Email](documentation/testing/user-stories/us-email.gif)
+![Email](documentation/testing/user-stories/us-email-test.png)
 
 ## Full Testing
 
