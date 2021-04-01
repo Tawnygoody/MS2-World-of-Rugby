@@ -216,6 +216,15 @@ I would then implement back end technologies (knowledge not yet gained)
     - [game-pro.html results](documentation/testing/w3c/w3c-pro.png)
     - [game-leg.html results](documentation/testing/w3c/w3c-leg.png)
 
+- JSHint
+    - [script.js](documentation/testing/w3c/js-script.png)
+    - [game-script.js](documentation/testing/w3c/js-game-script.png)
+
+No warning messages within the script.js. emailjs is listed as an undefined variable, and sendMail is listed as an unused variable, however this is a function. 
+
+The only warning in the game-script were to do with only being available in ES6. 
+
+
 ## Testing User stories
 
 ### Business Goals

@@ -61,7 +61,7 @@ function ready() {
     let victorySound = new Audio("assets/audio/victory.wav");
     let gameOverSound = new Audio("assets/audio/gameover.wav");
     let soundEffects = "off";
-    let soundButton = document.getElementById("sound-effects")
+    let soundButton = document.getElementById("sound-effects");
     bgMusic.loop = true;
     bgMusic.volume = 0.3;
 
@@ -205,53 +205,53 @@ function ready() {
         if(difficulty === "AMATEUR") {
             if(movesCounter <= 30) { //star rating system based on the number of moves made.
                 points = 80;
-                $("#star1,#star2,#star3,#star4,#star5").css({"color": "#c8831b", "opacity": "1"}) //5 stars shown if user has made 25 moves or less.
+                $("#star1,#star2,#star3,#star4,#star5").css({"color": "#c8831b", "opacity": "1"}); //5 stars shown if user has made 25 moves or less.
             } else if (movesCounter <= 35) {
                 points = 60;
-                $("#star1,#star2,#star3,#star4").css({"color": "#c8831b", "opacity": "1"}) //4 stars shows if the user has made 30 moves or less.
+                $("#star1,#star2,#star3,#star4").css({"color": "#c8831b", "opacity": "1"}); //4 stars shows if the user has made 30 moves or less.
             } else if (movesCounter <= 40) {
                 points = 40;
-                $("#star1,#star2,#star3").css({"color": "#c8831b", "opacity": "1"}) // 3 stars shown if the user has made 35 moves or less.
+                $("#star1,#star2,#star3").css({"color": "#c8831b", "opacity": "1"}); // 3 stars shown if the user has made 35 moves or less.
             } else if (movesCounter <= 45) {
                 points = 20;
-                $("#star1,#star2").css({"color": "#c8831b", "opacity": "1"}) //2 stars shown if the user has made 40 moves or less.
+                $("#star1,#star2").css({"color": "#c8831b", "opacity": "1"}); //2 stars shown if the user has made 40 moves or less.
             } else {
                 points = 0;
-                $("#star1").css({"color": "#c8831b", "opacity": "1"}) //1 star shown when user has made 40+ moves.
+                $("#star1").css({"color": "#c8831b", "opacity": "1"}); //1 star shown when user has made 40+ moves.
             }
         } else if(difficulty === "PRO") {
             if(movesCounter <= 35) { //star rating system based on the number of moves made.
                 points = 80;
-                $("#star1,#star2,#star3,#star4,#star5").css({"color": "#c8831b", "opacity": "1"}) //5 stars shown if user has made 35 moves or less.
+                $("#star1,#star2,#star3,#star4,#star5").css({"color": "#c8831b", "opacity": "1"}); //5 stars shown if user has made 35 moves or less.
             } else if (movesCounter <= 40) {
                 points = 60;
-                $("#star1,#star2,#star3,#star4").css({"color": "#c8831b", "opacity": "1"}) //4 stars shows if the user has made 40 moves or less.
+                $("#star1,#star2,#star3,#star4").css({"color": "#c8831b", "opacity": "1"}); //4 stars shows if the user has made 40 moves or less.
             } else if (movesCounter <= 45) {
                 points = 40;
-                $("#star1,#star2,#star3").css({"color": "#c8831b", "opacity": "1"}) // 3 stars shown if the user has made 45 moves or less.
+                $("#star1,#star2,#star3").css({"color": "#c8831b", "opacity": "1"}); // 3 stars shown if the user has made 45 moves or less.
             } else if (movesCounter <= 50) {
                 points = 20;
-                $("#star1,#star2").css({"color": "#c8831b", "opacity": "1"}) //2 stars shown if the user has made 50 moves or less.
+                $("#star1,#star2").css({"color": "#c8831b", "opacity": "1"}); //2 stars shown if the user has made 50 moves or less.
             } else {
                 points = 0;
-                $("#star1").css({"color": "#c8831b", "opacity": "1"}) //1 star shown when user has made 50+ moves.
+                $("#star1").css({"color": "#c8831b", "opacity": "1"}); //1 star shown when user has made 50+ moves.
             }
         } else {
             if(movesCounter <= 50) { //star rating system based on the number of moves made.
                 points = 80;
-                $("#star1,#star2,#star3,#star4,#star5").css({"color": "#c8831b", "opacity": "1"}) //5 stars shown if user has made 50 moves or less.
+                $("#star1,#star2,#star3,#star4,#star5").css({"color": "#c8831b", "opacity": "1"}); //5 stars shown if user has made 50 moves or less.
             } else if (movesCounter <= 65) {
                 points = 60;
-                $("#star1,#star2,#star3,#star4").css({"color": "#c8831b", "opacity": "1"}) //4 stars shows if the user has made 55 moves or less.
+                $("#star1,#star2,#star3,#star4").css({"color": "#c8831b", "opacity": "1"}); //4 stars shows if the user has made 55 moves or less.
             } else if (movesCounter <= 60) {
                 points = 40;
-                $("#star1,#star2,#star3").css({"color": "#c8831b", "opacity": "1"}) // 3 stars shown if the user has made 60 moves or less.
+                $("#star1,#star2,#star3").css({"color": "#c8831b", "opacity": "1"}); // 3 stars shown if the user has made 60 moves or less.
             } else if (movesCounter <= 65) {
                 points = 20;
-                $("#star1,#star2").css({"color": "#c8831b", "opacity": "1"}) //2 stars shown if the user has made 65 moves or less.
+                $("#star1,#star2").css({"color": "#c8831b", "opacity": "1"}); //2 stars shown if the user has made 65 moves or less.
             } else {
                 points = 0;
-                $("#star1").css({"color": "#c8831b", "opacity": "1"}) //1 star shown when user has made 65+ moves.
+                $("#star1").css({"color": "#c8831b", "opacity": "1"}); //1 star shown when user has made 65+ moves.
             }
         }
         
@@ -290,12 +290,12 @@ function ready() {
 
         $("#leader-modal").modal("toggle"); //opens the leader modal
         $("#victory-modal").modal("toggle"); //closes the victory-modal
-    }
+    };
 
     function removeStorage() {
         if (confirm("Are you sure you want to clear the leaderboard? All saved scores will be lost.")) { // confirm alert message aided by https://stackoverflow.com/questions/9334636/how-to-create-a-dialog-with-yes-and-no-options
             localStorage.clear(); //clears localStorage so any saved names are removed from the leaderboard
-            window.location.href = "index.html" //takes the user back to the home page if users confirms to clear localStorage
+            window.location.href = "index.html"; //takes the user back to the home page if users confirms to clear localStorage
         }
     }
 
@@ -306,7 +306,7 @@ function ready() {
             gameLoss();
         }
     }
-/*
+
     (function shuffle() {
         if(difficulty === "AMATEUR") {
             cards.forEach(card => { //iterate through cards Array.
@@ -325,7 +325,7 @@ function ready() {
             });
         }
     })(); //immediately invoked function.
-*/
+
     // Event Listeners
     cards.forEach(card => card.addEventListener("click", flipCard)); //adds an event listener to each game-card and calls flipcard function when clicked.
     overlays.addEventListener("click", startGame); //adds an event listener to the overlay and calls startGame function when clicked
