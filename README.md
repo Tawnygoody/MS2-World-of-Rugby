@@ -1,5 +1,7 @@
 <h1 align="center">World of Rugby Memory Game</h1>
 
+![Multiple device mockup](documentation/testing/responsiveness/manual/techsini-device.png)
+
 View the repository in GitHub [here](https://github.com/Tawnygoody/MS2-World-of-Rugby)
 
 View the live project [here]()
@@ -352,6 +354,15 @@ Although this is a problem when using Internet Explorer (IE), IE is gradually be
 #### iPhone 8
 - Google Chrome - successful
 - Safari - successful
+
+#### EmailJS
+Test emails from all browsers working correctly:
+- [Google Chrome](documentation/testing/browser/bc-chrome.png)
+- [Mozilla Firefox 81](documentation/testing/browser/bc-firefox.png)
+- [Safari 12](documentation/testing/browser/bc-safari.png)
+- [Edge 85](documentation/testing/browser/bc-edge.png)
+- [Opera 70](documentation/testing/browser/bc-opera.png)
+- [Internet Explorer 11](documentation/testing/browser/bc-ie.png)
 
 ### Responsive Design
 
