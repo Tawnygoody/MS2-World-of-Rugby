@@ -506,6 +506,13 @@ keeping a consistent height and width.
 
 ## Known bugs
 
+- Some of the game card images are slightly larger than the game cards, which cuts off the edge of the logos. As images have been used from different sources they all have varying dimensions. I did not want to stretch 
+the images in order to fit the game cards, as it wasn't aesthetically pleasing. By the edge of some of the images being cut by the game cards, I do not feel it detracts from the user 
+experience greatly. 
+- The game cards flip in slightly different ways. The top row of cards has a greater 3D effect than the second or thrid row of cards. We can see that the third row of cards barely flips in a 3D space at all. I believe this 
+is to do with vanishing point. I have tried altering the perspective origin, but this seems to remove the 3D effect. For the pruposes of this project, I am happy to accept this. For future implementaions I would like all cards to 
+have the same 3D effect. 
+
 ## Lighthouse
 I have tested the website's performace, accessibility, and user experience using Lighthouse in Google Developer Tools
 
