@@ -115,6 +115,12 @@ I would then implement back end technologies (knowledge not yet gained)
         related to what the company offers. 
         - Game page background must be in keeping with the game, but should not detract from the game cards or distract the user. 
         - All images must be of sound enough quality, so they can scale according to different device sizes, without pixelating.
+    - #### Audio 
+        - On the game page the user has the option to turn on sound effects. The background music is used during the Rugby World Cup, so is in keeping with 
+        what the website is offering. 
+        - In game audio (flip sound & match sound) can be heard over the background music and does not get drowned out. 
+        - Victory / game over audio adds further to the user experience. 
+
 
     
 ## Skeleton
@@ -149,7 +155,7 @@ a variety of changes made:
 - Kick Off modal has three buttons with dropdowns for "Rules" and "Contact Us" sections, to minimise unnecessary information 
 and increase user interactivity. 
 - Difficulty modal has been added to the home page, so the user can select the difficulty of the game.
-- A Leader Board modal has been added to the game pages, so they can compete against themselves and the default high scores. 
+- A Leader Board modal has been added to the game pages, so user's can compete against themselves and the default high scores. 
 - A variety of styling changes have been made to improve the aesthetics and user experience.  
 
 Although there have been several changes, I feel the planning at the beginning of the project meant these changes 
