@@ -99,8 +99,11 @@ I would then implement back end technologies (knowledge not yet gained)
 - ### Design
     - #### Colour Scheme
         - The main colours for the website are Brown, and Rusty colours. These have been picked from the logo Image
-        to compliment the website. White and Orange have been used for the text in places to increase color contrast and 
+        to compliment the website. White and yellow have been used for the text in places to increase color contrast and 
         allow easier readability. 
+            - #312018 & #c8831b have been picked from the logo and have been used throughout the site. 
+            - #1c961b has been picked from the game page background image, when no dark overlay has been applied, and has been used to style the audio button.
+            - #fff & #fbf41d have been used to increase readibility.           
     - #### Typography
         - Quattrocento will be used for headings and titles and Radley will be used for the websites content. San-serif will 
         be used as a fallback, should there be an error with the imported fonts. These fonts are in-keeping with the websites
@@ -115,6 +118,44 @@ I would then implement back end technologies (knowledge not yet gained)
 
     
 ## Skeleton
+Below you can find links for my wireframes based on Phase 1 (established within the scope), showing how I would 
+like the pages to be structured, and how the site would appear on different device sizes. 
+
+### Wireframes 
+The wireframes have been created using Wondershare Mockitt, and show for desktop, iPad & iPhone 11 Pro/X.
+- #### Home Page
+    - [Desktop](documentation/wireframes/home-page-wireframe-desktop.png)
+    - [iPad](documentation/wireframes/home-page-wireframe-ipad.png)
+    - [iPhone](documentation/wireframes/home-page-wireframe-iphone.png)
+- #### Home Page Modal
+    - [Desktop](documentation/wireframes/home-modal-desktop.png)
+    - [iPad](documentation/wireframes/home-modal-ipad.png)
+    - [iPhone](documentation/wireframes/home-modal-iphone.png)
+- #### Game Page
+    - [Desktop](documentation/wireframes/game-page-desktop.png)
+    - [iPad](documentation/wireframes/game-page-ipad.png)
+    - [iPhone](documentation/wireframes/game-page-iphone.png)
+- #### Game Page Modal 
+    - [Desktop](documentation/wireframes/game-modal-desktop.png)
+    - [iPad](documentation/wireframes/game-modal-ipad.png)
+    - [iPhone](documentation/wireframes/game-modal-iphone.png)
+
+### Modifications
+As the project progressed and I looked to implement Phase 2 concepts (established within the scope), there have been 
+a variety of changes made: 
+
+- Audio has been removed from the home page as I did not feel it was neessary. 
+- A footer has been added with links to GitHub and Linkedin. 
+- Kick Off modal has three buttons with dropdowns for "Rules" and "Contact Us" sections, to minimise un-necessary information 
+and increase user interactivity. 
+- Difficulty modal has been added to the home page, so the user can select the difficulty of the game.
+- A Leader Board modal has been added to the game pages, so they can compete against themselves and the default high scores. 
+- A variety of styling changes have been made to improve the aesthetics and user experience.  
+
+Although there have been a number of changes, I feel the planning at the beginning of the project meant these changes 
+could be applied very easily. 
+
+
 
 ## Surface
 - ### Features
@@ -163,6 +204,11 @@ I would then implement back end technologies (knowledge not yet gained)
             default scores and any previously saved scores. Only the top 15 scores will be displayed. 
             - Leader Board reset button will clear the local storage and take the user to the home screen. A confirm message will alert the user
             before the local storage is cleared. 
+
+### Personal Reflections
+Overall I am very happy with the final outcome of the project. I have been able to implement both Phase 1 & Phase 2 concepts to the final site. 
+As I further increase my knowledge of Javascript, rather than having 3 different game pages for the different difficulty levels, I could use Javascript to build
+the layout dependant on the difficulty selected. 
 
 # Technologies Used
 

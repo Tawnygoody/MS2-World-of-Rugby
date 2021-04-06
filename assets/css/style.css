@@ -83,14 +83,14 @@
 
 /**-----Home Page Hero-----**/
 
-.hero-image { /*-- Thanks to Matt Rudge at Code Institue for this code --*/
+.hero-image { /*-- Thanks to Matt Rudge (credited in README) --*/
     height:90vh;
     background: url('../images/haka.jpg') no-repeat center bottom;
     background-size: cover;
     position: relative;
 }
 
-.center { /*-- Thanks to https://www.w3schools.com/howto/howto_css_center_button.asp for centering button --*/
+.center { /*-- Thanks to W3Schools (credited in README --*/
   margin: 0;
   position: absolute;
   top: 50%;
@@ -125,7 +125,7 @@
 
 /**-----Game Page-----**/
 
-.game-hero-image { /*-- Thanks to https://css-tricks.com/perfect-full-page-background-image/ for game page background image--*/
+.game-hero-image { /*-- Thanks to CSS tricks (credited in README)--*/
     background: -webkit-gradient( linear, left top, left bottom, from(rgba(0,0,0,0.5)), to(rgba(0, 0, 0, 0.5)) ),url("../images/rugby-field.png") no-repeat center center scroll;
     background: -o-linear-gradient( rgba(0,0,0,0.5), rgba(0, 0, 0, 0.5) ),url("../images/rugby-field.png") no-repeat center center scroll;
     background: linear-gradient( rgba(0,0,0,0.5), rgba(0, 0, 0, 0.5) ),url("../images/rugby-field.png") no-repeat center center scroll; /*--thanks to stack overflow (credited in README)--*/
@@ -133,7 +133,7 @@
     min-height: 100vh;
 }
 
-#overlay-text {
+#overlay-text { /*-- Thanks to WebDev Simplified (credited in README)--*/
     display: none;
     position: fixed;
     top: 0;
@@ -161,7 +161,7 @@
     display: none;
 }
 
-#overlay-text.visible {
+#overlay-text.visible { /*-- Thanks to WebDev Simplified (credited in README)--*/
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -189,7 +189,7 @@
     max-width: 170px;
 }
 
-.game-container {
+.game-container { /*-- Thanks to Marina Ferreira (credited in README)--*/
     width: 550px;
     height: 750px;
     display: -webkit-box;
@@ -212,7 +212,7 @@
     width: 830px;
 }
 
-.game-card {
+.game-card { /*-- Thanks to Marina Ferreira (credited in README)--*/
     width: calc(25% - 10px);
     height: calc(25% - 10px);
     position: relative;
@@ -237,7 +237,7 @@
     width: calc(16.666% - 10px);
 }
 
-.game-card:active {
+.game-card:active { /*-- Thanks to Marina Ferreira (credited in README)--*/
     -webkit-transform: scale(.97);
         -ms-transform: scale(.97);
             transform: scale(.97);
@@ -248,13 +248,13 @@
     transition: transform .2s, -webkit-transform .2s;
 }
 
-.game-card.flip {
+.game-card.flip { /*-- Thanks to Marina Ferreira (credited in README)--*/
     -webkit-transform: rotateY(180deg);
             transform: rotateY(180deg);
 }
 
 .front-face,
-.back-face {
+.back-face { /*-- Thanks to Marina Ferreira (credited in README)--*/
     width: 100%;
     height: 100%;
     border-radius: 10px;
@@ -266,7 +266,7 @@
             backface-visibility: hidden;
 }
 
-.front-face {
+.front-face { /*-- Thanks to Marina Ferreira (credited in README)--*/
     -webkit-transform: rotateY(180deg);
             transform: rotateY(180deg);
 }
@@ -323,8 +323,7 @@
     text-decoration: none;
 }
 
-/*-- modal scrollable taken from https://stackoverflow.com/questions/10476632/how-to-scroll-the-page-when-a-modal-dialog-is-longer-than-the-screen --*/
-.modal-body.leader-body {
+.modal-body.leader-body { /*-- Thanks to Stack Overflow (credited in README)--*/
     max-height: calc(100vh - 100px);
     overflow-y: auto;
 }
@@ -338,7 +337,7 @@
     opacity: 1;
 }
 
-.modal-image {
+.modal-image { /*-- Thanks to WebDev Simplified (credited in README)--*/
     width: 110px;
     height: 170px;
     -o-object-fit: cover;
@@ -383,14 +382,14 @@
     border: 2px solid #fff;
 }
 
-#tackle {
+#tackle { /*-- Thanks to WebDev Simplified (credited in README)--*/
     width: 170px;
     height: 170px;
     -webkit-animation: dance 3s linear infinite;
             animation: dance 3s linear infinite;
 }
 
-@-webkit-keyframes dance { /**web dev**/
+@-webkit-keyframes dance { /*-- Thanks to WebDev Simplified (credited in README)--*/
     0%, 100% {
         -webkit-transform: rotate(0);
                 transform: rotate(0);
@@ -405,7 +404,7 @@
     }
 }
 
-@keyframes dance { /**web dev**/
+@keyframes dance { /*-- Thanks to WebDev Simplified (credited in README)--*/
     0%, 100% {
         -webkit-transform: rotate(0);
                 transform: rotate(0);
