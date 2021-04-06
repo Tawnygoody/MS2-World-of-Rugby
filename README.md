@@ -4,7 +4,7 @@
 
 View the repository in GitHub [here](https://github.com/Tawnygoody/MS2-World-of-Rugby)
 
-View the live project [here]()
+View the live project [here](https://tawnygoody.github.io/MS2-World-of-Rugby/index.html)
 
 # Contents
 
