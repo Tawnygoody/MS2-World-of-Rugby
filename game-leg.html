@@ -10,6 +10,8 @@
         <title>World of Rugby</title>
     </head>
     <body>
+
+        <!--Logo Bar-->
         <header>
             <div class="container-fluid" id="logo-bar">
                 <div class="row no-gutters justify-content-center">
@@ -25,11 +27,15 @@
                 </div>
             </div>
         </header>
+
+        <!--Game Page Content-->
         <section class="game-hero-image">
+            <!--Game Page Overlay-->
             <div class="visible" id="overlay-text">
                 <h2>Kick Off</h2>
                 <p id="portrait-mode"><small>Please turn your device to portrait</small></p>
             </div>
+            <!--Timer & Moves Counter-->
             <div class="container-fluid game-info-leg-div">
                 <div class="row text-center no-gutters justify-content-center">
                     <div class="col game-info">
@@ -39,6 +45,7 @@
                         <h2 class="headings-light headings-small">Moves: <span id="flips">0</span></h2>
                     </div>
                 </div>
+                <!--Game Cards-->
                 <div class="col-12 game-container container-leg justify-content-center">
                     <div class="game-card card-leg" data-logo="argentina">
                         <img class="front-face" src="assets/images/argentina-logo.jpg" alt="Argentina Rugby Logo">
@@ -139,6 +146,7 @@
                 </div>
             </div>
         </section>
+
         <footer class="footer-background">
             <div class="row no-gutters justify-content-center">
                 <div class="col-12">
@@ -160,8 +168,8 @@
             </div>
         </footer>
 
-        <!-- Modal -->
-        <!-- code to keep modal open when clicking outside taken from https://stackoverflow.com/questions/16152073/prevent-bootstrap-modal-from-disappearing-when-clicking-outside-or-pressing-esca-->
+        <!-- Victory Modal -->
+        <!-- Thanks to Stack Overflow (credited in README)-->
         <div class="modal fade" id="victory-modal" tabindex="-1" role="dialog" aria-labelledby="victory-modal" aria-hidden="true" data-backdrop="static" data-keyboard="false">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content text-center">
@@ -196,7 +204,7 @@
                                 <input type="text" name="username" id="username" placeholder="Name" maxlength="20">
                             </div>
                             <div class="col-12">
-                                <button type="submit" class="modal-buttons content-light" id="saveScoreBtn" onclick="saveHighScore(event)" disabled>Save</button>
+                                <button type="submit" class="modal-buttons content-light" id="saveScoreBtn" onclick="saveHighScore(event)" disabled>Save</button> <!--Thanks to James Q Quick (credited in README)-->
                             </div>
                             <div class="col-12">
                                 <a href="game-leg.html" class="btn modal-buttons content-light">
@@ -214,6 +222,7 @@
             </div>
         </div>
 
+        <!-- Leader Board Modal -->
         <div class="modal fade" id="leader-modal" tabindex="-1" role="dialog" aria-labelledby="leader-modal" aria-hidden="true" data-backdrop="static" data-keyboard="false">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content text-center">
@@ -244,6 +253,7 @@
             </div>
         </div>
 
+        <!-- Game Over Modal -->
         <div class="modal fade" id="game-over-modal" tabindex="-1" role="dialog" aria-labelledby="game-over-modal" aria-hidden="true" data-backdrop="static" data-keyboard="false">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content text-center">

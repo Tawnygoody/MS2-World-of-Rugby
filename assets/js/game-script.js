@@ -10,7 +10,7 @@ function ready() {
     let cardsArray = cards;
     let matchedCardsArray = [];
 
-    let difficulty; //difficulty aid using pathname taken from https://stackoverflow.com/questions/21265919/location-pathname-indexof-not-working-with-or
+    let difficulty; //difficulty aid using pathname taken from Stack Overflow (credited in README)
     if(window.location.pathname.indexOf("amateur") != -1) { // if the pathname contains amateur the gameType will be set to AMATEUR
         difficulty = "AMATEUR";
     } else if(window.location.pathname.indexOf("pro") != -1) { // if the pathname contains pro the gameType will be set to PRO
@@ -65,6 +65,9 @@ function ready() {
     bgMusic.loop = true;
     bgMusic.volume = 0.3;
 
+    /*
+    Help with soundEffects functions taken from Port Exe (credited in README)
+    */
     function startMusic() { //bgMusic players when function is called in audioToggle function
         bgMusic.play();
     }
@@ -87,16 +90,16 @@ function ready() {
         victorySound.play();
     }
 
-    function gameLoss() { //gameOverSounds players when not all the cards have been matched within the timeframe. Called in the gameOver function. 
+    function gameLoss() { //gameOverSounds plays when the user fails to match all the cards within the timeframe. Called in the gameOver function. 
         stopMusic(); //stops the bgMusic so background music and game over sounds aren't playing at the same time.
         gameOverSound.play();
     }
 
     function audioToggle() {
-        if(soundEffects === "on") { //if the soundEffects are on, bgMusic will play and the icon will be set to the mute button, should the user want to mute soundEffects.
+        if(soundEffects === "on") { //if the soundEffects are on, bgMusic will play and the icon will be set to the mute icon.
             soundButton.innerHTML = `<i class="fas fa-volume-mute"></i>`;
             startMusic();
-        } else { //else when soundEffects are off, stopMusic function called, and the icon will be set to volume up button, should the user want soundEffects on. 
+        } else { //else when soundEffects are off, stopMusic function called, and the icon will be set to volume up icon. 
             soundButton.innerHTML = `<i class="fas fa-volume-up"></i>`;
             stopMusic();
         }
@@ -115,9 +118,12 @@ function ready() {
         overlays.classList.remove("visible");
     }
 
+    /*
+    Help with flipCard function taken from Marina Ferreira (credited in README)
+    */
     function flipCard() {
-        if(lockBoard) return;
-        if(this === firstCard) return; //prevents the same card from being clicked twice. 
+        if(lockBoard) return; //prevents any card flipping before the cards are hidden or match
+        if(this === firstCard) return; //prevents the same card from being clicked twice, by asking if it is the first card clicked. 
 
         this.classList.add("flip"); //adds the "flip" class to the individual card that was clicked.
         if(soundEffects == "on") { //flipSound plays when soundEffects are on. 
@@ -138,7 +144,7 @@ function ready() {
     }
 
     /*
-    Help with countdown function taken from https://scotch.io/tutorials/how-to-build-a-memory-matching-game-in-javascript
+    Help with countdown function taken from Scotch (credited in README)
     */
     function countDownBegin() {
         countDown = setInterval(function() {
@@ -149,6 +155,9 @@ function ready() {
         }, 1000); //number reduces every second
     }
 
+    /*
+    Help with flipsCounter functions taken from Port Exe (credited in README)
+    */
     function flipsCounter() { //function called in the flipCard function
         movesCounter++; //increments the movesCounter by one everytime a card is flipped.
         counter.innerHTML = movesCounter; //shows the moves the user has made.
@@ -157,6 +166,9 @@ function ready() {
         }
     }
 
+    /*
+    Help with checkForMatch function taken from Marina Ferreira (credited in README)
+    */
     function checkForMatch() { //checkForMatch function called in the flipCard function
         if(firstCard.dataset.logo === secondCard.dataset.logo) { //if the firstCard and secondCard data-logo's are equal fires matchedCard function.
             matchedCards();
@@ -169,11 +181,14 @@ function ready() {
         }
     }
 
+    /*
+    Help with matchedCards function taken from Marina Ferreira (credited in README)
+    */
     function matchedCards() {
         firstCard.removeEventListener("click", flipCard); //if the cards match - removes event listener so the cards cannot be flipped back.
         secondCard.removeEventListener("click", flipCard); //if the cards match - removes event listener so the cards cannot be flipped back.
         matchedCardsArray.push(firstCard); //adds the firstcard clicked to the matchedCardsArray
-        matchedCardsArray.push(secondCard); //add the secondcard clicked to the matchedCardsArray
+        matchedCardsArray.push(secondCard); //adds the secondcard clicked to the matchedCardsArray
         if(matchedCardsArray.length === cardsArray.length) { //if the amount of cards in the matchedCardsArray is equal to the number of cards in the cardsArray fire the victory function
             victory();
         }
@@ -181,6 +196,9 @@ function ready() {
         resetBoard();
     }
 
+    /*
+    Help with unmatchedCards function taken from Marina Ferreira (credited in README)
+    */
     function unmatchedCards() {
         lockBoard = true; //board becomes unlocked only after the cards have been flipped
 
@@ -192,70 +210,76 @@ function ready() {
         }, 1000); //delays the cards from being turned back by 1 second
     }
 
-    function resetBoard() { //prevents the same card from being clicked twice. 
+    /*
+    Help with resetBoard function taken from Marina Ferreira (credited in README)
+    */
+    function resetBoard() { //resets the firstCard & secondCard variables and is called when 2 cards either match or do not match. 
         [hasFlippedCard, lockBoard] = [false, false];
         [firstCard, secondCard] = [null, null];
     }
 
     function victory() {
         clearInterval(countDown); //stops the countdown.
+        /*
+        Help with finishTime & finishMoves taken from Port Exe (credited in README)
+        */
         finishTime = timer.innerHTML; //finishTime variable set to the timer content.
         finishMoves = movesCounter; //finishMoves variable set to the movesCounter.
     
         if(difficulty === "AMATEUR") {
-            if(movesCounter <= 30) { //star rating system based on the number of moves made.
-                points = 80;
-                $("#star1,#star2,#star3,#star4,#star5").css({"color": "#c8831b", "opacity": "1"}); //5 stars shown if user has made 25 moves or less.
+            if(movesCounter <= 30) { //star & points calculated based on the number of moves made.
+                points = 80; //80 points if user has made 30 moves or less.
+                $("#star1,#star2,#star3,#star4,#star5").css({"color": "#c8831b", "opacity": "1"}); //5 stars shown if user has made 30 moves or less.
             } else if (movesCounter <= 35) {
-                points = 60;
-                $("#star1,#star2,#star3,#star4").css({"color": "#c8831b", "opacity": "1"}); //4 stars shows if the user has made 30 moves or less.
+                points = 60; //60 points if the user has made 35 moves or less.
+                $("#star1,#star2,#star3,#star4").css({"color": "#c8831b", "opacity": "1"}); //4 stars shows if the user has made 35 moves or less.
             } else if (movesCounter <= 40) {
-                points = 40;
-                $("#star1,#star2,#star3").css({"color": "#c8831b", "opacity": "1"}); // 3 stars shown if the user has made 35 moves or less.
+                points = 40; //40 points if the user has made 40 moves or less.
+                $("#star1,#star2,#star3").css({"color": "#c8831b", "opacity": "1"}); //3 stars shown if the user has made 40 moves or less.
             } else if (movesCounter <= 45) {
-                points = 20;
-                $("#star1,#star2").css({"color": "#c8831b", "opacity": "1"}); //2 stars shown if the user has made 40 moves or less.
+                points = 20; //20 points if the user has made 45 moves or less.
+                $("#star1,#star2").css({"color": "#c8831b", "opacity": "1"}); //2 stars shown if the user has made 45 moves or less.
             } else {
-                points = 0;
-                $("#star1").css({"color": "#c8831b", "opacity": "1"}); //1 star shown when user has made 40+ moves.
+                points = 0; //0 points when user has made 46+ moves.
+                $("#star1").css({"color": "#c8831b", "opacity": "1"}); //1 star shown when user has made 46+ moves.
             }
         } else if(difficulty === "PRO") {
-            if(movesCounter <= 35) { //star rating system based on the number of moves made.
-                points = 80;
+            if(movesCounter <= 35) { //star & points calculated based on the number of moves made.
+                points = 80; //80 points if user has made 35 moves or less.
                 $("#star1,#star2,#star3,#star4,#star5").css({"color": "#c8831b", "opacity": "1"}); //5 stars shown if user has made 35 moves or less.
             } else if (movesCounter <= 40) {
-                points = 60;
+                points = 60; //60 points if the user has made 40 moves or less.
                 $("#star1,#star2,#star3,#star4").css({"color": "#c8831b", "opacity": "1"}); //4 stars shows if the user has made 40 moves or less.
             } else if (movesCounter <= 45) {
-                points = 40;
+                points = 40; //40 points if the user has made 45 moves or less.
                 $("#star1,#star2,#star3").css({"color": "#c8831b", "opacity": "1"}); // 3 stars shown if the user has made 45 moves or less.
             } else if (movesCounter <= 50) {
-                points = 20;
+                points = 20; //20 if the user has made 50 moves or less.
                 $("#star1,#star2").css({"color": "#c8831b", "opacity": "1"}); //2 stars shown if the user has made 50 moves or less.
             } else {
-                points = 0;
-                $("#star1").css({"color": "#c8831b", "opacity": "1"}); //1 star shown when user has made 50+ moves.
+                points = 0; //0 points when user has made 51+ moves.
+                $("#star1").css({"color": "#c8831b", "opacity": "1"}); //1 star shown when user has made 51+ moves.
             }
         } else {
-            if(movesCounter <= 50) { //star rating system based on the number of moves made.
-                points = 80;
+            if(movesCounter <= 50) { //star & points calculated based on the number of moves made.
+                points = 80; //80 points if user has made 50 moves or less.
                 $("#star1,#star2,#star3,#star4,#star5").css({"color": "#c8831b", "opacity": "1"}); //5 stars shown if user has made 50 moves or less.
             } else if (movesCounter <= 65) {
-                points = 60;
+                points = 60; //60 points if the user has made 55 moves or less.
                 $("#star1,#star2,#star3,#star4").css({"color": "#c8831b", "opacity": "1"}); //4 stars shows if the user has made 55 moves or less.
             } else if (movesCounter <= 60) {
-                points = 40;
+                points = 40; //40 points if the user has made 60 moves or less.
                 $("#star1,#star2,#star3").css({"color": "#c8831b", "opacity": "1"}); // 3 stars shown if the user has made 60 moves or less.
             } else if (movesCounter <= 65) {
-                points = 20;
+                points = 20; //20 points if the user has made 65 moves or less.
                 $("#star1,#star2").css({"color": "#c8831b", "opacity": "1"}); //2 stars shown if the user has made 65 moves or less.
             } else {
-                points = 0;
-                $("#star1").css({"color": "#c8831b", "opacity": "1"}); //1 star shown when user has made 65+ moves.
+                points = 0; //0 points when user has made 66+ moves.
+                $("#star1").css({"color": "#c8831b", "opacity": "1"}); //1 star shown when user has made 66+ moves.
             }
         }
         
-        //help with final score equation taken from https://stackoverflow.com/questions/7658176/adding-two-variables-together
+        //help with final score equation taken from Stack Overflow (credited in README)
         finalScore = parseInt(points) + parseInt(timer.innerHTML); //final score is equal to points dependent on movesCounter and the time-remaining when the last match is made. 
         mostRecentScore.innerHTML = finalScore; // score shows in the victory modal as a result of the finalScore. 
 
@@ -268,10 +292,10 @@ function ready() {
     }
     
     /*
-    Help with saveHighScore event taken from https://www.youtube.com/watch?v=jfOv18lCMmw
+    Help with saveHighScore event taken from James Q Quick (credited in README)
     */
     saveHighScore = (e) => {
-        e.preventDefault();
+        e.preventDefault(); //prevents the default action from occuring
 
         let score = {
             score: finalScore, //score value taken from the result of the finalScore variable in the victory function
@@ -285,7 +309,7 @@ function ready() {
 
         highScoresList.innerHTML = 
         highScores.map(score => {
-        return `<li class="resultName">${score.name} - <span class="resultScore">${score.score}</span></li>`; 
+        return `<li class="resultName">${score.name} - <span class="resultScore">${score.score}</span></li>`; //lists all the users high scores and default high scores in the leader board modal
         }).join("");
 
         $("#leader-modal").modal("toggle"); //opens the leader modal
@@ -293,7 +317,7 @@ function ready() {
     };
 
     function removeStorage() {
-        if (confirm("Are you sure you want to clear the leaderboard? All saved scores will be lost.")) { // confirm alert message aided by https://stackoverflow.com/questions/9334636/how-to-create-a-dialog-with-yes-and-no-options
+        if (confirm("Are you sure you want to clear the leaderboard? All saved scores will be lost.")) { // confirm alert message aided by Stack Overflow (credited in README)
             localStorage.clear(); //clears localStorage so any saved names are removed from the leaderboard
             window.location.href = "index.html"; //takes the user back to the home page if users confirms to clear localStorage
         }
@@ -307,6 +331,9 @@ function ready() {
         }
     }
 
+    /*
+    Help with shuffle function taken from Marina Ferreira (credited in README)
+    */
     (function shuffle() {
         if(difficulty === "AMATEUR") {
             cards.forEach(card => { //iterate through cards Array.
@@ -330,10 +357,10 @@ function ready() {
     cards.forEach(card => card.addEventListener("click", flipCard)); //adds an event listener to each game-card and calls flipcard function when clicked.
     overlays.addEventListener("click", startGame); //adds an event listener to the overlay and calls startGame function when clicked
     soundButton.addEventListener("click", musicToggle); //adds an event listener to the soundbutton and calls musicToggle function when clicked
-    username.addEventListener("keyup", () => {
+    username.addEventListener("keyup", () => { //adds an event listener to the save button, and disables it until a name has been entered into the field above
         saveScoreBtn.disabled = !username.value;
     }); 
-    clearStorage.addEventListener("click", removeStorage);
+    clearStorage.addEventListener("click", removeStorage); //adds an event listener to the reset leader board button
 }
 
 if (document.readyState === "loading") {

@@ -1,5 +1,5 @@
 /*
-Send Mail function taken from Code Institute tutorial by Matt Rudge
+Send Mail function taken from Code Institute tutorial by Matt Rudge (credited in README)
 */
 function sendMail(contactForm) {
         emailjs.send("service_drsgi1h", "contact_form", {
@@ -10,7 +10,7 @@ function sendMail(contactForm) {
         .then(
             function() {
                 window.alert("Thankyou for your enquiry.")
-                $('#contact-form')[0].reset(); //clear the contact form taken from https://stackoverflow.com/questions/14589193/clearing-my-form-inputs-after-submission/47198786
+                $('#contact-form')[0].reset(); //clear the contact form taken from Stack Overflow (credited in README)
             },
             function() {
                 window.alert("Failed to submit enquiry.")
@@ -26,6 +26,6 @@ $(document).ready(function() {
         $("#rules-info, .listItems").slideToggle("medium").removeClass("hidden"); //slides down game rules when rules button is clicked
     });
     $("#contact-button").click(function() {
-        $("form").slideToggle("medium").removeClass("hidden");
+        $("form").slideToggle("medium").removeClass("hidden"); //slides down the contact form when the contact us button is clicked
     })
 });
