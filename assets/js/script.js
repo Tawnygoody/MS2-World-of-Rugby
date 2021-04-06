@@ -9,7 +9,7 @@ function sendMail(contactForm) {
         })
         .then(
             function() {
-                window.alert("Thankyou for your enquiry.")
+                window.alert("Thank you for your enquiry.")
                 $('#contact-form')[0].reset(); //clear the contact form taken from Stack Overflow (credited in README)
             },
             function() {
