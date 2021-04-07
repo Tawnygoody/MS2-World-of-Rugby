@@ -21,7 +21,7 @@ function ready() {
 
     let startTime;
     if (difficulty === "AMATEUR") { //if the difficulty is set to "AMATEUR" the startTime will be 60 seconds
-        startTime = 5;
+        startTime = 7;
     } else if (difficulty === "PRO") { //if the difficulty is set to "PRO" the startTime will be 80 seconds.
         startTime = 80;
     } else { //the default startTime will be set to 100 seconds. 
@@ -109,6 +109,8 @@ function ready() {
 
     function startGame() { //removes the overlay with the text of "Kick Off", so the game can begin.
         overlays.classList.remove("visible");
+        gameOverSound.volume = 0;
+        gameOverSound.play();
     }
 
     /*
@@ -121,8 +123,6 @@ function ready() {
         this.classList.add("flip"); //adds the "flip" class to the individual card that was clicked.
         if(soundEffects == true) { //flipSound plays when soundEffects are true. 
             flip();
-            gameOverSound.volume = 0;
-            gameOverSound.play();
         }
         
         flipsCounter(); //calls the flipsCounter function
