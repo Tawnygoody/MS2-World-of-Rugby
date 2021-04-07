@@ -257,7 +257,9 @@ the layout dependant on the difficulty selected.
 - [CloudConvert](https://cloudconvert.com/mp4-to-gif) 
     - This has been used to convert screen recordings into gif format for the README.
 - [Grammarly](https://app.grammarly.com/ddocs/1040510993) 
-    - This has been used across the website to fix spelling errors and grammar. 
+    - This has been used across the website to fix spelling errors and grammar.
+- [Favicon Generator](https://favicon.io/favicon-converter/)
+    - This has been used to generate a favicon image for the website tab.
 
 # Testing
 
@@ -569,6 +571,9 @@ could not see the team logo.
 I removed the button element and styled the anchor link to look like a button. However, the button was not appearing as it had previously. The button was wrapping the text, and not 
 keeping a consistent height and width. 
     - Fix: I had previously set the height of the buttons using height in CSS. I altered this to line-height, which has corrected the issue. 
+12. Whilst testing the sie, I would receive an error message in the console on every page for 404 Favicon errors. 
+    - Fix: I have added a Favicon of the website's logo, which now shows on the page tab and removes the error message from the console. 
+    
 
 ## Known bugs
 
@@ -730,4 +735,8 @@ Due to the nature of the game images have had to be taken from various sources:
 - Victory Sound - [View](https://freesound.org/people/humanoide9000/sounds/466133/)
 
 ## Acknowledgements
+- My mentor, Gerard McBride, for continuous helpful feedback and support.
+- Code Institute, for providing the learning required to build the site, and Code Institute's Tutor Support 
+for aiding with minor bug fixes. 
+- Aukje van der Wal, for hints and tips when preparing for Code Institute's Second Milestone Project.
 

@@ -9,7 +9,7 @@ function sendMail(contactForm) {
         })
         .then(
             function() {
-                window.alert("Thank you for your enquiry.")
+                window.alert("Thank you for your enquiry.") //alerts the user once they have submitted their enquiry
                 $('#contact-form')[0].reset(); //clear the contact form taken from Stack Overflow (credited in README)
                 $("form").slideToggle("medium").addClass("hidden"); //hides the contact form once the customer has submitted their enquiry
             },
