@@ -21,7 +21,7 @@ function ready() {
 
     let startTime;
     if (difficulty === "AMATEUR") { //if the difficulty is set to "AMATEUR" the startTime will be 60 seconds
-        startTime = 7;
+        startTime = 60;
     } else if (difficulty === "PRO") { //if the difficulty is set to "PRO" the startTime will be 80 seconds.
         startTime = 80;
     } else { //the default startTime will be set to 100 seconds. 
@@ -59,7 +59,7 @@ function ready() {
     let flipSound = new Audio("assets/audio/cardflip.wav");
     let matchSound = new Audio("assets/audio/match.wav");
     let victorySound = new Audio("assets/audio/victory.wav");
-    let gameOverSound = new Audio("assets/audio/gameover.wav");
+    let gameOverSound = new Audio("assets/audio/gameoveredit.wav");
     let soundEffects = false;
     let soundButton = document.getElementById("sound-effects");
     bgMusic.loop = true;
@@ -88,11 +88,6 @@ function ready() {
     function gameWin() { //victorySound plays whenever all the cards have been matched. Called in the victory function. 
         stopMusic(); //stop the bgMusic so background music and victory sounds aren't playing at the same time. 
         victorySound.play();
-    }
-
-    function gameLoss() { //gameOverSounds plays when the user fails to match all the cards within the timeframe. Called in the gameOver function. 
-        stopMusic(); //stops the bgMusic so background music and game over sounds aren't playing at the same time.
-        gameOverSound.play();
     }
 
     function musicToggle() { //function called when the user clicks the audio button in the logo bar
@@ -321,10 +316,10 @@ function ready() {
     function gameOver() {
         clearInterval(countDown); //stops the countdown
         $("#game-over-modal").modal("toggle"); //toggles the gameOver modal
-        if(soundEffects == true) { //gameLoss function called if soundEffects are true
+        if(soundEffects == true) { //manual pausing of bgMusic and playing gameOverSound due to errors with IOS
             bgMusic.pause();
             gameOverSound.muted = false;
-            gameOverSound.src = "assets/audio/gameover.wav";
+            gameOverSound.src = "assets/audio/gameoveredit.wav";
             gameOverSound.play();
         }
     }

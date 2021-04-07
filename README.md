@@ -577,6 +577,10 @@ keeping a consistent height and width.
     - Fix: I have added a Favicon of the website's logo, which now shows on the page tab and removes the error message from the console. 
     - Error: This fix only worked on the 8000 port, on the deployed site the favicon does not appear and the error message still shows. 
     - Fix: By adding a "Link" in the "Head" this has corrected the issue on the deployed site. 
+13. The game over sound would not play on IOS, when the timer runs out. After some research I found that web audio is effectively muted until
+user activation on IOS. 
+    - Fix: After a few attempts playing around with the code, my solution was to play a muted game over sound effect when the user first clicks to clear the 
+    Kick Off overlay text. This then allows the game over sound effect to be heard on IOS when the timer runs out and the gameOver function is called. 
     
 
 ## Known bugs
