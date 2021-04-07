@@ -21,7 +21,7 @@ function ready() {
 
     let startTime;
     if (difficulty === "AMATEUR") { //if the difficulty is set to "AMATEUR" the startTime will be 60 seconds
-        startTime = 7;
+        startTime = 5;
     } else if (difficulty === "PRO") { //if the difficulty is set to "PRO" the startTime will be 80 seconds.
         startTime = 80;
     } else { //the default startTime will be set to 100 seconds. 
@@ -121,6 +121,8 @@ function ready() {
         this.classList.add("flip"); //adds the "flip" class to the individual card that was clicked.
         if(soundEffects == true) { //flipSound plays when soundEffects are true. 
             flip();
+            gameOverSound.volume = 0;
+            gameOverSound.play();
         }
         
         flipsCounter(); //calls the flipsCounter function
@@ -321,6 +323,7 @@ function ready() {
         $("#game-over-modal").modal("toggle"); //toggles the gameOver modal
         if(soundEffects == true) { //gameLoss function called if soundEffects are true
             bgMusic.pause();
+            gameOverSound.volume = 1;
             gameOverSound.src = "assets/audio/gameover.wav";
             gameOverSound.play();
         }
