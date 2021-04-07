@@ -361,11 +361,12 @@ Please note the image below does not show the warning message when clearing the 
 #### I want to be able to contact the business with any queries I may have.
 - The user has the option of selecting the contact us button on the Kick Off modal, which drops down a contact form when clicked. 
 - All 3 fields must be completed, which will send an automated email to the developer. 
-- The user is greeted with a thank you for your enquiry message, and the contact form is cleared. 
+- The user is greeted with a thank you for your enquiry message, and the contact form is hidden.
+- When the user opens the contact form again, the form has been cleared. 
 
 Please note the image below does not show the "thankyou for your enquiry" message due to the screen recording programme used.
 
-![Email](documentation/testing/user-stories/us-email.gif)
+![Email](documentation/testing/user-stories/us-contact.gif)
 ![Email](documentation/testing/user-stories/us-email-test.png)
 
 ## Full Testing

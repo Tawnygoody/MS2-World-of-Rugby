@@ -11,6 +11,7 @@ function sendMail(contactForm) {
             function() {
                 window.alert("Thank you for your enquiry.")
                 $('#contact-form')[0].reset(); //clear the contact form taken from Stack Overflow (credited in README)
+                $("form").slideToggle("medium").addClass("hidden"); //hides the contact form once the customer has submitted their enquiry
             },
             function() {
                 window.alert("Failed to submit enquiry.")
