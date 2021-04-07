@@ -4,7 +4,7 @@
 
 View the repository in GitHub [here](https://github.com/Tawnygoody/MS2-World-of-Rugby)
 
-View the live project [here](https://tawnygoody.github.io/MS2-World-of-Rugby/index.html)
+View the live project [here](https://tawnygoody.github.io/MS2-World-of-Rugby/)
 
 # Contents
 
@@ -575,6 +575,8 @@ keeping a consistent height and width.
     - Fix: I had previously set the height of the buttons using height in CSS. I altered this to line-height, which has corrected the issue. 
 12. Whilst testing the sie, I would receive an error message in the console on every page for 404 Favicon errors. 
     - Fix: I have added a Favicon of the website's logo, which now shows on the page tab and removes the error message from the console. 
+    - Error: This fix only worked on the 8000 port, on the deployed site the favicon does not appear and the error message still shows. 
+    - Fix: By adding a "Link" in the "Head" this has corrected the issue on the deployed site. 
     
 
 ## Known bugs
