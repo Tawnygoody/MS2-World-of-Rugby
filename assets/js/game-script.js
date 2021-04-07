@@ -21,7 +21,7 @@ function ready() {
 
     let startTime;
     if (difficulty === "AMATEUR") { //if the difficulty is set to "AMATEUR" the startTime will be 60 seconds
-        startTime = 60;
+        startTime = 5;
     } else if (difficulty === "PRO") { //if the difficulty is set to "PRO" the startTime will be 80 seconds.
         startTime = 80;
     } else { //the default startTime will be set to 100 seconds. 
@@ -321,6 +321,7 @@ function ready() {
         $("#game-over-modal").modal("toggle"); //toggles the gameOver modal
         if(soundEffects == true) { //gameLoss function called if soundEffects are true
             gameLoss();
+            gameOverSound.src = "assets/audio/gameover.wav";
             gameOverSound.play();
         }
     }
