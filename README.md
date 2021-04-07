@@ -278,7 +278,7 @@ the layout dependant on the difficulty selected.
 
 - JSHint
     - [script.js](documentation/testing/w3c/js-script.png)
-    - [game-script.js](documentation/testing/w3c/js-game-script.png)
+    - [game-script.js](documentation/testing/w3c/jshint-game-script.png)
 
 No warning messages within the script.js. emailjs is listed as an undefined variable, and sendMail is listed as an unused variable, however this is a function. 
 
