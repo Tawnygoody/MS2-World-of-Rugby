@@ -22,7 +22,7 @@ View the live project [here](https://tawnygoody.github.io/MS2-World-of-Rugby/ind
     - [Testing User Stories](#testing-user-stories)
     - [Full Testing](#full-testing)
     - [Further Testing](#further-testing)
-        - [Browser Compatibility](#broswer-compatibility)
+        - [Browser Compatibility](#browser-compatibility)
         - [Responsive Design](#responsive-design)
     - [Solved Bugs](#solved-bugs)
     - [Known Bugs](#known-bugs)
@@ -36,7 +36,7 @@ View the live project [here](https://tawnygoody.github.io/MS2-World-of-Rugby/ind
     - [Media](#media)
         - [Images](#images)
         - [Audio](#audio)
-    - [Acknowledgements](#acknowledgement)
+    - [Acknowledgements](#acknowledgements)
 
 
 # User Experience (UX)
@@ -438,7 +438,7 @@ I have used Google Developer tools to simulate the following device sizes:
 - Ipad: [Portrait](documentation/testing/responsiveness/home/ipad-p.png), [Landscape](documentation/testing/responsiveness/home/ipad-l.png)
 - Moto G4: [Portrait](documentation/testing/responsiveness/home/motog4-p.png), [Landscape](documentation/testing/responsiveness/home/motog4-l.png)
 - Pixel 2: [Portrait](documentation/testing/responsiveness/home/pixel2-p.png), [Landscape](documentation/testing/responsiveness/home/pixel2-l.png)
-- Surface Duo: [Portrait](documentation/testing/responsiveness/home/surface-p.png), [Landscape](documentation/testing/responsiveness/home/surface-l.png)
+- Surface Duo: [Portrait](documentation/testing/responsiveness/home/surface-p.png), [Landscape](documentation/testing/responsiveness/home/surface-1.png)
 
 ##### Amateur Game Page
 As the game is optimized for playing in a portrait orientation, I have focused on laying out the cards so that minimal scrolling is required
@@ -706,6 +706,7 @@ By forking the GitHub Repository to make a copy of the original repository, we c
 
 
 ## Media
+
 ### Images 
 Due to the nature of the game images have had to be taken from various sources:
 - Home Page Background - [View](https://www.pixelstalk.net/free-new-zealand-all-black-rugby-hd-backgrounds/)
