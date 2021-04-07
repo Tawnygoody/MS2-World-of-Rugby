@@ -109,7 +109,7 @@ function ready() {
 
     function startGame() { //removes the overlay with the text of "Kick Off", so the game can begin.
         overlays.classList.remove("visible");
-        gameOverSound.volume = 0;
+        gameOverSound.muted = true;
         gameOverSound.play();
     }
 
@@ -323,7 +323,7 @@ function ready() {
         $("#game-over-modal").modal("toggle"); //toggles the gameOver modal
         if(soundEffects == true) { //gameLoss function called if soundEffects are true
             bgMusic.pause();
-            gameOverSound.volume = 1;
+            gameOverSound.muted = false;
             gameOverSound.src = "assets/audio/gameover.wav";
             gameOverSound.play();
         }
