@@ -254,6 +254,8 @@ the layout dependant on the difficulty selected.
     - This has been used to remove the background colour on images for the victory and gameover modals. 
 - [LambdaTest](https://www.lambdatest.com/)
     - LambdaTest has been used to test the website on different browsers.
+- [Screencastify](https://www.screencastify.com/)
+    - Screencastify has been used to record and edit the website in action for the README.
 - [CloudConvert](https://cloudconvert.com/mp4-to-gif) 
     - This has been used to convert screen recordings into gif format for the README.
 - [Grammarly](https://app.grammarly.com/ddocs/1040510993) 
