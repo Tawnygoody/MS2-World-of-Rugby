@@ -60,7 +60,7 @@ function ready() {
     let matchSound = new Audio("assets/audio/match.wav");
     let victorySound = new Audio("assets/audio/victory.wav");
     let gameOverSound = new Audio("assets/audio/gameover.wav");
-    let soundEffects = "off";
+    let soundEffects = false;
     let soundButton = document.getElementById("sound-effects");
     bgMusic.loop = true;
     bgMusic.volume = 0.3;
@@ -95,23 +95,16 @@ function ready() {
         gameOverSound.play();
     }
 
-    function audioToggle() {
-        if(soundEffects === "on") { //if the soundEffects are on, bgMusic will play and the icon will be set to the mute icon.
-            soundButton.innerHTML = `<i class="fas fa-volume-mute"></i>`;
+    function musicToggle() { //function called when the user clicks the audio button in the logo bar
+        if(!soundEffects) {
+            soundEffects = true;
+            soundButton.innerHTML = `<i class="fas fa-volume-mute"></i>`; //if the soundEffects are true, bgMusic will play and the icon will be set to the mute icon.
             startMusic();
-        } else { //else when soundEffects are off, stopMusic function called, and the icon will be set to volume up icon. 
-            soundButton.innerHTML = `<i class="fas fa-volume-up"></i>`;
+        } else {
+            soundEffects = false;
+            soundButton.innerHTML = `<i class="fas fa-volume-up"></i>`; //else when soundEffects are false, stopMusic function called, and the icon will be set to volume up icon.
             stopMusic();
         }
-    }
-
-    function musicToggle() {
-        if(soundEffects === "off") {
-            soundEffects = "on";
-        } else {
-            soundEffects = "off";
-        }
-        audioToggle();
     }
 
     function startGame() { //removes the overlay with the text of "Kick Off", so the game can begin.
@@ -126,7 +119,7 @@ function ready() {
         if(this === firstCard) return; //prevents the same card from being clicked twice, by asking if it is the first card clicked. 
 
         this.classList.add("flip"); //adds the "flip" class to the individual card that was clicked.
-        if(soundEffects == "on") { //flipSound plays when soundEffects are on. 
+        if(soundEffects == true) { //flipSound plays when soundEffects are true. 
             flip();
         }
         
@@ -172,7 +165,7 @@ function ready() {
     function checkForMatch() { //checkForMatch function called in the flipCard function
         if(firstCard.dataset.logo === secondCard.dataset.logo) { //if the firstCard and secondCard data-logo's are equal fires matchedCard function.
             matchedCards();
-            if(soundEffects == "on") {  //matchSound plays when the soundEffects are on.  
+            if(soundEffects == true) {  //matchSound plays when the soundEffects are true.  
                 match();
             }
             
@@ -284,7 +277,7 @@ function ready() {
         mostRecentScore.innerHTML = finalScore; // score shows in the victory modal as a result of the finalScore. 
 
         $("#victory-modal").modal("toggle"); //toggles the victory modal
-        if(soundEffects == "on") { //gameWin function called if soundEffects are on
+        if(soundEffects == true) { //gameWin function called if soundEffects are true
             gameWin();
         }
         document.getElementById("totalTime").innerHTML = finishTime; //displays the finishTime in the Victory Modal
@@ -326,8 +319,9 @@ function ready() {
     function gameOver() {
         clearInterval(countDown); //stops the countdown
         $("#game-over-modal").modal("toggle"); //toggles the gameOver modal
-        if(soundEffects == "on") { //gameLoss function called if soundEffects are on
+        if(soundEffects == true) { //gameLoss function called if soundEffects are true
             gameLoss();
+            gameOverSound.play();
         }
     }
 
