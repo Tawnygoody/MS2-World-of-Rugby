@@ -9,14 +9,14 @@ function sendMail(contactForm) {
         })
         .then(
             function() {
-                window.alert("Thank you for your enquiry.") //alerts the user once they have submitted their enquiry
+                window.alert("Thank you for your enquiry."); //alerts the user once they have submitted their enquiry
                 $('#contact-form')[0].reset(); //clear the contact form taken from Stack Overflow (credited in README)
                 $("form").slideToggle("medium").addClass("hidden"); //hides the contact form once the customer has submitted their enquiry
             },
             function() {
-                window.alert("Failed to submit enquiry.")
+                window.alert("Failed to submit enquiry.");
             });
-            return false
+            return false;
     }
 
 
@@ -28,5 +28,5 @@ $(document).ready(function() {
     });
     $("#contact-button").click(function() {
         $("form").slideToggle("medium").removeClass("hidden"); //slides down the contact form when the contact us button is clicked
-    })
+    });
 });
